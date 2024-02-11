@@ -1,0 +1,6 @@
+.venv/
+node_modules/
+.Rhistory
+.Rproj.user/
+*.tgz
+*.tar.gz

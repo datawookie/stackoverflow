@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteRule ^bosh_sahifa index.php [NC,L]
+RewriteRule ^biz_haqimizda about.php [NC,L]

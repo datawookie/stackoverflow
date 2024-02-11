@@ -1,0 +1,9 @@
+{
+    "name": "my-project",
+    "type": "module",
+    "scripts": {
+        "watch": "node --watch src/app.js",
+        "start": "node src/app.js"
+    },
+    "packageManager": "yarn@4.0.2"
+}

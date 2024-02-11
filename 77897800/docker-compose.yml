@@ -1,0 +1,17 @@
+version: '3.2'
+services:
+  project_name:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    container_name: project_name
+    ports:
+      - 18080:8080
+      - 18082:8082
+    volumes:
+      - ./configs/application.yml:/application.yml:ro
+      - ./configs/logging.xml:/logging.xml:ro
+      - ./configs/logback-access.xml:/logback-access.xml:ro
+    environment:
+      SERVER_PORT: 8080
+

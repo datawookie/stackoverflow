@@ -1,0 +1,79 @@
+---
+title: "Konjunktur- och arbetsmarknadsläget - Västernorrland"
+author: "Detta är en rapport från Tillväxtverksamheten."
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output: 
+  html_document:
+    css: styles.css  
+    toc: yes
+    toc_float:
+      toc_collapsed: true
+    toc_depth: 2
+    number_sections: true
+---
+
+# Om {.tabset}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+## Konjunkturläget
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+## Arbetsmarknaden
+
+### Begrepp och nyckeltal
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+# Läget
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+## Konjunkturläget {.tabset}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+### Sverige
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+### Regionalt
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+## Arbetsmarknaden
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+### Nyanmälda platser
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+### Lediga jobb (Af)
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+## Konkurser
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+# Arbetskraften - utbudet
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+## Arbetskraftsdeltagande
+
+## Sysselsättningsgrad
+
+## Arbetslöshet
+
+# Ej i arbetskraften
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+## Studerande
+
+## Pensionärer
+
+Rapport genererad genom R med R Markdown.

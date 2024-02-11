@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "private": true,
+  "description": "Gatsby example site using the Asciidoc transformer plugin",
+  "version": "1.0.0",
+  "dependencies": {
+    "asciidoctor": "2.2.6"
+  },
+  "devDependencies": {
+    "@angular/cli": "*"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "main": "n/a",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "ng build",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  }
+}

@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  first:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ID=first
+    volumes:
+      - .:/usr/src/app/data
+      
+  second:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ID=second
+    volumes:
+      - .:/usr/src/app/data
+

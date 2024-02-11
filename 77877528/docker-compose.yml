@@ -1,0 +1,9 @@
+services:
+  testimage:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    image: training_image
+    platform: linux/amd64
+    volumes:
+        - .:/app
