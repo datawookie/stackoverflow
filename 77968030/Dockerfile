@@ -1,7 +1,7 @@
 FROM jenkins/jenkins
-    
+
 USER root
-    
+
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get install -y nodejs && \
     curl -L https://www.npmjs.com/install.sh | sh && \

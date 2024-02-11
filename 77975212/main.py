@@ -17,7 +17,7 @@ PROXY_PORT = os.environ["PROXY_PORT"]
 # The host and port are from the proxy list on webshare.io.
 
 software_names = [SoftwareName.CHROME.value]
-operating_systems = [OperatingSystem.WINDOWS.value, OperatingSystem.LINUX.value] 
+operating_systems = [OperatingSystem.WINDOWS.value, OperatingSystem.LINUX.value]
 
 user_agent_rotator = UserAgent(software_names=software_names, operating_systems=operating_systems, limit=100)
 

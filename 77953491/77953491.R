@@ -11,7 +11,7 @@ link = "https://puc.overheid.nl/rsj/wettelijkkader/pagina/G/-/gdlv/1/"
 page = read_html(link)
 
 # Get link of all sub pages
-sub_pages <- page %>% 
+sub_pages <- page %>%
   html_nodes(".paging") %>%
   html_nodes("a") %>%
   html_attr("href")
@@ -31,20 +31,20 @@ links <- paste0("https://puc.overheid.nl", links[seq(1, length(links), 2)])
 onclick <- links[1] %>%
   read_html() %>%
   html_nodes(".download-als a") %>%
-  html_attr("onclick") 
+  html_attr("onclick")
 
 (req_param <- str_extract_all(onclick, "(?<=')[^\\s']+(?=')")[[1]])
 #> [1] "PUC_750817_21_1" "rsj"             "pdf"
 
 # submit request / get ticket ---------------------------------------------
-ticket <- 
-  request("https://puc.overheid.nl/PUC/Handlers/ManifestatieService.ashx") %>% 
+ticket <-
+  request("https://puc.overheid.nl/PUC/Handlers/ManifestatieService.ashx") %>%
   req_url_query(actie      = "maakmanifestatie",
                 kanaal     = req_param[2],
                 identifier = req_param[1],
                 soort      = req_param[3],
-                `_`        = timestamp_()) %>% 
-  req_perform() %>% 
+                `_`        = timestamp_()) %>%
+  req_perform() %>%
   resp_body_json(check_type = FALSE)
 
 jsonlite::toJSON(ticket, auto_unbox = TRUE,  pretty = TRUE)
@@ -53,12 +53,12 @@ jsonlite::toJSON(ticket, auto_unbox = TRUE,  pretty = TRUE)
 #> }
 
 Sys.sleep(5)
-pdf_url <- 
-  request("https://puc.overheid.nl/PUC/Handlers/ManifestatieService.ashx") %>% 
+pdf_url <-
+  request("https://puc.overheid.nl/PUC/Handlers/ManifestatieService.ashx") %>%
   req_url_query(actie      = "haalstatus",
                 ticket     = ticket$ticket,
-                `_`        = timestamp_()) %>% 
-  req_perform() %>% 
+                `_`        = timestamp_()) %>%
+  req_perform() %>%
   resp_body_json(check_type = FALSE)
 
 jsonlite::toJSON(pdf_url, auto_unbox = TRUE,  pretty = TRUE)
@@ -71,11 +71,11 @@ jsonlite::toJSON(pdf_url, auto_unbox = TRUE,  pretty = TRUE)
 #> }
 
 # download pdf ------------------------------------------------------------
-request("https://puc.overheid.nl/PUC/Handlers/ManifestatieService.ashx") %>% 
+request("https://puc.overheid.nl/PUC/Handlers/ManifestatieService.ashx") %>%
   req_url_query(actie = "download",
                 identifier = req_param[1],
                 url = pdf_url$result$url,
-                filename = pdf_url$result$filename) %>% 
+                filename = pdf_url$result$filename) %>%
   req_perform(path = pdf_url$result$filename %>% gsub("[ /]", "-", .))
 #> Error:
 #> ! Failed to open file RSJ 23/31577/GA 12 december 2023 beroep.pdf.

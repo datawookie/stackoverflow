@@ -1,9 +1,9 @@
 import os
 from dotenv import load_dotenv
 from peewee import MySQLDatabase
- 
+
 load_dotenv()
- 
+
 username = os.getenv('USERNAME')
 password = os.getenv('PASSWORD')
 hostname = os.getenv('HOST')

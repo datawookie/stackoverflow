@@ -112,4 +112,3 @@ services:
   # cvat_redis_ondisk:
   #   ports:
   #     - '6666:6666'
-

@@ -2,9 +2,9 @@
 title: "Konjunktur- och arbetsmarknadsläget - Västernorrland"
 author: "Detta är en rapport från Tillväxtverksamheten."
 date: "`r format(Sys.Date(), '%Y-%m-%d')`"
-output: 
+output:
   html_document:
-    css: styles.css  
+    css: styles.css
     toc: yes
     toc_float:
       toc_collapsed: true

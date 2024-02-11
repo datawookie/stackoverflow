@@ -20,4 +20,3 @@ RUN npm run build -- --configuration=${ENVIRONMENT}
 # COPY --from=build /usr/local/app/nginx.conf /etc/nginx/conf.d/default.conf
 
 # EXPOSE 80
-

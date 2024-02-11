@@ -7,7 +7,7 @@ const id = process.env.ID || 'Default';
 const appendContent = () => {
 	const now = new Date();
 	const timestamp = now.toISOString();
-	
+
 	const contentToAdd = `${timestamp}: Data from: ${id}\n`;
 
 	fs.appendFile(path, contentToAdd, err => {

@@ -370,4 +370,3 @@ volumes:
 
 networks:
   cvat:
-

@@ -18,7 +18,7 @@ services:
     image: directus/directus:10.8.3
     volumes:
       - ./extensions:/directus/extensions
-    environment:     
+    environment:
       PUBLIC_URL: "http://localhost:8055"
       ADMIN_EMAIL: "admin@example.com"
       ADMIN_PASSWORD: "d1r3ctu5"
