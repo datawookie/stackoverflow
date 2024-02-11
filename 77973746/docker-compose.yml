@@ -5,20 +5,24 @@ services:
     container_name: nginx
     image: nginx
     ports:
-      - "80:80"
+      - "7113:80"
+      - "7114:443"
     depends_on:
       - api
     volumes:
       - ./nginx:/etc/nginx/conf.d
+      - ./certificates:/etc/ssl/certs/self-signed
     networks:
-      - stack
+      - default
 
   api:
     container_name: api
     build:
       context: .
     networks:
-      - stack
+      - default
 
 networks:
-  stack:
+  default:
+    ipam:
+      driver: default
