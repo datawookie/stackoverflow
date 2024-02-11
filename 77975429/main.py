@@ -1,18 +1,18 @@
 import multiprocessing
-from multiprocessing import Process, Queue
+from multiprocessing import Process, Queue, Manager
 from fastapi import FastAPI
-from contextlib import asynccontextmanager
 
 CLIENT_CORES = 5
+DB_PROCS = 2
 connection = "mongo_connection_string"
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):    
-    manager = multiprocessing.Manager()
+app = FastAPI()
+
+def start_lifespan_resources():
+    manager = Manager()
 
     global dbWorkers
     global clientWorkers
-
     global clientQueue
     global clientResponse
 
@@ -23,44 +23,46 @@ async def lifespan(app: FastAPI):
     dbWorkers = []
     clientWorkers = []
 
-    config_processes(dbQueue,clientQueue,clientResponse,psetObjects)
+    config_processes(dbQueue, clientQueue, clientResponse, psetObjects)
 
-    yield
-    
-    graceful_shutdown()
+def stop_lifespan_resources():
+    for worker in dbWorkers + clientWorkers:
+        worker.terminate()
+        worker.join()
 
-def config_processes(dbQueue,clientQueue,clientResponse,psetObjects):
-    start_db_workers(dbQueue,psetObjects)
+    print("All workers terminated.")
 
-    start_client_workers(clientQueue,psetObjects,dbQueue,clientResponse)
+def config_processes(dbQueue, clientQueue, clientResponse, psetObjects):
+    start_db_workers(dbQueue, psetObjects)
+    start_client_workers(clientQueue, psetObjects, dbQueue, clientResponse)
 
-def start_db_workers(dbQueue,psetObjects):
+def start_db_workers(dbQueue, psetObjects):
     print("Building db Workers")
-
     for p in range(DB_PROCS):
-        dbworker = Process(target=db_worker,args=(connection,dbQueue,psetObjects,p))
+        dbworker = Process(target=db_worker, args=(connection, dbQueue, psetObjects, p))
         dbWorkers.append(dbworker)
         dbworker.start()
+    print(f"db Pool of {DB_PROCS} db Worker(s) Built -OK")
 
-    print("db Pool of {} db Worker(s) Built -OK".format(DB_PROCS))
-
-def start_client_workers(clientQueue,psetObjects,dbQueue,clientResponse):
+def start_client_workers(clientQueue, psetObjects, dbQueue, clientResponse):
     print("Building client Workers")
-    print("CLIENT CORES: {}".format(CLIENT_CORES))
-    
+    print(f"CLIENT CORES: {CLIENT_CORES}")
     for p in range(CLIENT_CORES):
-        clientWorker = Process(target=client_worker,args=(clientQueue,psetObjects,dbQueue,clientResponse,p),name="client-worker-{}".format(p))
+        clientWorker = Process(target=client_worker, args=(clientQueue, psetObjects, dbQueue, clientResponse, p), name=f"client-worker-{p}")
         clientWorkers.append(clientWorker)
         clientWorker.start()
-    
-    print("Client Pool of {} Worker(s) Built -OK".format(len(clientWorkers)))
+    print(f"Client Pool of {len(clientWorkers)} Worker(s) Built -OK")
 
-def db_worker(connection,dbQueue,pset_objects,n):
-    dbworker = DbWorker(connection,dbQueue,pset_objects,n)
-    print("built dbworker {}".format(n))
-    dbworker.listen()
+def db_worker(connection, dbQueue, pset_objects, n):
+    print(f"built dbworker {n}")
 
-def client_worker(clientQueue,psetObjects,dbQueue,clientResponse,p):
-    clientworker = ClientWorker(clientQueue,psetObjects,dbQueue,clientResponse,p)
-    print("built client worker {}".format(p))
-    clientworker.listen()
+def client_worker(clientQueue, psetObjects, dbQueue, clientResponse, p):
+    print(f"built client worker {p}")
+
+@app.on_event("startup")
+def startup_event():
+    start_lifespan_resources()
+
+@app.on_event("shutdown")
+def shutdown_event():
+    stop_lifespan_resources()
