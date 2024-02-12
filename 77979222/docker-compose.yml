@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  traefik:
+    container_name: traefik
+    image: traefik:v2.5
+    command:
+      - "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+  fhback:
+    container_name: fhback
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./back:/app
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.fhback.rule=Host(`example.com`) && PathPrefix(`/`)
+      - traefik.http.services.fhback.loadbalancer.server.port=8000
+      - traefik.http.middlewares.firehouse-compress.compress=true
+      - traefik.http.routers.fhback.middlewares=firehouse-compress,fhback-stripprefix
+      - traefik.http.middlewares.testheader.headers.customresponseheaders.X-Test-Header=TraefikProxy
+      - traefik.http.routers.fhback.middlewares=testheader
+    depends_on:
+      - traefik
+
+networks:
+  default:
+    external:
+      name: traefik
