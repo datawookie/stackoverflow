@@ -22,32 +22,36 @@ RUN apt-get update && apt-get install -y \
         libpango-1.0-0 \
         libcairo2 \
         libxss1 \
-        libxkbcommon0 && \
+        libxkbcommon0 \
+        libx11-6 \
+        libxcb1 \
+        libxcomposite1 \
+        libxcursor1 \
+        libxdamage1 \
+        libxi6 \
+        libxtst6 \
+        libnss3 \
+        libcups2 \
+        libxss1 \
+        libxrandr2 \
+        libasound2 \
+        libpangocairo-1.0-0 \
+        libatk1.0-0 \
+        libatk-bridge2.0-0 \
+        libgtk-3-0 && \
     rm -rf /var/lib/apt/lists/*
 
-COPY package.json .
+RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
+    && mkdir -p /home/pptruser/Downloads \
+    && chown -R pptruser:pptruser /home/pptruser
 
 RUN npm install -g pnpm
 
-RUN pnpm i puppeteer
+USER pptruser
+WORKDIR /home/pptruser
 
-# RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser && \
-#     mkdir -p /home/pptruser/Downloads && \
-#     chown -R pptruser:pptruser /home/pptruser && \
-#     chown -R pptruser:pptruser /node_modules && \
-#     chown -R pptruser:pptruser /package.json && \
-#     chown -R pptruser:pptruser /package-lock.json
+RUN pnpm install puppeteer
 
-# RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
-#     && mkdir -p /home/pptruser/Downloads /app \
-#     && chown -R pptruser:pptruser /home/pptruser \
-#     && chown -R pptruser:pptruser /app
-
-WORKDIR /app
-
-COPY index.js /app
-
-# USER pptruser
+COPY index.js .
 
 CMD ["node", "index.js"]
-# CMD ["/bin/bash"]

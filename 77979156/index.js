@@ -5,6 +5,8 @@ const puppeteer = require('puppeteer');
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
+  console.log(`Browser Executable Path: ${puppeteer.executablePath()}`);
+
   const page = await browser.newPage();
 
   const response = await page.goto('https://example.com');
