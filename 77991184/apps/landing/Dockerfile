@@ -1,10 +1,9 @@
 FROM node:18.17.0-alpine as base
-ENV PNPM_HOME="/pnpm"
-ENV PATH="$PNPM_HOME:$PATH"
-RUN corepack enable
 
-RUN apk add --no-cache libc6-compat
-RUN apk update
+ENV PNPM_HOME="/var/lib/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+
+RUN corepack enable
 
 RUN pnpm add -g turbo
 
