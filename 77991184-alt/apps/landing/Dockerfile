@@ -1,34 +1,58 @@
-# Stage 1: Building the code
-FROM node:18.17.0-alpine as builder
+
+FROM node:18.17.0-alpine as base
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
+
+RUN apk add --no-cache libc6-compat
+RUN apk update
+
+# BUILDER -----------------------------------------------------------------------------------------
+
+FROM base AS builder
 
 WORKDIR /app
 
-# Copy the relevant files to the container
+RUN pnpm add -g turbo
+COPY . .
+RUN turbo prune landing --docker
+
 COPY ./package.json ./pnpm-lock.yaml ./pnpm-workspace.yaml /app/
 COPY ./apps/landing /app/apps/landing
 
-# Install dependencies
-RUN npm install -g pnpm
+# RUN npm install -g pnpm
 RUN pnpm install --frozen-lockfile
 
-# Build the project
 WORKDIR /app/apps/landing
 RUN pnpm run build
 
-# Stage 2: Run the application
-FROM node:18.17.0-alpine
+# INSTALLER ---------------------------------------------------------------------------------------
 
-WORKDIR /app
+# FROM base AS installer
 
-COPY --from=builder /app/apps/landing/.next ./.next
-COPY --from=builder /app/apps/landing/public ./public
-COPY --from=builder /app/apps/landing/package.json ./package.json
+# WORKDIR /app
 
-RUN npm install -g pnpm
-RUN pnpm install next
+CMD /bin/sh -c "sleep 600"
 
-EXPOSE 3000
 
-# CMD ["pnpm", "start"]
-# CMD node server.js
-CMD node /app/.next/standalone/apps/landing/server.js
+
+# # Build the project
+
+
+# # Stage 2: Run the application
+# FROM node:18.17.0-alpine
+
+# WORKDIR /app
+
+# COPY --from=builder /app/apps/landing/.next ./.next
+# COPY --from=builder /app/apps/landing/public ./public
+# COPY --from=builder /app/apps/landing/package.json ./package.json
+
+# RUN npm install -g pnpm
+# RUN pnpm install next
+
+# EXPOSE 3000
+
+# # CMD ["pnpm", "start"]
+# # CMD node server.js
+# CMD node /app/.next/standalone/apps/landing/server.js
