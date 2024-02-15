@@ -2,17 +2,10 @@ version: '3.8'
 services:
   landing:
     container_name: landing
-    image: landing
     build:
       context: .
       dockerfile: ./apps/landing/Dockerfile
-    volumes:
-      - .:/app
-    user: "1001"
-    networks:
-      - landing
-
-networks:
-  landing:
-    name: landing
-    driver: bridge
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production

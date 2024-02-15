@@ -1,14 +1,12 @@
 {
-  "name": "your-package-name",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "my-next-app",
+  "private": true,
+  "workspaces": [
+    "apps/landing"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "installConfig": {
-    "hoistingLimits": "workspaces"
+    "dev": "next dev apps/landing",
+    "build": "next build apps/landing",
+    "start": "next start apps/landing"
   }
 }
