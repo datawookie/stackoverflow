@@ -1,13 +1,7 @@
-# Use the jupyter/r-notebook image as the base
 FROM quay.io/jupyter/r-notebook
 
-# Set the working directory to /app
-WORKDIR /app
-
-# Switch to the root user
 USER root
 
-# Install system dependencies
 RUN apt-get update
 RUN apt-get install -y --fix-missing \
     libssl-dev \
@@ -23,32 +17,24 @@ RUN apt-get install -y --fix-missing \
     libpng-dev \
     libtiff5-dev \
     libjpeg-dev \
-    r-cran-igraph \
     mono-mcs \
     mono-xbuild \
     mono-runtime \
-    libmono-system-data4.0-cil
+    libmono-system-data4.0-cil \
+    r-cran-igraph
 
-# Install R packages
-RUN mamba install --yes \
-    'r-BiocManager'\
+ENV R_LIBS_USER=/usr/lib/R/site-library/
 
-# Install BiocManager packages
-RUN R -e "BiocManager::install(c(\
-    'clusterProfiler',\
-    'AnnotationDbi',\
-    'org.Hs.eg.db'\
-))"
+RUN R -e 'install.packages("BiocManager", repos = "https://cloud.r-project.org")'
+RUN R -e 'BiocManager::install(c("clusterProfiler", "AnnotationDbi", "org.Hs.eg.db"), ask=FALSE)'
 
-# Expose the Jupyter Notebook port
 EXPOSE 8888
 
-# Create JupyterLab configuration directory
 RUN mkdir -p /etc/jupyter
 
-# Add JupyterLab configuration to save notebooks in /app/notebooks
 RUN echo "c.NotebookApp.notebook_dir = '/app/notebooks'" >> /etc/jupyter/jupyter_lab_config.py
 RUN echo "c.MappingKernelManager.kernel_cmd_timeout = 3600" >> /home/jovyan/.jupyter/jupyter_notebook_config.py
+# Disable authentication.
+RUN echo "c.NotebookApp.token = ''" >> /etc/jupyter/jupyter_lab_config.py
 
-# Command to run Jupyter Notebook
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
