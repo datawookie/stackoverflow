@@ -2,6 +2,7 @@
 #include <stdint.h>         // uint16_t
 #include <stdio.h>          // fclose, fopen, fprintf, fscanf, snprintf stderr
 #include <string.h>         // strcmp
+#include <stdexcept>
 
 #include <memory>            // unique_ptr
 #include <string>            // string, to_string
