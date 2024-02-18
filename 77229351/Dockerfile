@@ -21,36 +21,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         coreutils \
         build-essential \
         pkg-config \
-        git \
         xdg-user-dirs \
         libgl1-mesa-dev \
         freeglut3-dev \
         mesa-utils \
-        vulkan-tools \
         libvulkan-dev \
         libglfw3-dev \
+        libglew-dev \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# ENV USERNAME cudagl
-# ENV HOME /home/$USERNAME
-# RUN useradd -m $USERNAME && \
-#         echo "$USERNAME:$USERNAME" | chpasswd && \
-#         usermod --shell /bin/bash $USERNAME && \
-#         usermod -aG sudo $USERNAME && \
-#         mkdir /etc/sudoers.d && \
-#         echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/$USERNAME && \
-#         chmod 0440 /etc/sudoers.d/$USERNAME && \
-#         usermod  --uid $UID $USERNAME && \
-#         groupmod --gid $GID $USERNAME
-
 RUN apt-get update && \
-    apt-get install -y \
-        libglew-dev
-
-# USER $USERNAME
-# WORKDIR /home/$USERNAME
+    apt-get install -y
 
 WORKDIR /root
 
