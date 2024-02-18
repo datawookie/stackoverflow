@@ -11,10 +11,10 @@ RUN apt-get update && apt-get install -y \
   wget \
   python3 \
   libgmp-dev \
+  libgtest-dev \
   sudo
 
-RUN apt install -y -qq libgtest-dev && \
-    cd /usr/src/gtest && \
+RUN cd /usr/src/gtest && \
     cmake CMakeLists.txt && \
     make && \
     cp ./lib/*.a /usr/lib
