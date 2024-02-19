@@ -5,6 +5,7 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "experimentalDecorators": true,
     "baseUrl": "./",
     "paths": {
       "*": ["node_modules/*"]
