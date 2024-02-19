@@ -1,0 +1,11 @@
+version: "2.0"
+
+services:
+  call-center-service:
+    build:
+      context: .
+    image: gcr.io/real-estate-ai-ce697/streaming-call-center:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - /usr/src/app/responder/node_modules
