@@ -1,0 +1,22 @@
+FROM archlinux:base-20231112.0.191179
+
+WORKDIR /Lab3
+
+RUN pacman-key --init && \
+    pacman -Sy --noconfirm archlinux-keyring && \
+    pacman -S --noconfirm base-devel valgrind
+
+
+# pacman -S --noconfirm archlinux-keyring
+
+# RUN pacman -Syu --noconfirm && \
+#     pacman -S --noconfirm base-devel && \
+#     pacman -S --noconfirm valgrind
+
+# Copy files AFTER pacman install, otherwise cached install not used.
+#
+COPY . .
+
+RUN chmod +x testscr.sh
+
+# CMD ["./testscr.sh"]
