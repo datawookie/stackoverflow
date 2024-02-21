@@ -1,0 +1,29 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+      "major": 3,
+      "minor": 19,
+      "patch": 0
+    },
+    "configurePresets": [
+      {
+        "name": "default",
+        "hidden": false,
+        "generator": "Unix Makefiles",  // Change generator to "Unix Makefiles"
+        "binaryDir": "${sourceDir}/build",
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "Debug"
+        }
+      },
+      {
+        "name": "debug_linux",
+        "hidden": false,
+        "generator": "Unix Makefiles",  // Change generator to "Unix Makefiles"
+        "binaryDir": "${sourceDir}/build_debug_linux",
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "Debug",
+          "CMAKE_SYSTEM_NAME": "Linux"
+        }
+      }
+    ]
+  }
