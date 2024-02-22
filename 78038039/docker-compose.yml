@@ -3,11 +3,11 @@ services:
   data-pipeline-db:
     image: data-pipeline-db
     restart: always
+    container_name: data-pipeline-db
     shm_size: 512mb
     build:
       context: .
-    volumes:
-      - ./data/pgsql:/var/lib/postgresql/data
+      dockerfile: ./Dockerfile
     environment:
       - POSTGRES_DB=testing
       - POSTGRES_USER=data-pipeline
