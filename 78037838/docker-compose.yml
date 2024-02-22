@@ -1,9 +1,12 @@
+version: "3"
+
+services:
   nginx:
     image: nginx:alpine
     restart: unless-stopped
     ports:
-      - ${FORWARD_NGINX_HTTP_PORT:-80}:80
-      - ${FORWARD_NGINX_HTTPS_PORT:-443}:443
+      - 80:80
+      - 443:443
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./nginx/ssl:/etc/nginx/ssl
@@ -11,7 +14,7 @@
       - default
   minio:
     image: minio/minio
-    command: minio server /data/minio --console-address ":9001"
+    command: minio server /data/minio --console-address "0.0.0.0:9001"
     restart: unless-stopped
     healthcheck:
       test: [ "CMD", "mc", "ready", "local" ]
@@ -22,14 +25,10 @@
       - 9000
       - 9001
     environment:
-      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minio}
-      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-password}
-      MINIO_SERVER_URL: https://s3.localhost
-      MINIO_BROWSER_REDIRECT_URL: https://s3.localhost/minio/ui
+      MINIO_ROOT_USER: minio
+      MINIO_ROOT_PASSWORD: password
     ports:
-      - ${FORWARD_MINIO_API_PORT:-9000}:9000
-      - ${FORWARD_MINIO_CONSOLE_PORT:-9001}:9001
-    volumes:
-      - minio-data:/data
+      - 9000:9000
+      - 9001:9001
     networks:
       - default
