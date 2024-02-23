@@ -13,15 +13,15 @@ FROM base AS builder
 
 WORKDIR /app
 
-COPY . .
-RUN turbo prune landing --docker
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml turbo.json .
+COPY apps/landing ./apps/landing
 
-COPY ./package.json ./pnpm-lock.yaml ./pnpm-workspace.yaml /app/
-COPY ./apps/landing /app/apps/landing
+RUN turbo prune landing --docker
 
 RUN pnpm install --frozen-lockfile
 
 WORKDIR /app/apps/landing
+
 RUN pnpm turbo run build
 
 # RUNNER ----------------------------------------------------------------------

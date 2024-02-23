@@ -8,5 +8,8 @@
     "dev": "next dev apps/landing",
     "build": "next build apps/landing",
     "start": "next start apps/landing"
+  },
+  "engines": {
+    "npm": "^9.0.0"
   }
 }
