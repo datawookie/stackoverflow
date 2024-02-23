@@ -7,3 +7,4 @@ node_modules/
 *.pyc
 .env
 .bash_history
+*.so

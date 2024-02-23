@@ -1,6 +1,4 @@
 function foo(a) result(b)
-!f2py intent(in) n
-!f2py intent(out) a
     implicit none
 
     real(kind=8), intent(in)    :: a(:,:)
