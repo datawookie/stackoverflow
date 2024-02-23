@@ -1,6 +1,7 @@
 version: '3.8'
 services:
   landing:
+    image: landing
     container_name: landing
     build:
       context: .

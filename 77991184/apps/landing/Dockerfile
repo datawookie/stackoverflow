@@ -17,7 +17,6 @@ COPY package.json pnpm-lock.yaml pnpm-workspace.yaml turbo.json .
 COPY apps/landing ./apps/landing
 
 RUN turbo prune landing --docker
-
 RUN pnpm install --frozen-lockfile
 
 WORKDIR /app/apps/landing
@@ -32,6 +31,7 @@ WORKDIR /app
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
+
 USER nextjs
 
 COPY --from=builder /app/apps/landing/.next/standalone /app
