@@ -1,105 +1,94 @@
 from selenium.webdriver import Chrome
-
 from selenium.webdriver.common.keys import Keys
-
 from selenium.webdriver.common.by import By
-
 from selenium.webdriver.support.ui import WebDriverWait
-
 from selenium.webdriver.support import expected_conditions as EC
-
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 
+import traceback
+import time
+import logging
 
+logging.basicConfig(
+  level=logging.DEBUG,
+  format='%(asctime)s [%(levelname)7s] %(message)s',
+)
+logging.getLogger("selenium").setLevel(logging.WARNING)
+logging.getLogger("urllib3").setLevel(logging.WARNING)
 
-# Define the base URL of the website
+BASE_URL = "https://www.ssllc.com"
 
-base_url = 'https://www.ssllc.com'
-
-search_bar='#page-top > div > div > div > div:nth-child(1) > input[type=text]' #CSS_SELECTOR
-
-items = '#gatsby-focus-wrapper > div.root > div > div > div > div.medium-8.columns.main-content > div.ais-Hits > ul '
-
-
-
-# Define the list of search queries
-
-search_queries = [
- 'Unused+Sartorius+1000+Liter+BIOSTAT+CultiBag+STR+Single+Use+Bioreactor',
-
-
-'3+x+V5/XCell+Repigen+Next+Gen+ATF+controllers',
-
-'InSite+Integrity+Tester'
-
+SEARCH_QUERIES = [
+    'Unused Sartorius 1000 Liter BIOSTAT CultiBag STR Single Use Bioreactor',
+    '3 x V5/XCell Repigen Next Gen ATF controllers',
+    'InSite Integrity Tester'
 ]
 
-
-
-# Configure ChromeOptions
+RESULTS = []
 
 options = ChromeOptions()
+# options.add_argument('--headless')
 
-options.add_argument('--headless')  # Optional: Run Chrome in headless mode for faster execution
+# Don't instantiate browser inside loop. Once is enough!
+with Chrome(options=options) as driver:
+    # Just open the base URL once too.
+    driver.get(BASE_URL)
+    try:
+        for search_query in SEARCH_QUERIES:
+            # logging.info(f"* Search term: {search_query}")
+            # search_input = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((
+            #     By.CSS_SELECTOR,
+            #     ".search-row input[type=text]"
+            # )))
+            # logging.debug("- Clear existing search term.")
+            # search_input.clear()
+            # time.sleep(5)
+            # logging.debug("- Insert search term.")
+            # search_input.send_keys(search_query)
+            # time.sleep(10)
+            # logging.debug("- Run search.")
+            # search_input.send_keys(Keys.RETURN)
 
+            query_url = BASE_URL+"/search/?query='"+search_query+"'"
+            driver.get(query_url)
 
+            logging.debug("- Wait for results to load.")
+            WebDriverWait(driver, 10).until(EC.presence_of_element_located((
+                By.CSS_SELECTOR,
+                ".ais-Hits > ul.ais-Hits-list"
+            )))
 
-try:
+            logging.debug("- Extract results.")
+            search_results = driver.find_elements(
+                By.CSS_SELECTOR,
+                ".ais-Hits > ul.ais-Hits-list > li"
+            )
 
-for search_query in search_queries:
+            results = []
 
-    # Initialize Chrome WebDriver for each search
+            if search_results:
+                logging.info(f"✅ Search results ({len(search_results)} items).")
+                for result in search_results:
 
-    with Chrome(options=options) as driver:
+                    # Get the link to the search result
 
-        # Load the website
+                    #result_link = result.find_element(By.TAG_NAME, 'a').get_attribute('href')
 
-        driver.get(base_url)
+                    #logging.info(f"{result.text.strip()} - {result_link}")
+                    results.append(result.text.strip())
+            else:
 
+                logging.warning(f"🚨 No search results found for '{search_query}'")
 
+            time.sleep(20)
 
-        # Find the search input field and enter the query
+            RESULTS.append({
+                "search": search_query,
+                "results": results
+            })
 
-        search_input = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.CSS_SELECTOR, search_bar)))
+            time.sleep(60)
 
-        search_input.clear()
-
-        search_input.send_keys(search_query)
-
-        search_input.send_keys(Keys.RETURN)
-
-
-
-        # Wait for the search results to load
-
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, items )))
-
-
-
-        # Extract and print search results
-
-        search_results = driver.find_elements(By.CSS_SELECTOR, items )
-
-        if search_results:
-
-            print(f"Search results for '{search_query}':")
-
-            for result in search_results:
-
-                # Get the link to the search result
-
-                #result_link = result.find_element(By.TAG_NAME, 'a').get_attribute('href')
-
-                #print(f"{result.text.strip()} - {result_link}")
-
-                print(result.text.strip())
-
-                print()
-
-        else:
-
-            print(f"No search results found for '{search_query}'")
-
-except Exception as e:
-
-print("An error occurred:", e)
+    except Exception as e:
+        logging.error("An error occurred:"+str(e))
+        logging.error(traceback.format_exc())
