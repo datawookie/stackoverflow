@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+  db1:
+    image: mariadb:10.6.17-focal
+    container_name: db1
+    environment:
+      MYSQL_ROOT_PASSWORD: dbadmin
+    volumes:
+      - vol1-db-vol:/var/lib/mysql
+    networks:
+      - Network1
+
+  db2:
+    image: mariadb:10.5.24-focal
+    container_name: db2
+    environment:
+      MYSQL_ROOT_PASSWORD: dbadmin
+      MYSQL_TCP_PORT: 3307
+      MYSQL_UNIX_PORT: 3307
+    volumes:
+      - vol2-db-vol:/var/lib/mysql
+    networks:
+      - Network1
+
+  myadmin1:
+    image: phpmyadmin:latest
+    container_name: myadmin1
+    environment:
+      PMA_HOST: db1
+    ports:
+      - "8080:80"
+    networks:
+      - Network1
+
+  myadmin2:
+    image: phpmyadmin:latest
+    container_name: myadmin2
+    environment:
+      PMA_HOST: db2
+      PMA_PORT: 3307
+    ports:
+      - "8081:80"
+    networks:
+      - Network1
+
+volumes:
+  vol1-db-vol:
+  vol2-db-vol:
+
+networks:
+  Network1:
