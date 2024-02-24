@@ -8,6 +8,7 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 import traceback
 import time
 import logging
+import json
 
 logging.basicConfig(
   level=logging.DEBUG,
@@ -19,9 +20,9 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 BASE_URL = "https://www.ssllc.com"
 
 SEARCH_QUERIES = [
-    'Unused Sartorius 1000 Liter BIOSTAT CultiBag STR Single Use Bioreactor',
-    '3 x V5/XCell Repigen Next Gen ATF controllers',
-    'InSite Integrity Tester'
+    "Unused+Sartorius+1000+Liter+BIOSTAT+CultiBag+STR+Single+Use+Bioreactor",
+    "3+x+V5/XCell+Repigen+Next+Gen+ATF+controllers",
+    "InSite+Integrity+Tester"
 ]
 
 RESULTS = []
@@ -35,21 +36,9 @@ with Chrome(options=options) as driver:
     driver.get(BASE_URL)
     try:
         for search_query in SEARCH_QUERIES:
-            # logging.info(f"* Search term: {search_query}")
-            # search_input = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((
-            #     By.CSS_SELECTOR,
-            #     ".search-row input[type=text]"
-            # )))
-            # logging.debug("- Clear existing search term.")
-            # search_input.clear()
-            # time.sleep(5)
-            # logging.debug("- Insert search term.")
-            # search_input.send_keys(search_query)
-            # time.sleep(10)
-            # logging.debug("- Run search.")
-            # search_input.send_keys(Keys.RETURN)
+            logging.info(f"🟦 Search term: {search_query}")
 
-            query_url = BASE_URL+"/search/?query='"+search_query+"'"
+            query_url = BASE_URL+"/search/?query="+search_query
             driver.get(query_url)
 
             logging.debug("- Wait for results to load.")
@@ -64,23 +53,12 @@ with Chrome(options=options) as driver:
                 ".ais-Hits > ul.ais-Hits-list > li"
             )
 
-            results = []
-
             if search_results:
                 logging.info(f"✅ Search results ({len(search_results)} items).")
-                for result in search_results:
-
-                    # Get the link to the search result
-
-                    #result_link = result.find_element(By.TAG_NAME, 'a').get_attribute('href')
-
-                    #logging.info(f"{result.text.strip()} - {result_link}")
-                    results.append(result.text.strip())
+                results = [result.text.strip() for result in search_results]
             else:
-
+                results = []
                 logging.warning(f"🚨 No search results found for '{search_query}'")
-
-            time.sleep(20)
 
             RESULTS.append({
                 "search": search_query,
@@ -92,3 +70,6 @@ with Chrome(options=options) as driver:
     except Exception as e:
         logging.error("An error occurred:"+str(e))
         logging.error(traceback.format_exc())
+
+with open("search-results.json", "wt") as fid:
+    json.dump(RESULTS, fid)
