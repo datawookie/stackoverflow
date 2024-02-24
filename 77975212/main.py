@@ -24,16 +24,14 @@ user_agent_rotator = UserAgent(software_names=software_names, operating_systems=
 ATTEMPTS = 3
 TIMEOUT = 30
 
+
 def request_with_proxy(url, headers={}):
     headers["User-Agent"] = user_agent_rotator.get_random_user_agent()
     try:
-        proxy_url = f'http://{PROXY_USER}:{PROXY_PWRD}@{PROXY_HOST}:{PROXY_PORT}'
-        proxies = {
-            'http': proxy_url,
-            'https': proxy_url
-        }
-    except:
-        raise TypeError("Missing environment variables!")
+        proxy_url = f"http://{PROXY_USER}:{PROXY_PWRD}@{PROXY_HOST}:{PROXY_PORT}"
+        proxies = {"http": proxy_url, "https": proxy_url}
+    except NameError:
+        raise NameError("Missing environment variables!")
 
     print(url)
     print(headers)
@@ -43,7 +41,9 @@ def request_with_proxy(url, headers={}):
             response = requests.get(url, headers=headers, proxies=proxies, timeout=TIMEOUT)
             print(response.status_code)
             return response
-        except Exception as E: print(E)
+        except Exception as E:
+            print(E)
+
 
 if __name__ == "__main__":
     request_with_proxy("https://github.com/davidteather/everything-web-scraping/stargazers")

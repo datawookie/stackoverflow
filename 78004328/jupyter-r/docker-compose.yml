@@ -13,4 +13,3 @@ services:
       - TZ=UTC+1  # Set the container timezone
     image: jupyter_r
     container_name: jupyter_r
-
