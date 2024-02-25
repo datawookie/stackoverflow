@@ -15,7 +15,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: dbadmin
       MYSQL_TCP_PORT: 3307
-      MYSQL_UNIX_PORT: 3307
     volumes:
       - vol2-db-vol:/var/lib/mysql
 

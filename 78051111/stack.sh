@@ -11,7 +11,6 @@ docker run -d --name db1 \
 docker run -d --name db2 \
     -e MYSQL_ROOT_PASSWORD=dbadmin \
     -e MYSQL_TCP_PORT=3307 \
-    -e MYSQL_UNIX_PORT=3307 \
     -v vol2-db-vol:/var/lib/mysql \
     mariadb:10.5.24-focal
 
