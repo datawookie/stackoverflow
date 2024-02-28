@@ -1,0 +1,35 @@
+<Project>
+  <PropertyGroup>
+    <!-- Specify the output path for all projects in the solution -->
+    <OutputPath>./bin/$(Configuration)/</OutputPath>
+
+    <!-- Set the C# language version for all projects -->
+    <LangVersion>latest</LangVersion>
+
+    <!-- Define a common warning level -->
+    <WarningLevel>4</WarningLevel>
+
+    <!-- Set nullable reference types feature -->
+    <Nullable>enable</Nullable>
+
+    <!-- Define any constants that should be available in all projects -->
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+
+    <!-- Set the .NET Framework version for all projects -->
+    <TargetFramework>net6.0</TargetFramework>
+
+    <!-- Configuration for deterministic builds -->
+    <Deterministic>true</Deterministic>
+
+    <!-- Other properties like version numbers, authors, etc. -->
+    <Version>1.0.0</Version>
+    <Authors>My Company</Authors>
+    <Company>My Company</Company>
+  </PropertyGroup>
+
+  <!-- You can also specify package references that should be included in all projects -->
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <!-- Add other common package references here -->
+  </ItemGroup>
+</Project>

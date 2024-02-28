@@ -1,0 +1,15 @@
+<Project>
+  <ItemGroup>
+    <!-- Define NuGet package versions for use in project files -->
+    <PackageVersion Include="Serilog" Version="2.10.0" />
+    <PackageVersion Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageVersion Include="NUnit" Version="3.13.0" />
+    <PackageVersion Include="Moq" Version="4.14.5" />
+    <!-- Add other package versions here -->
+
+    <!-- Centralize versioning for analyzers or other development tools -->
+    <PackageVersion Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.1" />
+    <PackageVersion Include="StyleCop.Analyzers" Version="1.1.118" />
+    <!-- Add other analyzer versions here -->
+  </ItemGroup>
+</Project>
