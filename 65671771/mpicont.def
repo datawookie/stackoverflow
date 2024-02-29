@@ -5,11 +5,11 @@ From: ubuntu:latest
     export OMPI_DIR=/opt/ompi
     export SINGULARITY_OMPI_DIR=$OMPI_DIR
     export SINGULARITYENV_APPEND_PATH=$OMPI_DIR/bin
-    export SINGULAIRTYENV_APPEND_LD_LIBRARY_PATH=$OMPI_DIR/lib
+    export SINGULARITYENV_APPEND_LD_LIBRARY_PATH=$OMPI_DIR/lib
 
 %post
     echo "Installing required packages..."
-    apt-get update && apt-get install -y wget git bash gcc gfortran g++ make file
+    apt-get update && apt-get install -y wget git bash gcc gfortran g++ make file bzip2
 
     echo "Installing Open MPI"
     export OMPI_DIR=/opt/ompi
@@ -20,4 +20,4 @@ From: ubuntu:latest
     # Download
     cd /tmp/ompi && wget -O openmpi-$OMPI_VERSION.tar.bz2 $OMPI_URL && tar -xjf openmpi-$OMPI_VERSION.tar.bz2
     # Compile and install
-    cd /tmp/ompi/openmpi-$OMPI_VERSION && ./configure --prefix=$OMPI_DIR && make install
+    cd /tmp/ompi/openmpi-$OMPI_VERSION && ./configure --prefix=$OMPI_DIR && make all install
