@@ -1,0 +1,66 @@
+version: '3'
+
+services:
+  traefik:
+    image: traefik:v2.11
+    container_name: "traefik"
+    restart: always
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker"
+      - "--providers.docker.exposedByDefault=false"
+      - "--providers.docker.network=traefik_web"
+      - "--entrypoints.http.address=:80"
+      - "--entrypoints.http.http.redirections.entrypoint.to=https"
+      - "--entrypoints.http.http.redirections.entrypoint.scheme=https"
+      - "--entrypoints.https.address=:443"
+      - "--entrypoints.https.http.tls.certResolver=le"
+      # - "--certificatesresolvers.le.acme.tlschallenge=true"
+      # - "--certificatesresolvers.le.acme.email=deine@mail.de"
+      # - "--certificatesresolvers.le.acme.storage=/letsencrypt/acme.json"
+  #     - "--log.level=DEBUG"
+  #     - "--api.insecure=true"
+  #     - "--providers.docker=true"
+  #     - "--entrypoints.web.address=:80"
+  #     - "--entrypoints.websecure.address=:443"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+  #     # - /var/run/docker.sock:/var/run/docker.sock:ro
+      - "/var/run/docker.sock:/var/run/docker.sock"
+  #     # - ./../letsencrypt:/letsencrypt
+  #   networks:
+  #     - traefik_web
+
+  gitlab:
+    image: 'gitlab/gitlab-ce:latest'
+    hostname: "gitlab.example.com"
+    container_name: gitlab
+    environment:
+      GITLAB_OMNIBUS_CONFIG: "external_url 'https://gitlab.example.com'"
+    # ports:
+    #   - "80:80"
+    #   - "443:443"
+    #   - "8080:8080"
+    networks:
+      - traefik_web
+    labels:
+      # - "traefik.enable=true"
+      # - "traefik.http.routers.gitlab.rule=Host(`gitlab.example.com`)"
+      # - "traefik.http.routers.gitlab.entrypoints=https"
+      # - "traefik.http.routers.gitlab.tls=true"
+      # - "traefik.http.routers.gitlab.service=gitlab-main"
+      # - "traefik.http.services.gitlab-main.loadbalancer.server.port=80"
+      # - traefik.enable=true
+      - traefik.http.routers.gitlab.rule=Host(`example.com`) && PathPrefix(`/`)
+      - traefik.http.services.gitlab.loadbalancer.server.port=8000
+      - traefik.http.middlewares.firehouse-compress.compress=true
+      - traefik.http.routers.gitlab.middlewares=firehouse-compress,gitlab-stripprefix
+      - traefik.http.middlewares.testheader.headers.customresponseheaders.X-Test-Header=TraefikProxy
+      - traefik.http.routers.gitlab.middlewares=testheader
+
+networks:
+  traefik_web:
+    name: traefik_web
