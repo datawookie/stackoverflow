@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  php:
+    container_name: php
+    build:
+      context: .
+      target: php
+    # volumes:
+    #   - wordpress-data:/var/www/html
+    # environment:
+    #   - WORDPRESS_DB_HOST=db
+    #   - WORDPRESS_DB_USER=wordpress
+    #   - WORDPRESS_DB_PASSWORD=wordpress
+    #   - WORDPRESS_DB_NAME=wordpress
+    # networks:
+    #   - app-network
+
+  nginx:
+    container_name: nginx
+    build:
+      context: .
+      target: nginx
+    depends_on:
+      - php
+    ports:
+      - "80:80"
+    # volumes:
+    #   - wordpress-data:/var/www/html
+
+# volumes:
+#   wordpress-data:
+#   db-data:
