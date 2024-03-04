@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "nv6x9qVw/9g3pgyLsKF2ngz4AaSxpFRHKUp5fsO3ngzSk/2oUuZesdfuHcyam1YWVJ4zcjo+2cSzSeeFjG9eQQ==",
+  "success": true,
+  "projectFilePath": "/home/wookie/proj/stackoverflow/78097745/PuppeteerProject/PuppeteerProject.csproj",
+  "expectedPackageFiles": [
+    "/home/wookie/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.0/microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "/home/wookie/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/2.0.0/microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
+    "/home/wookie/.nuget/packages/microsoft.extensions.logging/2.0.2/microsoft.extensions.logging.2.0.2.nupkg.sha512",
+    "/home/wookie/.nuget/packages/microsoft.extensions.logging.abstractions/2.0.2/microsoft.extensions.logging.abstractions.2.0.2.nupkg.sha512",
+    "/home/wookie/.nuget/packages/microsoft.extensions.options/2.0.2/microsoft.extensions.options.2.0.2.nupkg.sha512",
+    "/home/wookie/.nuget/packages/microsoft.extensions.primitives/2.0.0/microsoft.extensions.primitives.2.0.0.nupkg.sha512",
+    "/home/wookie/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/home/wookie/.nuget/packages/puppeteersharp/14.1.0/puppeteersharp.14.1.0.nupkg.sha512",
+    "/home/wookie/.nuget/packages/system.runtime.compilerservices.unsafe/4.4.0/system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
