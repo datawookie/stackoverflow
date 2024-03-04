@@ -1,0 +1,28 @@
+ARG BASE_IMG=python:3.11-slim
+ARG VENV="/opt/venv"
+
+FROM $BASE_IMG as compile-image
+ARG VENV
+
+RUN apt-get update && \
+    apt-get upgrade && \
+    apt-get install -y python3-dev libhdf5-dev libnetcdf-dev
+
+RUN python -m venv $VENV
+ENV PATH="$VENV/bin:$PATH"
+
+RUN pip install numpy~=1.23.5 netcdf4~=1.6.4 h5py~=3.9.0
+
+FROM $BASE_IMG
+ARG VENV
+
+RUN apt-get update && \
+    apt-get upgrade && \
+    apt-get install -y libhdf5-dev libnetcdf-dev
+
+COPY --from=compile-image $VENV $VENV
+ENV PATH="$VENV/bin:$PATH"
+
+COPY test.py test.py
+
+ENTRYPOINT ["python", "-m", "test"]
