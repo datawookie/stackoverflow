@@ -182,6 +182,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   rails
+  railties
   sorbet-static (= 0.5.10346)
 
 BUNDLED WITH
