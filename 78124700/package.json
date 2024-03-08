@@ -1,0 +1,12 @@
+{
+  "name": "landing",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "",
+    "build": "tsc -b app/src",
+    "start": ""
+  },
+  "dependencies": {
+    "typescript": "*"
+  }
+}
