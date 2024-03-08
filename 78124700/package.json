@@ -4,9 +4,9 @@
   "scripts": {
     "dev": "",
     "build": "tsc -b app/src",
-    "start": ""
+    "start": "node app/src/dist/bot.js"
   },
   "dependencies": {
-    "typescript": "*"
+    "typescript": "5.4.2"
   }
 }
