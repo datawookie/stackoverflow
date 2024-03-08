@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  selenium-hub:
+    image: selenium/hub:latest
+    container_name: selenium-hub
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "5555:5555"
+    expose:
+      - "5555"
+    networks:
+       - hub_network
+
+  chrome-node:
+    image: selenium/standalone-chrome:latest
+    container_name: chrome-node
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=5555
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+       - hub_network
+
+  selenium.test:
+    build:
+      context: .
+      dockerfile: BitflySelenium/Dockerfile
+    container_name: selenium.test
+    depends_on:
+      - selenium-hub
+      - chrome-node
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+       - hub_network
+
+networks:
+ hub_network:
+  external: false

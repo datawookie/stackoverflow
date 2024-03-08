@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "",
-    "build": "tsc -b app/src",
-    "start": "node app/src/dist/bot.js"
+    "build": "tsc -b src",
+    "start": "node src/dist/bot.js"
   },
   "dependencies": {
     "typescript": "5.4.2"
