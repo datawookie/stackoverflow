@@ -1,0 +1,84 @@
+version: '2.4'
+networks:
+    all:
+services:
+    bridge:
+        container_name: bridge-wyzely-detect
+        restart: unless-stopped
+        image: mrlt8/wyze-bridge:latest
+        # The ports can be removed since we're using the network
+        # Just an unnecesary security risk to expose them but can be useful for debugging
+        # ports:
+        #     - 1935:1935 # RTMP
+        #     - 8554:8554 # RTSP (this is really the only one we need)
+        #     - 8888:8888 # HLS
+        # - 5000:5000 # WEB-UI
+        environment:
+            # This is a simple configuration without 2FA.
+            # For advanced configuration, including using an API key, see https://github.com/mrlt8/docker-wyze-bridge/wiki/Two-Factor-Authentication
+            # Either replace the following with your Wyze username and password, or set the environment variables
+            - WYZE_EMAIL=${WYZE_EMAIL} 
+            - WYZE_PASSWORD=${WYZE_PASSWORD}
+        networks:
+            all:
+    ntfy:
+      image: binwiederhier/ntfy
+      container_name: ntfy-wyzely-detect
+      command:
+        - serve
+      environment:
+        - TZ=UTC    # optional: set desired timezone
+      # volumes:
+      #   - /var/cache/ntfy:/var/cache/ntfy
+      #   - /etc/ntfy:/etc/ntfy
+      ports:
+        - 9216:80
+      restart: unless-stopped
+      networks:
+        all:
+    wyzely-detect:
+      container_name: wyzely-detect
+      # restart: unless-stopped 
+      # image: ghcr.io/slashtechno/wyzely-detect:latest
+      # Building from source is also an option
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command:
+        - "--ntfy-url"
+        # Replace "wyzely-detect" with the desired notification stream
+        - "http://ntfy:80/wyzely-detect"
+
+        - "--rtsp-url"
+        # Replace "cv" with the desired rtsp stream
+        - "rtsp://bridge:8554/cv"
+
+        # Example second rtsp stream
+        # - "--rtsp-url"
+        # - "rtsp://bridge:8554/camera"
+      volumes:
+        - ./faces:/app/faces
+      networks:
+        all:
+      environment:
+        - URL=rtsp://bridge:8554/cv
+        - NO_DISPLAY=true
+        - NTFY_URL=http://ntfy:80/wyzely-detect
+      depends_on:
+        - bridge
+
+      # Use curl to check if the rtsp stream is up, then run the face recognition
+      # command: >
+      #   /bin/sh -c "
+      #   while true; do
+      #     curl -s http://bridge:8888/cv/0.m3u8 > /dev/null
+      #     if [ $? -eq 0 ]; then
+      #       echo 'Stream is up, running face recognition'
+      #       python3 /app/main.py
+      #     else
+      #       echo 'Stream is down, waiting 5 seconds'
+      #       sleep 5
+      #     fi
+      #   done
+      #   "
+      tty: true

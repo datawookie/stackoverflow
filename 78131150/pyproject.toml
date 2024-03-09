@@ -1,0 +1,68 @@
+[tool.poetry]
+name = "wyzely-detect"
+version = "0.2.1"
+description = ""
+authors = ["slashtechno <77907286+slashtechno@users.noreply.github.com>"]
+repository = "https://github.com/slashtechno/wyzely-detect"
+keywords = ["object-detection", "face-detection", "wyze", "security", "yolov8", "unified-push"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "wyzely_detect"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.12"
+python-dotenv = "^1.0.0"
+httpx = "^0.25.0"
+opencv-python = "^4.8.1.78"
+ultralytics = "^8.0.190"
+hjson = "^3.1.0"
+numpy = "^1.23.2"
+torchvision = "0.16.2"
+torch = {version = "2.1.*", source = "pytorch-cpu", markers = "extra!='cuda'" }
+absl-py = "^2.1.0"
+tensorflow = {version = "^2.13.0", markers = "extra!='cuda'"}
+tensorflow-macos = { version = "^2.13.0", platform = "darwin", markers = "platform_machine=='arm64'" }
+tensorflow-intel = { version = "^2.13.0", platform = "win32" }
+tensorflow-io-gcs-filesystem = [
+    { version = "< 0.32.0", markers = "platform_system == 'Windows'" }
+]
+deepface = "^0.0.79"
+prettytable = "^3.9.0"
+
+[tool.poetry.group.gpu]
+optional = true
+
+[tool.poetry.group.gpu.dependencies]
+torch = {version = "2.1.*", source = "pytorch-cu121", markers = "extra=='cuda'"}
+tensorflow = {version = "^2.14.0", extras = ["and-cuda"], markers = "extra=='cuda'"}
+torchvision = "0.16.2"
+
+[tool.poetry.extras]
+cuda = []
+
+[[tool.poetry.source]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[[tool.poetry.source]]
+name = "pytorch-cu121"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+ruff = "^0.0.291"
+ipykernel = "^6.25.2"
+nbconvert = "^7.9.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 135
+extend-select= ["FIX002"]
+
+[tool.poetry.scripts]
+wyzely-detect = "wyzely_detect.__main__:main"
