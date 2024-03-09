@@ -83,10 +83,7 @@ def process_footage(
 
         # The following is stuff for objects
         # Setup dictionary of object names
-        if (
-            objects_and_peoples["objects"] == {}
-            or objects_and_peoples["objects"] is None
-        ):
+        if objects_and_peoples["objects"] == {} or objects_and_peoples["objects"] is None:
             for name in r.names.values():
                 objects_and_peoples["objects"][name] = {
                     "last_detection_time": None,
@@ -99,9 +96,7 @@ def process_footage(
             for obj in detect_object:
                 # .keys() shouldn't be needed
                 if obj not in objects_and_peoples["objects"]:
-                    print(
-                        f"Warning: {obj} is not in the list of objects the model can detect!"
-                    )
+                    print(f"Warning: {obj} is not in the list of objects the model can detect!")
 
         for box in r.boxes:
             # Get the name of the object
@@ -118,9 +113,7 @@ def process_footage(
             # print("---")
 
             # Now do stuff (if conf > 0.5)
-            if conf < object_confidence_threshold or (
-                class_id not in detect_object and detect_object != []
-            ):
+            if conf < object_confidence_threshold or (class_id not in detect_object and detect_object != []):
                 # If the confidence is too low
                 # or if the object is not in the list of objects to detect and the list of objects to detect is not empty
                 # then skip this iteration
@@ -278,10 +271,10 @@ def recognize_face(
             model_name="ArcFace",
             detector_backend="opencv",
         )
-        '''
+        """
         Example dataframe, for reference
-        identity  (path to image) | source_x | source_y | source_w | source_h | VGG-Face_cosine (pretty much the confidence \\_('_')_/) 
-        '''
+        identity  (path to image) | source_x | source_y | source_w | source_h | VGG-Face_cosine (pretty much the confidence \\_('_')_/)
+        """
     except ValueError as e:
         if (
             str(e)
@@ -330,8 +323,6 @@ def recognize_face(
             return None
         # label = "Unknown"
         to_return = dict(label=label, **coordinates)
-        print(
-            f"Cosine similarity: {cosine_similarity}, filname: {path_to_image.name}, to_return: {to_return}"
-        )
+        print(f"Cosine similarity: {cosine_similarity}, filname: {path_to_image.name}, to_return: {to_return}")
         return to_return
     return None

@@ -30,9 +30,7 @@ def set_argparse():
         action="append",
         # If RTSP_URL is in the environment, use it, otherwise just use a blank list
         # This may cause problems down the road, but if it does, env for this can be removed
-        default=[os.environ["RTSP_URL"]]
-        if "RTSP_URL" in os.environ and os.environ["RTSP_URL"] != ""
-        else [],
+        default=[os.environ["RTSP_URL"]] if "RTSP_URL" in os.environ and os.environ["RTSP_URL"] != "" else [],
         type=str,
         help="RTSP camera URL",
     )
@@ -50,8 +48,7 @@ def set_argparse():
     video_options.add_argument(
         "--run-scale",
         # Set it to the env RUN_SCALE if it isn't blank, otherwise set it to 0.25
-        default=os.environ["RUN_SCALE"]
-        if "RUN_SCALE" in os.environ and os.environ["RUN_SCALE"] != ""
+        default=os.environ["RUN_SCALE"] if "RUN_SCALE" in os.environ and os.environ["RUN_SCALE"] != ""
         # else 0.25,
         else 1,
         type=float,
@@ -60,8 +57,7 @@ def set_argparse():
     video_options.add_argument(
         "--view-scale",
         # Set it to the env VIEW_SCALE if it isn't blank, otherwise set it to 0.75
-        default=os.environ["VIEW_SCALE"]
-        if "VIEW_SCALE" in os.environ and os.environ["VIEW_SCALE"] != ""
+        default=os.environ["VIEW_SCALE"] if "VIEW_SCALE" in os.environ and os.environ["VIEW_SCALE"] != ""
         # else 0.75,
         else 1,
         type=float,
@@ -71,9 +67,7 @@ def set_argparse():
     video_options.add_argument(
         "--no-display",
         default=os.environ["NO_DISPLAY"]
-        if "NO_DISPLAY" in os.environ
-        and os.environ["NO_DISPLAY"] != ""
-        and os.environ["NO_DISPLAY"].lower() != "false"
+        if "NO_DISPLAY" in os.environ and os.environ["NO_DISPLAY"] != "" and os.environ["NO_DISPLAY"].lower() != "false"
         else False,
         action="store_true",
         help="Don't display the video feed",
@@ -93,8 +87,7 @@ def set_argparse():
     notifcation_services = argparser.add_argument_group("Notification Services")
     notifcation_services.add_argument(
         "--ntfy-url",
-        default=os.environ["NTFY_URL"]
-        if "NTFY_URL" in os.environ and os.environ["NTFY_URL"] != ""
+        default=os.environ["NTFY_URL"] if "NTFY_URL" in os.environ and os.environ["NTFY_URL"] != ""
         # This is None but there is a default set in notify.py
         else None,
         type=str,
@@ -122,8 +115,7 @@ def set_argparse():
     timers.add_argument(
         "--notification-window",
         default=os.environ["NOTIFICATION_WINDOW"]
-        if "NOTIFICATION_WINDOW" in os.environ
-        and os.environ["NOTIFICATION_WINDOW"] != ""
+        if "NOTIFICATION_WINDOW" in os.environ and os.environ["NOTIFICATION_WINDOW"] != ""
         else 30,
         type=int,
         help="The time (seconds) before another notification can be sent",
@@ -141,8 +133,7 @@ def set_argparse():
     face_recognition.add_argument(
         "--face-confidence-threshold",
         default=os.environ["FACE_CONFIDENCE_THRESHOLD"]
-        if "FACE_CONFIDENCE_THRESHOLD" in os.environ
-        and os.environ["FACE_CONFIDENCE_THRESHOLD"] != ""
+        if "FACE_CONFIDENCE_THRESHOLD" in os.environ and os.environ["FACE_CONFIDENCE_THRESHOLD"] != ""
         else 0.3,
         type=float,
         help="The confidence (currently cosine similarity) threshold to use for face recognition",
@@ -170,8 +161,7 @@ def set_argparse():
     object_detection.add_argument(
         "--object-confidence-threshold",
         default=os.environ["OBJECT_CONFIDENCE_THRESHOLD"]
-        if "OBJECT_CONFIDENCE_THRESHOLD" in os.environ
-        and os.environ["OBJECT_CONFIDENCE_THRESHOLD"] != ""
+        if "OBJECT_CONFIDENCE_THRESHOLD" in os.environ and os.environ["OBJECT_CONFIDENCE_THRESHOLD"] != ""
         # I think this should always be a str so using lower shouldn't be a problem.
         # Also, if the first check fails the rest shouldn't be run
         and os.environ["OBJECT_CONFIDENCE_THRESHOLD"].lower() != "false" else 0.6,

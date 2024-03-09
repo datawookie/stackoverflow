@@ -17,7 +17,7 @@ services:
             # This is a simple configuration without 2FA.
             # For advanced configuration, including using an API key, see https://github.com/mrlt8/docker-wyze-bridge/wiki/Two-Factor-Authentication
             # Either replace the following with your Wyze username and password, or set the environment variables
-            - WYZE_EMAIL=${WYZE_EMAIL} 
+            - WYZE_EMAIL=${WYZE_EMAIL}
             - WYZE_PASSWORD=${WYZE_PASSWORD}
         networks:
             all:
@@ -38,7 +38,7 @@ services:
         all:
     wyzely-detect:
       container_name: wyzely-detect
-      # restart: unless-stopped 
+      # restart: unless-stopped
       # image: ghcr.io/slashtechno/wyzely-detect:latest
       # Building from source is also an option
       build:

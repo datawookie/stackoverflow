@@ -48,8 +48,7 @@ def thing_detected(
             # If the object has not been detected before
             respective_type[thing_name]["last_detection_time"] is None
             # If the last detection was more than 15 seconds ago
-            or time.time() - respective_type[thing_name]["last_detection_time"]
-            > detection_window
+            or time.time() - respective_type[thing_name]["last_detection_time"] > detection_window
         ):
             # Set the last detection time to now
             respective_type[thing_name]["last_detection_time"] = time.time()
@@ -65,10 +64,7 @@ def thing_detected(
         else:
             # Check if the last NOTIFICATION was less than 15 seconds ago
             # If it was, then don't do anything
-            if (
-                time.time() - respective_type[thing_name]["last_detection_time"]
-                <= notification_window
-            ):
+            if time.time() - respective_type[thing_name]["last_detection_time"] <= notification_window:
                 pass
             # If it was more than 15 seconds ago, reset the detection duration
             # This effectively resets the notification timer
@@ -93,21 +89,17 @@ def thing_detected(
     # Check if detection has been ongoing for 2 seconds or more in the past 15 seconds
     if (
         respective_type[thing_name]["detection_duration"] >= detection_duration
-        and time.time() - respective_type[thing_name]["last_detection_time"]
-        <= detection_window
+        and time.time() - respective_type[thing_name]["last_detection_time"] <= detection_window
     ):
         # If the last notification was more than 15 seconds ago, then send a notification
         if (
             respective_type[thing_name]["last_notification_time"] is None
-            or time.time() - respective_type[thing_name]["last_notification_time"]
-            > notification_window
+            or time.time() - respective_type[thing_name]["last_notification_time"] > notification_window
         ):
             respective_type[thing_name]["last_notification_time"] = time.time()
             print(f"Detected {thing_name} for {detection_duration} seconds")
             if ntfy_url is None:
-                print(
-                    "ntfy_url is None. Not sending notification. Set ntfy_url to send notifications"
-                )
+                print("ntfy_url is None. Not sending notification. Set ntfy_url to send notifications")
             else:
                 headers = construct_ntfy_headers(
                     title=f"{thing_name} detected",

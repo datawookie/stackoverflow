@@ -81,10 +81,7 @@ def main():
     pretty_table = PrettyTable(field_names=["Source Type", "Resolution"])
     for source_type, sources in video_sources.items():
         for source in sources:
-            if (
-                source.get(cv2.CAP_PROP_FRAME_WIDTH) == 0
-                or source.get(cv2.CAP_PROP_FRAME_HEIGHT) == 0
-            ):
+            if source.get(cv2.CAP_PROP_FRAME_WIDTH) == 0 or source.get(cv2.CAP_PROP_FRAME_HEIGHT) == 0:
                 message = "Capture for a source failed as resolution is 0x0.\n"
                 if source_type == "streams":
                     message += "Check if the stream URL is correct and if the stream is online."
