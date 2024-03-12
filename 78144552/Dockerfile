@@ -1,7 +1,9 @@
-FROM openjdk:17.0.2
-LABEL authors="ivanh"
+FROM gradle:jdk17
+
 WORKDIR /app
-COPY ./ .
+
+COPY . .
+
 RUN ./gradlew clean build
-ENTRYPOINT ["ls"]
-EXPOSE 8001
+
+ENTRYPOINT [ "ls" ]
