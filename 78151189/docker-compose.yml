@@ -1,0 +1,33 @@
+version: '3.1'
+services:
+  redis:
+    image: redis:latest
+    restart: always
+    container_name: cache
+    ports:
+     - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning --requirepass password
+    logging:
+      driver: "none"
+
+  php-redis:
+    image: php-redis
+    container_name: php-redis
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=password
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    depends_on:
+      - php-redis
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      # - ./index.php:/var/www/html/index.php
