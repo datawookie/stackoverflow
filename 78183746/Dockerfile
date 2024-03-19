@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM python:3.11.3
 
 RUN apt-get update -y \
     && apt-get upgrade -y \
@@ -24,18 +24,6 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
     && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
     && apt-get update && apt-get install -y \
     google-chrome-stable
-
-RUN wget -O /tmp/python.tar.xz https://www.python.org/ftp/python/3.11.3/Python-3.11.3.tar.xz \
-    && mkdir -p /usr/src/python \
-    && tar -xJC /usr/src/python --strip-components=1 -f /tmp/python.tar.xz \
-    && rm /tmp/python.tar.xz \
-    && cd /usr/src/python \
-    && ./configure --enable-optimizations --with-ssl \
-    && make -j$(nproc) \
-    && make install \
-    && cd / \
-    && rm -rf /usr/src/python \
-    && python3 -c "import ssl; print(ssl.OPENSSL_VERSION)"
 
 RUN pip3 install --upgrade pip
 
