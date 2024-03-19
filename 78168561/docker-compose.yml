@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  # web:
+  #   build: ./web
+  #   ports:
+  #     - 3000:3000
+  api:
+    build: ./api
+    ports:
+      - 5001:5001
+    environment:
+      DB_URL: http://localhost:5001/api/
+  db:
+    container_name: apidb
+    hostname: mssql-db
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "PassW0rd!"
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"
