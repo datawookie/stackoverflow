@@ -1,6 +1,5 @@
-Feature: Hello Cucumber
+Feature: Chrome Loads Page
 
-Scenario: Saying hello
-  Given I have Cucumber installed
-  When I run a test
-  Then I should see that the test passes
+  Scenario: Load example page
+    Given I am on the example.com page
+    Then the page has loaded

@@ -1,13 +1,18 @@
-FROM selenium/hub:nightly
+FROM selenium/standalone-chrome:latest
+
+USER root
+
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get install -y nodejs
 
 WORKDIR /usr/src/app
 
-RUN sudo apt-get update
+COPY . .
 
-RUN sudo curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+RUN npm install
 
-RUN sudo apt-get install nodejs -y
+RUN chmod +x ./start.sh
 
-COPY . /usr/src/app/
+USER seluser
 
-CMD ./start.sh
+CMD ["./start.sh"]

@@ -1,17 +1,34 @@
-import { Given, When, Then } from '@cucumber/cucumber';
+import { Given, Then, After } from '@cucumber/cucumber';
+import { Builder, By, until } from 'selenium-webdriver';
 import assert from 'assert';
+import chrome from 'selenium-webdriver/chrome.js';
 
-Given('I have Cucumber installed', function () {
-  // Normally, you'd check something related to your setup.
-  // This step is just for demonstration.
+let driver;
+
+let options = new chrome.Options();
+options.addArguments('--headless');
+options.addArguments('--no-sandbox');
+options.addArguments('--disable-dev-shm-usage');
+options.addArguments('--disable-gpu');
+options.addArguments('--disable-extensions');
+options.addArguments('--remote-debugging-port=9222');
+
+Given('I am on the example.com page', async function () {
+  driver = await new Builder().forBrowser('chrome').setChromeOptions(options).build();
+  await driver.get('http://www.example.com');
 });
 
-When('I run a test', function () {
-  // This step would also involve more in a real test.
-  this.actualAnswer = 'test passes';
+Then('the page has loaded', async function () {
+  // Wait for the h1 element to be loaded in the DOM
+  let element = await driver.wait(until.elementLocated(By.css('h1')), 10000);
+  let text = await element.getText();
+
+  // Verify the h1 text is "Example Domain"
+  assert.strictEqual(text, "Example Domain", 'The page did not load correctly.');
 });
 
-Then('I should see that the test passes', function () {
-  // In a real test, you'd compare the actual output with the expected output.
-  assert.strictEqual(this.actualAnswer, 'test passes');
+After(async function () {
+  if (driver) {
+    await driver.quit();
+  }
 });
