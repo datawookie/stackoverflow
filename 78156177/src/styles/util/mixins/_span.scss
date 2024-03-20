@@ -1,0 +1,72 @@
+@use "sass:math";
+
+@mixin fluid-width($min, $max, $minWidth, $maxWidth: $desktop-pageWidth) {
+  $multiplier: (
+    $max - $min) / ($maxWidth - $minWidth
+  );
+$vwMultiplier: $multiplier / ($multiplier * 0 + 1) * 100vw;
+width: calc(#{($min - $multiplier * $minWidth) + " + " + $vwMultiplier});
+}
+
+@mixin desktop($count, $properties: "width", $exclude: 0) {
+  $colWidth: calc(#{math.div($desktop-colWidth, $desktop-pageWidth) * $vwMultiplier});
+  $gutterWidth: calc(#{math.div($desktop-gutterWidth, $desktop-pageWidth) * 100vw});
+  $outerGutter: calc(#{math.div($desktop-gutterWidth, $desktop-pageWidth) * 100vw});
+
+  @if type-of($properties)=="map" {
+    @each $property in map-keys($properties) {
+      @include rem($property, map-get($properties, $property));
+    }
+  }
+
+  @else {
+    @each $property in $properties {
+      @if $rem-fallback or $rem-px-only {
+        #{$property}: desktopCols($count, $exclude);
+      }
+
+      @if not $rem-px-only {
+        #{$property}: desktopCols($count, $exclude);
+      }
+    }
+  }
+}
+
+@function desktopCols($count, $exclude: 0) {
+  @if ($exclude) {
+    @return calc(#{math.div(($desktop-colWidth + $desktop-gutterWidth) * $count, $desktop-pageWidth) * 100vw + " - " + #{math.div($desktop-gutterWidth, $desktop-pageWidth) * 100vw}
+    });
+}
+
+@return calc($desktop-colWidth + $desktop-gutterWidth * $count, $desktop-pageWidth * 100vw);
+}
+
+@mixin mobile($count, $properties: width, $exclude: $mobile-gutterWidth) {
+  $mobile-colWidth: calc(#{math.div($mobile-colWidth, $mobile-pageWidth) * 100vw});
+  $mobile-gutterWidth: calc(#{math.div($mobile-gutterWidth, $mobile-pageWidth) * 100vw});
+  $mobile-outerGutter: calc(#{math.div($mobile-outerGutter, $mobile-pageWidth) * 100vw});
+
+  @if type-of($properties)=="map" {
+    @each $property in map-keys($properties) {
+      @include rem($property, map-get($properties, $property));
+    }
+  }
+
+  @else {
+    @each $property in $properties {
+      @if $rem-fallback or $rem-px-only {
+        #{$property}: desktopCols($count, $exclude);
+      }
+
+      @if not $rem-px-only {
+        #{$property}: desktopCols($count, $exclude);
+      }
+    }
+  }
+}
+
+@function mobileCol($count, $exclude: $mobile-gutterWidth) {
+  @return calc(#{((($mobile-colWidth + $mobile-gutterWidth) * $count) / $mobile-pageWidth) *
+ $vwMultiplier
+  });
+}

@@ -1,0 +1,15 @@
+@import "@styles/settings/__settings";
+
+.logoHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  height: 8rem;
+  width: 100%;
+  z-index: 9999;
+
+  .image {
+    width: 10rem;
+  }
+}

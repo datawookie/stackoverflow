@@ -1,0 +1,39 @@
+@use "sass:math";
+
+@mixin responsive-font($min-size: $font-size-sm, $size: $font-size-base-px, $limit: $page-limit) {
+  $scale-font-enable: global-variable-exists(scale);
+  $font-multiplier: 1;
+  $unitless-min: strip-unit($min-size);
+  $unitless-size: strip-unit($size);
+  $baseline: strip-unit($bp-sm);
+  $font-multiplier: math.div($unitless-size - $unitless-min, strip-unit($limit) - $baseline);
+  $font-baseline: (
+    $unitless-min - $font-multiplier * $baseline
+  );
+
+font-size: #{$unitless-min}px;
+
+@if $scale-font-enable ==true {
+  font-size: calc(#{$unitless-min}px * #{var(--scale-font)});
+}
+
+@media (min-width: $bp-sm) {
+  font-size: #{$unitless-min}px;
+
+  @if $scale-font-enable ==true {
+    font-size: calc((#{$font-multiplier} * #{100vw} + (#{$font-baseline}px)) * #{var(--scale-font)});
+  }
+
+  @else {
+    font-size: calc((#{$font-multiplier} * #{100vw} + (#{$font-baseline}px)));
+  }
+}
+
+@media (min-width: $limit) {
+  font-size: #{$unitless-size}px;
+
+  @if $scale-font-enable ==true {
+    font-size: calc(#{$unitless-size}px * #{var(--scale-font)});
+  }
+}
+}

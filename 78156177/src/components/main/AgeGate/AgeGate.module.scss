@@ -1,0 +1,124 @@
+@import "@styles/config";
+
+.ageGate {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    background-color: $c-astralBlue;
+
+    .inner {
+        z-index: 2;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin-top: -8rem;
+    }
+}
+
+.island {
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    color: $c-white;
+
+    @media screen and (min-width: $bp-lg) {
+        display: flex;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            margin-bottom: $spacing-xxs;
+        }
+
+        h3 {
+            @include h2();
+            margin: 0 $mobile-outerGutter $mobile-outerGutter;
+        }
+    }
+
+    .tabGroup {
+        display: flex;
+        @include mobile(11);
+        margin: 0 auto;
+
+        @media screen and (min-width: $bp-md) {
+            @include desktop(8);
+        }
+
+        @media screen and (min-width: $bp-xl) {
+            @include desktop(5);
+        }
+
+        .tab {
+            @include cta();
+            flex: 1 0 50%;
+            padding: $spacing-m $spacing-l;
+            margin-bottom: -1px;
+            cursor: pointer;
+            color: $c-white;
+            background-color: $c-darkBlue;
+            border: 1px solid hsla(0, 0%, 94%, .7);
+
+            @media (hover: hover) {
+                &:hover {
+                    background-color: $c-white;
+                    color: $c-darkBlue;
+                }
+            }
+
+            &.active {
+                background-color: $c-white;
+                color: $c-darkBlue;
+            }
+
+            &.inActive {
+                background-color: $c-astralBlue;
+                color: $c-white;
+
+                @media (hover: hover) {
+                    &:hover {
+                        color: $c-white;
+                        background-color: darken($c-darkBlue, 10%);
+                    }
+                }
+            }
+
+            &:first-child {
+                border-right: 0;
+            }
+        }
+    }
+}
+
+.tabPanel {
+    display: flex;
+    flex-direction: column;
+    background-color: $c-white;
+
+    .tabText {
+        @include detail;
+        color: $c-black;
+        padding: $spacing-l;
+        max-width: 460px;
+        margin: 0 auto;
+
+        a {
+            color: $c-black;
+            padding-bottom: 1px;
+            border-bottom: 1px solid $c-black;
+        }
+    }
+}

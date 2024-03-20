@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "@components/*": [
+                "src/components/*"
+            ],
+            "@pages/*": [
+                "src/pages/*"
+            ],
+            "@api/*": [
+                "src/api/*"
+            ],
+            "@images/*": [
+                "static/images/*"
+            ],
+            "@styles/*": [
+                "src/styles/*"
+            ],
+            "@helpers/*": [
+                "src/helpers/*"
+            ],
+            "@store/*": [
+                "src/store/*"
+            ]
+        }
+    }
+}

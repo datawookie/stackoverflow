@@ -1,0 +1,39 @@
+@use "sass:math";
+
+@mixin responsive-line-height($min-size: $line-height-sm, $size: $line-height-base-px, $limit: $page-limit) {
+  $scale-line-height-enable: global-variable-exists(scale);
+  $line-height-multiplier: 1;
+  $unitless-min: strip-unit($min-size);
+  $unitless-size: strip-unit($size);
+  $baseline: strip-unit($bp-sm);
+  $line-height-multiplier: math.div($unitless-size - $unitless-min, strip-unit($limit) - $baseline);
+  $line-height-baseline: (
+    $unitless-min - $line-height-multiplier * $baseline
+  );
+
+line-height: #{$unitless-min}px;
+
+@if $scale-line-height-enable ==true {
+  line-height: calc(#{$unitless-min}px * #{var(--scale-line-height)});
+}
+
+@media (min-width: $bp-sm) {
+  line-height: #{$unitless-min}px;
+
+  @if $scale-line-height-enable ==true {
+    line-height: calc((#{$line-height-multiplier} * #{100vw} + (#{$line-height-baseline}px)) * #{var(--scale-line-height)});
+  }
+
+  @else {
+    line-height: calc((#{$line-height-multiplier} * #{100vw} + (#{$line-height-baseline}px)));
+  }
+}
+
+@media (min-width: $limit) {
+  line-height: #{$unitless-size}px;
+
+  @if $scale-line-height-enable ==true {
+    line-height: calc(#{$unitless-size}px * #{var(--scale-line-height)});
+  }
+}
+}

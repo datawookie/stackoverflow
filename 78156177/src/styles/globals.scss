@@ -1,0 +1,132 @@
+@import "./config.scss";
+
+:root {
+    font-size: 62.5%;
+
+    @if global-variable-exists(scale) {
+        --scale-element: 1;
+        --scale-font: 1;
+
+        @each $size in $scale {
+            @media (max-height: nth($size, 1)) {
+                --scale-element: #{nth($size, 2)};
+                --scale-font: #{nth($size, 2)};
+            }
+        }
+    }
+}
+
+html,
+body {
+    min-height: 100vh;
+    background-color: $c-white;
+}
+
+html {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    position: relative;
+    margin: 0;
+    font-size: 1.7rem;
+    line-height: $font-line-height-base;
+    text-size-adjust: 100%; // iOS on orientation change
+    color: $c-black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "itc-benguiat", serif;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+h1 {
+    @include h1();
+    line-height: 1.15;
+}
+
+h2 {
+    @include h2();
+    line-height: 1.235;
+}
+
+h3 {
+    @include h3();
+}
+
+h4 {
+    @include h4();
+}
+
+h5 {
+    @include h5();
+}
+
+h6 {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    @include body();
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: $c-black;
+}
+
+ul,
+ol {
+    font-size: 1.8rem;
+    margin: 0;
+    margin-bottom: 1.75rem;
+    color: $c-black;
+}
+
+strong,
+b {
+    color: $c-black;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+// placeholders
+input,
+textarea,
+select {
+    border-radius: 0;
+
+    &::-webkit-input-placeholder {
+        color: lighten($c-black, 50%);
+    }
+
+    &::-moz-placeholder {
+        opacity: 1;
+        color: lighten($c-black, 50%);
+    }
+
+    &:-ms-input-placeholder {
+        color: lighten($c-black, 50%);
+    }
+}

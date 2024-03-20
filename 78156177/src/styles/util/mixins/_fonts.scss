@@ -1,0 +1,53 @@
+@mixin h1($weight: 400) {
+  @include responsive-font(58, 80);
+  @include responsive-line-height(70, 90);
+  font-weight: $weight;
+}
+
+@mixin h2($weight: 400) {
+  @include responsive-font(64, 64);
+  @include responsive-line-height(74, 74);
+  font-weight: $weight;
+}
+
+@mixin h3($weight: 400) {
+  @include responsive-font(38, 55);
+  @include responsive-line-height(45, 65);
+  font-weight: $weight;
+}
+
+@mixin h4($weight: 400) {
+  @include responsive-font(30, 30);
+  @include responsive-line-height(38, 38);
+  font-weight: $weight;
+}
+
+@mixin h5($weight: 400) {
+  @include responsive-font(20, 20);
+  @include responsive-line-height(24, 25);
+  font-weight: $weight;
+}
+
+@mixin cta() {
+  @include responsive-font(18, 18);
+  @include responsive-line-height(23, 28);
+  font-weight: normal;
+}
+
+@mixin body($weight: 400) {
+  @include responsive-font(20, 20);
+  @include responsive-line-height(23, 23);
+  font-family: "Open Sans", sans-serif;
+  font-weight: $weight;
+  font-style: normal;
+  text-transform: none;
+}
+
+@mixin detail() {
+  @include responsive-font(14, 16);
+  @include responsive-line-height(18, 20);
+  font-family: "century-gothic", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  text-transform: none;
+}
