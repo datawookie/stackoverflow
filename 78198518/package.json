@@ -1,0 +1,15 @@
+{
+  "name": "test",
+  "private": true,
+  "scripts": {
+    "build": "nuxi build"
+  },
+  "engines": {
+    "npm": "^9.0.0"
+  },
+  "dependencies": {
+    "nuxt": "3.11.1",
+    "nuxi": "3.11.1",
+    "@nuxt/kit": "3.11.1"
+  }
+}
