@@ -10,6 +10,9 @@ services:
       - ./Services/Apache/apache.conf:/usr/local/apache2/conf/httpd.conf
     depends_on:
       - django
+    labels:
+      - "traefik.http.routers.web.rule=Host(`localhost`)"
+      - "traefik.http.services.web.loadbalancer.server.port=8080"
 
   django:
     container_name: django
@@ -21,18 +24,18 @@ services:
       - ./Services/Chronocommand:/src
     command: python manage.py runserver 0.0.0.0:8000
 
-# #   traefik:
-# #     image: "traefik:v3.0"
-# #     ports:
-# #       - "80:80"
-# #       - "443:443"
-# #       - "8888:8080"  # Traefik dashboard
-# #     networks:
-# #       - proxy
-# #     volumes:
-# #       - /var/run/docker.sock:/var/run/docker.sock
-# #       - ./Services/DevTraefik/:/etc/traefik
-
-# # networks:
-# #   proxy:
-# #     external: true
+  traefik:
+    container_name: traefik
+    image: traefik:v3.0
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8888:8080"
+    depends_on:
+      - apache
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
