@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  app-a:
+    container_name: app-a
+    build:
+      context: app-a
+      dockerfile: Dockerfile
+
+  app-b:
+    container_name: app-b
+    build:
+      context: app-b
+      dockerfile: Dockerfile
+
+  nginx:
+    container_name: nginx
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    depends_on:
+      - app-a
+      - app-b
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
