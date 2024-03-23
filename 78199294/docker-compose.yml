@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+
+  web:
+    depends_on:
+      - django
+      - traefik
+    expose:
+      - "${VIRTUAL_PORT}"
+    networks:
+      - default
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.chronocommand.rule=Host(`localhost`)"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.chronocommand.entrypoints=web,websecure"
+
+  django:
+    expose:
+      - "80"
+    ports:
+      - "8080:80"
+      - "8000:8000"
+      - "3000:3000"
+    volumes:
+      - ./Services/Chronocommand:/src
+
+  traefik:
+    image: "traefik:v3.0"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8888:8080"  # Traefik dashboard
+    networks:
+      - proxy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./Services/DevTraefik/:/etc/traefik
+
+networks:
+  proxy:
+    external: true
