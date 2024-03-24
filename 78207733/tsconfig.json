@@ -5,10 +5,10 @@
   ],
   "exclude": [
     "node_modules",
-    "bin"
+    "build"
   ],
   "compilerOptions": {
-    "outDir": "bin",
+    "outDir": "build",
     "rootDir": "./",
     "baseUrl": "./",
     "sourceMap": true,
