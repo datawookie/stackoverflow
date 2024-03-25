@@ -1,0 +1,17 @@
+{
+    "name": "test",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+      "build": "echo 'Build script not defined'",
+      "start": "echo 'Start here...'"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "mysql2": "^2.3.0",
+      "sequelize": "^6.6.5",
+      "sequelize-cli": "^6.2.0"
+    },
+    "devDependencies": {
+    }
+  }

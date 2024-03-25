@@ -1,44 +1,20 @@
 version: '3.8'
 
-networks:
-  common:
-    driver: bridge
-
 services:
   db:
-    networks:
-      - common
-    container_name: database
-    volumes:
-      - mysql_data:/var/lib/mysql
+    image: mysql
     restart: on-failure
-    ports:
-      - 3306:3306
-    build:
-      context: .
-      dockerfile: Dockerfile.mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-p$MYSQL_ROOT_PASSWORD"]
       interval: 1s
       retries: 120
 
-  adminer:
-    image: adminer
-    restart: always
-    container_name: adminer-g-database
-    links:
-      - db:db
-    ports:
-      - 8080:8080
-
   app:
-    networks:
-      - common
     build:
       context: .
       dockerfile: Dockerfile.app
-    container_name: g-app
-    restart: always
     links:
       - db:db
     ports:
@@ -46,12 +22,3 @@ services:
     depends_on:
       db:
         condition: service_healthy
-
-    command: sh -c "npx sequelize-cli db:migrate && npm install && npm run build && npm start"
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-
-volumes:
-  mysql_data:
-    driver: local
