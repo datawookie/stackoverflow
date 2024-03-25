@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  cassandra:
+    container_name: cassandra
+    image: cassandra:latest
+    ports:
+      - 9042:9042
+    environment:
+      - CASSANDRA_AUTHENTICATOR=AllowAllAuthenticator
+      - CASSANDRA_AUTHORIZER=AllowAllAuthorizer
+    logging:
+      driver: none
+
+  spring-boot-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: imageone
+    ports:
+      - "9000:9000"
+    depends_on:
+      - cassandra
