@@ -12,9 +12,11 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
         testthat \
         docopt
 
+USER rstudio
+
 RUN Rscript -e 'tinytex::install_tinytex()'
 
-ENV PATH="${PATH}:/root/bin"
+ENV PATH="${PATH}:/home/rstudio/bin"
 
 RUN tlmgr update --self
 RUN tlmgr update --all
@@ -27,8 +29,4 @@ RUN tlmgr install \
         tcolorbox \
         pdfcol
 
-# TEST ========================================================================
-
-COPY minimal.qmd .
-
-CMD quarto render minimal.qmd
+USER root
