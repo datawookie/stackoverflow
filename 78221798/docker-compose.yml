@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  mongodb:
+    image: mongo:7.0.7
+    hostname: mongodb
+    restart: always
+    volumes:
+      - ./scripts/mongodb/rs-initiate.js:/docker-entrypoint-initdb.d/rs-initiate.js
+    ports:
+      - 27017:27017
+    command: ["--replSet", "dbrs", "--bind_ip", "0.0.0.0"]
+
+  # mongodb-express:
+  #   image: mongo-express
+  #   # restart: always
+  #   depends_on:
+  #     - mongodb
+  #   environment:
+  #     - ME_CONFIG_MONGODB_SERVER=mongodb
+  #     # ME_CONFIG_MONGODB_URL: mongodb://mongodb:27017/?replicaSet=dbrs
+  #   ports:
+  #     - 8081:8081
