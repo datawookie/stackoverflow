@@ -1,10 +1,15 @@
 #!/bin/bash
 
 initialise() {
-    sleep 5
+    while true
+    do
+        if mongosh --host mongodb --eval "quit()" &> /dev/null; then
+            break
+        fi
+    done
     mongosh --host mongodb --eval "rs.initiate()"
 }
 
 initialise &
 
-mongod --replSet rs0 --bind_ip_all
+mongod --replSet dbrs --bind_ip_all

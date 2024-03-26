@@ -1,43 +1,5 @@
 version: "3.9"
 
-# services:
-#   mongodb:
-#     image: mongo:7.0.7
-#     restart: always
-#     volumes:
-#       - ./scripts/mongodb/rs-initiate.js:/docker-entrypoint-initdb.d/rs-initiate.js
-#     ports:
-#       - 27017:27017
-#     # environment:
-#     #   MONGO_INITDB_ROOT_USERNAME: root
-#     #   MONGO_INITDB_ROOT_PASSWORD: test
-#     command: ["--replSet", "dbrs", "--bind_ip", "0.0.0.0"]
-
-# services:
-
-#   mongodb:
-#     image: mongo
-#     hostname: mongodb
-#     restart: always
-#     environment:
-#       MONGO_INITDB_ROOT_USERNAME: root
-#       MONGO_INITDB_ROOT_PASSWORD: password
-#     command: ["--replSet", "dbrs", "--bind_ip", "0.0.0.0"]
-#     volumes:
-#       - ./scripts/mongodb/rs-initiate.js:/docker-entrypoint-initdb.d/rs-initiate.js
-
-#   mongo-express:
-#     image: mongo-express
-#     restart: always
-#     depends_on:
-#       - mongodb
-#     ports:
-#       - 8081:8081
-#     environment:
-#       ME_CONFIG_MONGODB_ADMINUSERNAME: root
-#       ME_CONFIG_MONGODB_ADMINPASSWORD: password
-#       ME_CONFIG_MONGODB_URL: mongodb://root:password@mongodb:27017/
-
 services:
   mongodb:
     image: mongo:7.0.7
@@ -46,8 +8,8 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - ./scripts/rs-initiate.sh:/mongo-init-rset.sh
-    command: ./mongo-init-rset.sh
+      - ./scripts/rs-initiate.sh:/rs-initiate.sh
+    command: ./rs-initiate.sh
 
   mongo-express:
     image: mongo-express
@@ -56,6 +18,6 @@ services:
     depends_on:
     - mongodb
     ports:
-        - ${MONGOEXP_PORT:-8081}:8081
+        - 8081:8081
     environment:
       ME_CONFIG_MONGODB_SERVER: mongodb
