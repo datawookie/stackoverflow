@@ -11,9 +11,9 @@ activate_rs() {
     echo "Waiting for Mongo to start..."
     sleep 5
     echo "INITIATE REPLICA SET"
-    mongosh --host mongo --eval "rs.initiate()"
+    mongosh --host mongodb --eval "rs.initiate()"
     echo "MAKE ADMIN USER FOR REPLICA SET"
-    mongosh --host mongo --eval "db.createUser({ user: \"root\", pwd: \"root\", roles: [ { role: \"root\", db: \"admin\" } ] });" admin
+    mongosh --host mongodb --eval "db.createUser({ user: \"root\", pwd: \"root\", roles: [ { role: \"root\", db: \"admin\" } ] });" admin
 }
 
 activate_rs &
