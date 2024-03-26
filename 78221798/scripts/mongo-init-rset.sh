@@ -16,4 +16,5 @@ activate_rs() {
     mongosh --host mongo --eval "db.createUser({ user: \"root\", pwd: \"root\", roles: [ { role: \"root\", db: \"admin\" } ] });" admin
 }
 
-start_mongo & activate_rs
+activate_rs &
+start_mongo
