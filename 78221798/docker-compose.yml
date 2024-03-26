@@ -40,7 +40,7 @@ version: "3.9"
 
 services:
   mongo:
-    image: mongo:5.0.2-focal
+    image: mongo:7.0.7
     container_name: mongo
     restart: always
     ports:
