@@ -3,8 +3,8 @@ services:
   db_cassandra:
     container_name: db_cassandra
     image: cassandra:latest
-    volumes:
-      - "./common/cassandra:/lua/cassandra_setup:rw"
+    # volumes:
+    #   - "./common/cassandra:/lua/cassandra_setup:rw"
     environment:
       WORKSPACE: "/tmp"
       SERVICES_ROOT_DIR: "/services_root"
