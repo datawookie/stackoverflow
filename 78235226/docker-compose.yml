@@ -1,0 +1,34 @@
+version: "3"
+services:
+  db_cassandra:
+    container_name: db_cassandra
+    image: cassandra:latest
+    volumes:
+      - "./common/cassandra:/lua/cassandra_setup:rw"
+    environment:
+      WORKSPACE: "/tmp"
+      SERVICES_ROOT_DIR: "/services_root"
+    healthcheck:
+        test: ["CMD", "cqlsh", "-u", "cassandra", "-p", "cassandra" ]
+        interval: 5s
+        timeout: 5s
+        retries: 60
+    ports:
+      - "9042:9042"
+    logging:
+      driver: none
+
+  remote_cassandra:
+    container_name: remote_cassandra
+    build:
+      context: .
+    #   args:
+    #     BASE_IMAGE: custom.cassandra.image/builder-cassandra
+    # depends_on:
+    #   db_cassandra:
+    #     condition: service_healthy
+    # volumes:
+    #   - "./common/cassandra:/lua/cassandra_setup:rw"
+    # environment:
+    #   WORKSPACE: "/tmp"
+    #   SERVICES_ROOT_DIR: "/services_root"
