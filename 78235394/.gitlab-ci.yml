@@ -1,0 +1,11 @@
+stages:
+  - build
+
+build:
+  stage: build
+  image: docker:latest
+  before_script:
+    - apk add docker-compose
+    - docker-compose --version
+  script:
+    - echo "Ready to run docker-compose."
