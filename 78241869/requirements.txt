@@ -1,0 +1,13 @@
+azureml-core==1.55.0.post2
+azureml-defaults==1.55.0
+azureml-mlflow==1.55.0
+azureml-telemetry==1.55.0
+ipykernel==6.29.4
+matplotlib==3.7.5
+numpy==1.24.4
+pandas==2.0.3
+psutil==5.9.8
+scipy==1.10.1
+tensorboard==2.14.0
+tensorflow-gpu==2.11.0
+tqdm==4.66.2
