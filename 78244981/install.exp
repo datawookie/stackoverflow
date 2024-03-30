@@ -1,0 +1,14 @@
+set timeout 120
+
+spawn ./EnergyPlus-24.1.0-9d7789a3ac-Linux-Ubuntu22.04-x86_64.sh
+
+expect -re {Do you accept the license.*:}
+send "y\r"
+
+expect -re {EnergyPlus install directory.*}
+send "\r"
+
+expect -re {Symbolic link location.*}
+send "\r"
+
+expect eof
