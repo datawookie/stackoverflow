@@ -16,7 +16,7 @@ ENV CONDA_DIR /home/$USER_NAME/anaconda3
 # Install some packages
 RUN apt update
 # Change the download server
-COPY sources.list /etc/apt/sources.list
+# COPY sources.list /etc/apt/sources.list
 RUN apt update
 
 RUN apt install -y wget sudo git
@@ -44,7 +44,7 @@ USER $USER_NAME
 # Set the working directory
 WORKDIR /home/$USER_NAME/workspace
 # Copy your application code into the container
-COPY ./moving_ai /home/$USER_NAME/workspace
+# COPY ./moving_ai /home/$USER_NAME/workspace
 
 # Install anaconda
 RUN sudo wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh -O anaconda.sh
@@ -79,11 +79,11 @@ RUN /bin/bash -c "source activate $PROJECT_NAME && \
 
 
 # Copy your application code into the container
-COPY ./requirements.txt /home/$USER_NAME/workspace
+# COPY ./requirements.txt /home/$USER_NAME/workspace
 
 # Install any needed dependencies specified in requirements.txt
-RUN /bin/bash -c "source activate $PROJECT_NAME && \
-    pip install --no-cache-dir -r requirements.txt"
+# RUN /bin/bash -c "source activate $PROJECT_NAME && \
+#     pip install --no-cache-dir -r requirements.txt"
 
 
 # After pytorch
@@ -91,14 +91,14 @@ RUN /bin/bash -c "source activate $PROJECT_NAME && \
     pip install torcheval efficientnet_pytorch paramiko"
 
 # Copy the files and set permissions/ownership in a single step
-COPY --chown=$USER_NAME:$USER_NAME ./moving_ai /home/$USER_NAME/workspace/moving_ai
+# COPY --chown=$USER_NAME:$USER_NAME ./moving_ai /home/$USER_NAME/workspace/moving_ai
 
 
 # Install dependencies and run unit tests
-RUN test -d /home/$USER_NAME/workspace/moving_ai/DINO/models/dino/ops && \
-    rm -rf /home/$USER_NAME/workspace/moving_ai/DINO/models/dino/ops || true
-RUN cd /home/$USER_NAME/workspace/moving_ai && \
-    cp -r dino_ops/ops DINO/models/dino/ops
+# RUN test -d /home/$USER_NAME/workspace/moving_ai/DINO/models/dino/ops && \
+#     rm -rf /home/$USER_NAME/workspace/moving_ai/DINO/models/dino/ops || true
+# RUN cd /home/$USER_NAME/workspace/moving_ai && \
+#     cp -r dino_ops/ops DINO/models/dino/ops
 
 RUN cd /usr/local/cuda
 # Verify environment variables
@@ -109,7 +109,7 @@ RUN echo "USER_NAME: $USER_NAME"
 RUN /bin/bash -c "source ~/.bashrc || true"
 
 # Run
-RUN $CONDA_DIR/bin/activate mov && \
-    cd /home/$USER_NAME/workspace/moving_ai && \
-    cd DINO/models/dino/ops && \
-    python setup.py build install
+# RUN $CONDA_DIR/bin/activate mov && \
+#     cd /home/$USER_NAME/workspace/moving_ai && \
+#     cd DINO/models/dino/ops && \
+#     python setup.py build install
