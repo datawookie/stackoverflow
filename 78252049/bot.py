@@ -13,7 +13,7 @@ def send_welcome(message):
     pass
 
 
-@bot.callback_query_handler(func=lambda call: call.data == "test")
+@bot.callback_query_handler(func=lambda callback: True)
 def handle_query(call):
     pass
 
