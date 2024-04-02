@@ -1,0 +1,17 @@
+default:
+  image: docker:latest
+  services:
+    - name: docker:dind
+
+stages:
+  - build
+
+variables:
+  IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+
+build:
+  stage: build
+  before_script:
+    - docker info
+  script:
+    - docker build -t $IMAGE_TAG .
