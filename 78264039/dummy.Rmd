@@ -1,0 +1,28 @@
+---
+title: "Dummy Report"
+author: "Me"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    extra_dependencies: ["booktabs","anyfontsize"]
+documentclass: article
+classoption: a4paper
+header-includes:
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{multirow}
+  - \usepackage[table]{xcolor}
+  - \usepackage{wrapfig}
+  - \usepackage{float}
+  - \usepackage{colortbl}
+  - \usepackage{pdflscape}
+  - \usepackage{tabu}
+  - \usepackage{threeparttable}
+  - \usepackage[normalem]{ulem}
+  - \usepackage{anyfontsize}
+  - \usepackage[]{fancyhdr}
+---
+
+## R Markdown
+Sample Text
