@@ -3,20 +3,19 @@ FROM golang:1.21 as build
 WORKDIR /app
 
 RUN apt-get update
-RUN apt-get install -y libvips libvips-dev
+RUN apt-get install -y libvips-dev
 
 COPY go.mod go.sum main.go .
 
-RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build \
+RUN go mod download
+RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=1 go build \
         -tags netgo \
-        -ldflags '-w -extldflags "-static"' \
         -o main main.go
 
-FROM alpine:3.19
+FROM debian:bookworm-slim
 
+RUN apt-get update && apt-get install -y libvips
 
-RUN apk add --no-cache ca-certificates
+COPY --from=build /app /app
 
-COPY --from=build /app/main /main
-
-ENTRYPOINT [ "/main" ]
+ENTRYPOINT ["/app/main"]
