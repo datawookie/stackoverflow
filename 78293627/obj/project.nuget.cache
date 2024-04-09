@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "vp0lPo8vde3o6BT/HJLPHWoS3ZhwzonjhEHiMrbCbJBmKFfV+Bptx82o1cj+TektVH7F50zzri2idH9nsXTDrw==",
+  "success": true,
+  "projectFilePath": "/home/wookie/proj/stackoverflow/78293627/PlaywrightDemo/PlaywrightDemo.csproj",
+  "expectedPackageFiles": [
+    "/home/wookie/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "/home/wookie/.nuget/packages/microsoft.playwright/1.42.0/microsoft.playwright.1.42.0.nupkg.sha512",
+    "/home/wookie/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "/home/wookie/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/home/wookie/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
+    "/home/wookie/.nuget/packages/system.text.json/6.0.0/system.text.json.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
