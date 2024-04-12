@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: studentdb
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_APPLICATION_USER}
+      MYSQL_PASSWORD: ${DB_APPLICATION_PASSWORD}
+
+  client:
+    image: mariadb:latest
+    command: "bash -c 'sleep 5; MYSQL_PWD=${DB_APPLICATION_PASSWORD} mariadb -h mariadb -u ${DB_APPLICATION_USER}'"
