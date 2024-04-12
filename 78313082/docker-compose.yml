@@ -1,0 +1,24 @@
+services:
+  django:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./movies_admin:/movies_admin"
+    environment:
+      - DB_HOST=database
+      - POSTGRES_DB=movies_database
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=123qwe
+    command:
+      sh -c "python3 manage.py runserver 0.0.0.0:8000"
+    depends_on:
+      - database
+
+  database:
+    image: postgres:16
+    environment:
+      - POSTGRES_DB=movies_database
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=123qwe
