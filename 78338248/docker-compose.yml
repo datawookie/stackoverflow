@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  noetic_nvidia:
+    image: osrf/ros:noetic-desktop-full
+    container_name: noetic_nvidia
+    command: /bin/bash
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev:/dev
+    environment:
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - DISPLAY=${DISPLAY}
+    privileged: true
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
