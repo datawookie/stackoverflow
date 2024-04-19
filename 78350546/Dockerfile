@@ -1,7 +1,7 @@
-FROM --platform=linux/amd64 node:14.21.0-alpine as development
+FROM --platform=linux/amd64 node:15.14.0-alpine3.13 as development
 
 WORKDIR /home/app
-COPY . /home/app
+COPY package.json /home/app
 
 RUN apk add --no-cache --no-progress \
         python3 \
