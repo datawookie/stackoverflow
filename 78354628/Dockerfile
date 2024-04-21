@@ -26,8 +26,8 @@ RUN wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VER
     tar -zxf Python-${PYTHON_VERSION}.tgz
 
 WORKDIR /usr/src/Python-${PYTHON_VERSION}
-RUN ./configure --enable-optimizations --enable-shared --with-ensurepip=install
-RUN make altinstall
+RUN ./configure --enable-optimizations --enable-shared --with-ensurepip=install && \
+    make altinstall
 
 RUN yum clean all && \
     rm -rf /var/cache/yum && \
