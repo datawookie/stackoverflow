@@ -7,13 +7,21 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: roots
       MYSQL_DATABASE: oks
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
   api_service:
     build: ./oks-api
     ports:
       - 8081:8081
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
     environment:
-      spring.datasource.url: jdbc:mysql://mysql/oks?characterEncoding=UTF-8
-      spring.datasource.username: root
-      spring.datasource.password: roots
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql/oks?characterEncoding=UTF-8
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: roots

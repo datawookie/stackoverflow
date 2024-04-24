@@ -17,13 +17,23 @@ import java.sql.ResultSet;
 public class DatabaseConfig {
     private static final Logger logger = LoggerFactory.getLogger(DatabaseConfig.class);
 
+    @Value("${SPRING_DATASOURCE_URL}")
+    private String dbUrl;
+
+    @Value("${SPRING_DATASOURCE_USERNAME}")
+    private String dbUsername;
+
+    @Value("${SPRING_DATASOURCE_PASSWORD}")
+    private String dbPassword;
+
+    // DataSource bean configuration
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://mysql:3306/oks");
-        dataSource.setUsername("root");
-        dataSource.setPassword("roots");
+        dataSource.setUrl(dbUrl);
+        dataSource.setUsername(dbUsername);
+        dataSource.setPassword(dbPassword);
         return dataSource;
     }
 
