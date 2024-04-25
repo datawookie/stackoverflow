@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+    php:
+        build:
+            context: .
+            target: php
+            # args:
+            #     - APP_ENV=${APP_ENV}
+        # entrypoint: /bin/bash -c "ls"
+        # command: ls
+        # environment:
+        #     - APP_ENV=${APP_ENV}
+        #     - CONTAINER_ROLE=app
+        # working_dir: /var/www
+        volumes:
+            - .:/var/www
+        ports:
+            - 8000:8000
