@@ -1,0 +1,38 @@
+version: '3'
+services:
+  database:
+    build:
+      context: ./database
+      dockerfile: database.Dockerfile
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql@sit
+    volumes:
+      - ./database/mysql-lib:/var/lib/mysql
+    restart: on-failure
+    networks:
+    - test-networks
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    depends_on:
+      database:
+        condition: service_healthy
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=mysql@sit
+      - MYSQL_URL=jdbc:mysql://database:3306/task_base?serverTimezone=UTC
+    networks:
+      - test-networks
+
+networks:
+  test-networks:
+    driver: bridge

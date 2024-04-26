@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  ollama:
+    container_name: ollama
+    image: ollama/ollama:rocm
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            capabilities: ["gpu"]
+            count: all
+    volumes:
+      - ollama:/root/.ollama
+    restart: always
+
+volumes:
+    ollama:
