@@ -15,8 +15,6 @@ t2 <- structure(c(`2` = 2L, `10` = 2L, `15` = 1L, `20` = 2L, `30` = 3L,
                                           "80", "90", "95", "100", "105", "110", "120", "130", "150", "180",
                                           "200", "240", "300", "500")), names = ""), class = "table")
 
-t1
-
 library(dplyr)
 library(ggplot2)
 
@@ -29,7 +27,7 @@ counts <- rbind(
     frequency = Freq
   ) %>%
   mutate(
-    duration = as.integer(duration)
+    duration = as.integer(as.character(duration))
   )
 
 ggplot(counts) +
