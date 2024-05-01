@@ -1,0 +1,15 @@
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      - MYSQL_USER=cct1
+      - MYSQL_DATABASE=cct1
+      - MYSQL_PORT=3306
+      - MYSQL_ROOT_PASSWORD=secret
+    healthcheck:
+      test: [ "CMD-SHELL", "mysqladmin ping" ]
+      start_period: 5s
+      interval: 3s
+      timeout: 5s
+      retries: 6
