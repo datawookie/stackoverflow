@@ -1,0 +1,8 @@
+FROM amazon/aws-cli:2.15.43
+
+RUN yum update -y && \
+    yum install -y nodejs
+
+    curl https://rpm.nodesource.com/setup_20.x
+
+ENTRYPOINT [ "/bin/bash" ]
