@@ -1,0 +1,10 @@
+{
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "OS_VERSION",
+        "value" : "13"
+      }
+    ]
+  }
+}

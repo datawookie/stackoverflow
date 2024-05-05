@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    environment {
+        URL = 'https://example.com' // Example URL
+    }
+
+    stages {
+        stage('Update XCTestPlan') {
+            steps {
+                script {
+                    // Execute jq command to update the XCTestPlan file
+                    def updatedPlan = sh(
+                        script: "jq --arg url \"$URL\" '.defaultOptions.environmentVariableEntries += [{\"key\": \"URL\", \"value\": \$url}]' json.xctestplan",
+                        returnStdout: true
+                    ).trim()
+
+                    // Write the updated plan to a file
+                    writeFile file: 'json.xctestplan-updated', text: updatedPlan
+                }
+            }
+        }
+    }
+}
