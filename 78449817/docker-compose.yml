@@ -1,0 +1,31 @@
+version: '3.1'
+services:
+  odoo:
+    image: odoo:17
+    depends_on:
+      - db
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=odoo
+    ports:
+      - 8069:8069
+
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - odoo
+
+volumes:
+  odoo-web-data:
