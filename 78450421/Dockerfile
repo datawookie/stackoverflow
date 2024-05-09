@@ -8,7 +8,6 @@ RUN npm i -g @nestjs/cli typescript
 
 COPY ./package*.json ./
 RUN npm install
-RUN npm uninstall @types/node
 RUN npm install @types/node
 
 COPY ./ ./

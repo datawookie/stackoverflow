@@ -4,15 +4,7 @@
   "description": "A simple NestJS web server",
   "main": "src/main.ts",
   "scripts": {
-    "prebuild": "npm run format && npm run lint",
-    "build": "nest build",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "node dist/main",
-    "start:dev": "nest start --watch",
-    "start:prod": "node dist/main",
-    "lint": "eslint \"**/*.{ts,tsx}\" --fix",
-    "test": "jest",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "start:dev": "nest start --watch"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
