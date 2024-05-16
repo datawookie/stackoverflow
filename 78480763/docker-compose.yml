@@ -1,0 +1,43 @@
+version: "3.7"
+
+services:
+  guacd:
+    image: guacamole/guacd
+    restart: always
+
+  mysql:
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    healthcheck:
+      test: ["CMD", "mysqladmin", "-uroot", "-p${MYSQL_ROOT_PASSWORD}", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    image: mysql:5.7.22
+    restart: always
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d
+
+  guacamole:
+    depends_on:
+      guacd:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+    environment:
+      GUACD_HOSTNAME: guacd
+      MYSQL_HOSTNAME: ${MYSQL_HOSTNAME}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DRIVER: mysql
+      MYSQL_SSL_MODE: disabled
+    image: guacamole/guacamole
+    ports:
+      - 8080:8080
+    links:
+      - guacd
+    restart: always
