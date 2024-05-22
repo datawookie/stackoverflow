@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=hive
+      - POSTGRES_USER=hiveuser
+      - POSTGRES_PASSWORD=hivepassword
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d hive -U hiveuser"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  hive:
+    build: ./hive
+    depends_on:
+      postgres:
+        condition: service_healthy
