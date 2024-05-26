@@ -25,7 +25,7 @@ services:
       POSTGRES_PASSWORD: hivepassword
     ports:
       - "5432:5432"
-    # 🚨 
+    # 🚨 Check that PostgreSQL is ready for connections before marking as "healthy".
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
       interval: 5s
@@ -35,7 +35,6 @@ services:
   hive:
     build: ./hive  # Assumes you have a Dockerfile in the ./hive directory
     container_name: hive
-    #env_file: ./hive/hive.env  # Reference to the environment file
     environment:
       POSTGRES_JDBC_VERSION: 42.2.24
       POSTGRES_HOST: postgres  # Ensure PostgreSQL host is set
@@ -43,6 +42,7 @@ services:
       POSTGRES_USER: hiveuser
       POSTGRES_PASSWORD: hivepassword
     depends_on:
+      # 🚨 Only start this container when PostgreSQL is "healthy".
       postgres:
         condition: service_healthy
       hadoop:
