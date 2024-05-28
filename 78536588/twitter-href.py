@@ -7,6 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 from dotenv import load_dotenv
+
 load_dotenv()
 
 import os
@@ -16,11 +17,7 @@ PASSWORD = os.getenv("PASSWORD")
 
 options = Options()
 
-driver = webdriver.Remote(
-    "http://127.0.0.1:4444/wd/hub",
-    DesiredCapabilities.CHROME,
-    options=options
-)
+driver = webdriver.Remote("http://127.0.0.1:4444/wd/hub", DesiredCapabilities.CHROME, options=options)
 
 driver.get("https://twitter.com/login")
 
