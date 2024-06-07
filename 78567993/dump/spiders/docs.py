@@ -31,13 +31,13 @@ class DocsSpider(scrapy.Spider):
             """
         )
 
-        await page.wait_for_selector('.product-card-list', timeout=30000)
+        await page.wait_for_selector(".product-card-list", timeout=30000)
 
         html = await page.content()
 
         await page.close()
 
-        soup = BeautifulSoup(html, 'html.parser')
+        soup = BeautifulSoup(html, "html.parser")
 
-        for title in soup.find_all('h2', class_="product-card-content__name"):
+        for title in soup.find_all("h2", class_="product-card-content__name"):
             print(title.get_text())

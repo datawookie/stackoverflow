@@ -18,14 +18,57 @@ start_url = "https://www.lavoro.gov.it/"
 
 all_data = []
 
-keywords = ['big data', 'data warehouse', 'data lake', 'data science', 'data mining', 'data privacy', 'open data',
-            'data governance', 'data literacy', 'data', 'biometric', 'analisi biometrica',
-            'machine learning', 'apprendimento automatico', 'algoritm', 'calcolo', 'punteggio', 'valutazione',
-            'monitoraggi','predittiv', 'cloud', 'statistic', 'reti neurali', 'rete neurale', 'neural network',
-            'apprendimento profondo', 'deep learning', 'ranking', 'classificazione', 'apprendimento supervisionato',
-            'apprendimento non supervisionato', 'software', 'numeric', 'rango', 'ranghi', 'rank', "Elaborazione del linguaggio naturale",
-            'natural language processing', 'NLP', 'graduazione', 'transformer', 'GPT', 'Bard', 'Copilot', 'Gemini', 'DALL-E',
-            'automa', 'internet delle cose', 'intelligenza artificiale']
+keywords = [
+    "big data",
+    "data warehouse",
+    "data lake",
+    "data science",
+    "data mining",
+    "data privacy",
+    "open data",
+    "data governance",
+    "data literacy",
+    "data",
+    "biometric",
+    "analisi biometrica",
+    "machine learning",
+    "apprendimento automatico",
+    "algoritm",
+    "calcolo",
+    "punteggio",
+    "valutazione",
+    "monitoraggi",
+    "predittiv",
+    "cloud",
+    "statistic",
+    "reti neurali",
+    "rete neurale",
+    "neural network",
+    "apprendimento profondo",
+    "deep learning",
+    "ranking",
+    "classificazione",
+    "apprendimento supervisionato",
+    "apprendimento non supervisionato",
+    "software",
+    "numeric",
+    "rango",
+    "ranghi",
+    "rank",
+    "Elaborazione del linguaggio naturale",
+    "natural language processing",
+    "NLP",
+    "graduazione",
+    "transformer",
+    "GPT",
+    "Bard",
+    "Copilot",
+    "Gemini",
+    "DALL-E",
+    "automa",
+    "internet delle cose",
+    "intelligenza artificiale",
+]
 
 for word in keywords:
     driver.get(start_url)
@@ -42,7 +85,7 @@ for word in keywords:
     searchbar = driver.find_element(By.ID, "search-input")
     searchbar.send_keys(word)
     searchbar.send_keys(Keys.ENTER)
-    
+
     while True:
         time.sleep(10)
 
@@ -55,5 +98,5 @@ for word in keywords:
         print(f"Next page: {next}.")
 
         driver.get(next)
-            
+
 driver.quit()
