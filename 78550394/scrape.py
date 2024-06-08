@@ -1,0 +1,512 @@
+import requests
+import json
+
+headers = {
+    "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0",
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJBT1RGLVRPS0VOLVBBWUxPQUQiOiJ7XCJzZXNzaW9uSURcIjpcIjNkNTBlYWM1LWEyNjgtNDM1Ny1iYTU1LWM5NTNkODlhNjE1OVwiLFwiYW5vbnltb3VzVG9rZW5QYXlsb2FkXCI6e1wiaXNDb250YWN0XCI6dHJ1ZSxcImlzUmVnaXN0ZXJlZFwiOnRydWUsXCJpc1NpZ25lZEluXCI6ZmFsc2UsXCJlbWFpbFwiOlwidGFiaW8xOTg1QGhvdG1haWwuY29tXCIsXCJtbHNJZFwiOlwiU0VGTUlBTUlcIixcImFnZW50SWRcIjpcIjEwOTc1XCIsXCJjb250YWN0SWRcIjpcIjkyODEyODlcIixcImdyb3VwSWRcIjpcImVhZTRkN2Y5LWZmNWYtMzk0NC04N2QyLWY3YzRhMzE4OTEwY1wiLFwiVmlld01vZGVcIjpcIjFcIixcInVzZXJXZWxjb21lZFwiOnRydWUsXCJpc2RlbHRhXCI6ZmFsc2V9LFwiYXV0aGVudGljYXRlZFJvbGVcIjpcIkFOT05fVVNFUlwifSIsImp0aSI6ImNiOTdmMzg3LWE4NjAtNDM2Yy05Y2U0LTRiMTMwMTM0NDQ5NiIsImlhdCI6MTcxNzg2MTgwNywibmJmIjoxNzE3ODYxODA3fQ.EuvRAVmjh2H4b_oGr9vfkmPF37UpQfmTAJxa8-Fmbqk",
+}
+
+json_data = {
+    "operationName": "ListingById",
+    "variables": {
+        "suppressEvent": False,
+        "listingId": "aotf~1075849001~SEFMIAMI",
+        "groupId": "",
+    },
+    "query": """
+query ListingById($listingId: String!, $groupId: String!, $savedSearchId: String, $suppressEvent: Boolean = true) {
+  listingDetail(listingId: $listingId, groupId: $groupId, savedSearchId: $savedSearchId, suppressEvent: $suppressEvent) {
+    id
+    createdAt
+    hideWhenUnauth
+    property {
+      ...PropertyInfoFields
+      __typename
+    }
+    media {
+      LongDescription
+      LongDescription_es_US
+      LongDescription_en_CA
+      LongDescription_fr_CA
+      ShortDescription
+      ImageOf
+      MediaType
+      Order
+      Image {
+        Thumbnail {
+          ...imageDetails
+          __typename
+        }
+        Medium {
+          ...imageDetails
+          __typename
+        }
+        Large {
+          ...imageDetails
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    openHouse {
+      OpenHouseDate
+      OpenHouseEndTime
+      OpenHouseStartTime
+      OpenHouseStatus
+      OpenHouseType
+      OpenHouseLiveStreamURL
+      Refreshments
+      __typename
+    }
+    rooms {
+      RoomType
+      RoomLevel
+      RoomDimensions
+      RoomLength
+      RoomWidth
+      RoomFeatures
+      RoomFlooring
+      RoomDescription
+      __typename
+    }
+    unitType {
+      UnitTypeActualRent
+      UnitTypeActualRentRange
+      UnitTypeBedsTotal
+      UnitTypeBathsTotal
+      UnitTypeUnitsTotal
+      UnitTypeDescription
+      UnitTypeArea
+      UnitTypeTotalRent
+      __typename
+    }
+    customProperty {
+      FIPSCode
+      LivingAreaRange
+      LivingAreaRangeUnits
+      LotSizeRange
+      BelowGradeFinishedAreaRange
+      BelowGradeUnfinishedAreaRange
+      AboveGradeFinishedAreaRange
+      AboveGradeUnfinishedAreaRange
+      BuildingAreaTotalRange
+      PropertyKey
+      LeaseAmountPerArea
+      LeaseAmountPerAreaUnit
+      ListingKey
+      ListingId
+      LandTenure
+      SourceSupplementPublicCount
+      TransactionDeskUrl
+      BrightDocumentsUrl
+      PublicRemarks_en_CA
+      PublicRemarks_es_US
+      PublicRemarks_fr_CA
+      PublicRemarks_lang2
+      PublicRemarks_lang3
+      Directions_es_US
+      Directions_en_CA
+      Directions_en_EG
+      Directions_fr_CA
+      BoatDockYN
+      NumberOfBoatDocks
+      BoatDockHeight
+      BoatSlipYN
+      NumberOfBoatSlips
+      BoatDockAccommodates
+      BoatDockSlipFeatures
+      BoatDockSlipDescription
+      MonthlyRate
+      BelowGradeBedrooms
+      AboveGradeBedrooms
+      OffersDescription
+      OffersReviewDate
+      ThirdPartyIntegrationType
+      CustomFields {
+        MileMarker
+        MileMarkerArea
+        LakeDepthFeet
+        RoadBetweenWaterfrontAndHomeYN
+        LakeBottomType
+        ElevationHighPointWaterfrontFeet
+        WaterfrontSlopeType
+        ChainName
+        ChainAcres
+        DNRLakeIDNumber
+        DNRLakeClass
+        RentalAvailability
+        MinimumRentalPeriod
+        FurnishedAnnualPrice
+        FurnishedOffseasonPrice
+        UnfurnishedAnnualPrice
+        UnfurnishedOffseasonPrice
+        UnfurnishedSeasonalPrice
+        FurnishedSeasonalPrice
+        ResortFee
+        ResortFeePer
+        TransferTax
+        DeedRestricted
+        AdditionalMembershipAvailableYN
+        NumberOfPets
+        MaxPetWeight
+        BasementPercentFinished
+        AssociationFeeRequirement
+        AssociationFeeComments
+        AssociationApprovalRequiredYN
+        OtherFeesAmount
+        PetRestrictions
+        PetFeeNonRefundable
+        MinimumLease
+        AssociationApprovalFee
+        MontlyMaintAmtAdditionToHOA
+        PetSize
+        PetDepositFee
+        AdditionalPetFees
+        TotalAvailSqFt
+        LeasedPricePerSqFt
+        GarageSqft
+        SqFtTotalPropertyHLA
+        FeeOptions
+        FeePurchase
+        Deposit
+        PetRefund
+        PetDeposit
+        PerPetYN
+        SpecialLevyYN
+        UtilityCostsLease
+        ExpensesforYearEndingMMYY
+        LaundryOtherIncome
+        HydroCostLease
+        AnnualDebtService
+        AnnualGrossIncomeComment
+        GrossOperatingIncome
+        NetOperatingIncomeComments
+        NetOperIncomeMultiNOI
+        OtherCosts
+        OtherCostsComments
+        OtherIncomeOTHR
+        TotalOperatExpPct
+        SchedRentalIncomeSRI
+        SecurityExpense
+        VacancyLossAmount
+        VacancyLossRatioVL
+        CashFlowAmount
+        __typename
+      }
+      WaterAccessYN
+      LakeSize
+      RentSpreeURL
+      RentSpreeYN
+      AvailabilityType
+      Restrictions
+      FractionalShare
+      OriginatingSystemPropertyTaxKey
+      RentalBeastLink
+      AdditionalFeeDescription
+      AdditionalFee
+      OtherExpense
+      __typename
+    }
+    propertyLevel {
+      LevelType
+      LevelBedsTotal
+      LevelBathroomsFull
+      LevelBathroomsHalf
+      __typename
+    }
+    notes {
+      notes {
+        note
+        timestamp
+        __typename
+      }
+      __typename
+    }
+    sourceMedia {
+      ...SourceMediaFields
+      __typename
+    }
+    __typename
+  }
+}
+
+fragment PropertyInfoFields on Property {
+  OriginatingSystemKey
+  StreetNumber
+  StreetAdditionalInfo
+  StreetDirPrefix
+  StreetName
+  StreetSuffix
+  StreetDirSuffix
+  UnitNumber
+  City
+  PostalCity
+  StateOrProvince
+  PostalCode
+  PostalCodePlus4
+  InternetAddressDisplayYN
+  VirtualTourURLUnbranded
+  VirtualTourURLUnbranded2
+  VirtualTourURLUnbranded3
+  BedroomsTotal
+  BathroomsTotalInteger
+  LivingArea
+  LivingAreaUnits
+  LivingAreaTotal
+  PublicRemarks
+  YearBuilt
+  LotSizeArea
+  LotSizeUnits
+  ParkingTotal
+  HeatingYN
+  Heating
+  CoolingYN
+  Cooling
+  AssociationFee
+  AssociationFeeFrequency
+  AssociationFee2
+  AssociationFee2Frequency
+  PoolPrivateYN
+  PoolFeatures
+  PetsAllowed
+  LeaseTerm
+  CountyOrParish
+  BathroomsFull
+  BathroomsThreeQuarter
+  BathroomsHalf
+  BathroomsOneQuarter
+  BathroomsPartial
+  BuildingAreaTotal
+  BuildingAreaUnits
+  Levels
+  Stories
+  InteriorFeatures
+  BasementYN
+  Basement
+  Flooring
+  SecurityFeatures
+  WindowFeatures
+  FireplaceYN
+  FireplaceFeatures
+  FireplacesTotal
+  Appliances
+  AccessibilityFeatures
+  PropertyType
+  ArchitecturalStyle
+  Ownership
+  DirectionFaces
+  LotSizeDimensions
+  LotFeatures
+  ParkingFeatures
+  CarportYN
+  CarportSpaces
+  GarageYN
+  GarageSpaces
+  AttachedGarageYN
+  CoveredSpaces
+  ExteriorFeatures
+  WaterfrontYN
+  WaterfrontFeatures
+  WaterBodyName
+  Fencing
+  PatioAndPorchFeatures
+  RoadFrontageType
+  RoadSurfaceType
+  Topography
+  ViewYN
+  View
+  GreenEnergyEfficient
+  LaundryFeatures
+  Sewer
+  WaterSource
+  Utilities
+  ConstructionMaterials
+  YearBuiltEffective
+  Roof
+  HomeWarrantyYN
+  BodyType
+  FoundationDetails
+  PropertyAttachedYN
+  AssociationYN
+  AssociationName
+  AssociationName2
+  SeniorCommunityYN
+  AssociationAmenities
+  AssociationFeeIncludes
+  RentControlYN
+  BuildingName
+  StoriesTotal
+  ElementarySchoolDistrict
+  ElementarySchool
+  MiddleOrJuniorSchoolDistrict
+  MiddleOrJuniorSchool
+  HighSchoolDistrict
+  HighSchool
+  ListingId
+  CLIP
+  ListPrice
+  Inclusions
+  Exclusions
+  Directions
+  NumberOfUnitsTotal
+  OtherStructures
+  CurrentUse
+  PossibleUse
+  DevelopmentStatus
+  ElectricOnPropertyYN
+  GrossIncome
+  HorseAmenities
+  LandLeaseAmount
+  LandLeaseAmountFrequency
+  LeaseAmount
+  LeaseAmountFrequency
+  LeaseConsideredYN
+  ListingTerms
+  NetOperatingIncome
+  NumberOfBuildings
+  NumberOfUnitsInCommunity
+  NumberOfUnitsVacant
+  OperatingExpense
+  SpaYN
+  SpaFeatures
+  Zoning
+  ZoningDescription
+  ParcelNumber
+  TaxAssessedValue
+  TaxYear
+  Contingency
+  TaxAnnualAmount
+  AvailabilityDate
+  Furnished
+  RentIncludes
+  TenantPays
+  OwnerPays
+  Township
+  SubdivisionName
+  CommunityFeatures
+  BusinessName
+  BusinessType
+  YearEstablished
+  LeaseRenewalOptionYN
+  MajorChangeType
+  SpecialListingConditions
+  NewConstructionYN
+  Latitude
+  Longitude
+  MajorChangeTimestamp
+  PropertySubType
+  StructureType
+  PropertyCondition
+  ClosePrice
+  PreviousListPrice
+  DprLink
+  RatePlugLink
+  StandardStatus
+  AboveGradeFinishedArea
+  AboveGradeFinishedAreaUnits
+  BelowGradeFinishedArea
+  BelowGradeFinishedAreaUnits
+  DaysOnMarket
+  CloseDate
+  EntryLevel
+  BuilderName
+  RoadResponsibility
+  Possession
+  BuyerFinancing
+  MLSAreaMinor
+  TaxLegalDescription
+  ActivationDate
+  ListOfficeName
+  CoListOfficeName
+  ListOfficeEmail
+  CoListOfficeEmail
+  ListOfficePhone
+  CoListOfficePhone
+  BuyerAgencyCompensation
+  BuyerAgencyCompensationType
+  BuyerBrokerageCompensation
+  BuyerBrokerageCompensationType
+  MLSAreaMajor
+  OriginatingSystemName
+  CommonInterest
+  FrontageLength
+  FrontageType
+  FoundationArea
+  AttributionContact
+  PrivateRemarks
+  ShowingInstructions
+  ShowingRequirements
+  LockBoxType
+  LockBoxLocation
+  OwnerName
+  OwnerPhone
+  ShowingContactName
+  ShowingContactPhone
+  SubAgencyCompensationType
+  SubAgencyCompensation
+  TransactionBrokerCompensationType
+  TransactionBrokerCompensation
+  DualVariableCompensationYN
+  ListAgentStateLicense
+  ListingAgreement
+  ListingContractDate
+  ExpirationDate
+  OriginalListPrice
+  ListAgentFullName
+  ListAgentMobilePhone
+  ListAgentEmail
+  ListAgentOfficePhone
+  ListAgentMlsId
+  PendingTimestamp
+  SourceSystemKey
+  CrossStreet
+  PermissionPrivate
+  LeaseExpiration
+  CityRegion
+  OtherParking
+  TotalActualRent
+  TrashExpense
+  UtilitiesExpense
+  ElectricExpense
+  InsuranceExpense
+  GardenerExpense
+  MaintenanceExpense
+  ManagerExpense
+  NetOperatingIncome
+  OperatingExpenseIncludes
+  CableTvExpense
+  SuppliesExpense
+  WaterSewerExpense
+  DocumentsAvailable
+  VacancyAllowanceRate
+  BuildingFeatures
+  __typename
+}
+
+fragment imageDetails on Image {
+  mediaUrl
+  width
+  height
+  size
+  __typename
+}
+
+fragment SourceMediaFields on SourceMedia {
+  MediaObjectID
+  LongDescription
+  ShortDescription
+  sourceMediaLink
+  ImageOf
+  __typename
+}
+""",
+}
+
+response = requests.post("https://services.onehome.com/graphql?ListingById", headers=headers, json=json_data)
+
+print(response.text)
+
+with open("results.json", "wt") as file:
+    file.write(json.dumps(response.json(), indent=2))

@@ -1,0 +1,912 @@
+{
+  "data": {
+    "listingDetail": {
+      "id": "aotf~1075849001~SEFMIAMI",
+      "createdAt": 0,
+      "hideWhenUnauth": false,
+      "property": {
+        "OriginatingSystemKey": "396355508",
+        "StreetNumber": "110",
+        "StreetAdditionalInfo": null,
+        "StreetDirPrefix": null,
+        "StreetName": "Fontainebleau Blvd",
+        "StreetSuffix": null,
+        "StreetDirSuffix": null,
+        "UnitNumber": "104",
+        "City": "Miami",
+        "PostalCity": "Miami",
+        "StateOrProvince": "FL",
+        "PostalCode": "33172",
+        "PostalCodePlus4": "4569",
+        "InternetAddressDisplayYN": true,
+        "VirtualTourURLUnbranded": "https://www.propertypanorama.com/instaview/mia/A11594416",
+        "VirtualTourURLUnbranded2": null,
+        "VirtualTourURLUnbranded3": null,
+        "BedroomsTotal": 2.0,
+        "BathroomsTotalInteger": 2.0,
+        "LivingArea": 892.0,
+        "LivingAreaUnits": null,
+        "LivingAreaTotal": 892.0,
+        "PublicRemarks": "This 2 bed 1.5 bath unit in the Greens Condo has a spacious floor plan with tile floors throughout. First floor unit with covered balcony and access to the exterior green area. Garden views with a community pool. Don\u2019t miss the opportunity to make this delightful space your new home! The seller does not accept blind offers or escalation clauses.",
+        "YearBuilt": 1972.0,
+        "LotSizeArea": null,
+        "LotSizeUnits": "SquareFeet",
+        "ParkingTotal": null,
+        "HeatingYN": true,
+        "Heating": [
+          "Central"
+        ],
+        "CoolingYN": true,
+        "Cooling": [
+          "CentralAir"
+        ],
+        "AssociationFee": 355.0,
+        "AssociationFeeFrequency": "Monthly",
+        "AssociationFee2": null,
+        "AssociationFee2Frequency": null,
+        "PoolPrivateYN": null,
+        "PoolFeatures": [
+          "Association"
+        ],
+        "PetsAllowed": [
+          "No"
+        ],
+        "LeaseTerm": null,
+        "CountyOrParish": [
+          "Miami-Dade County"
+        ],
+        "BathroomsFull": 1,
+        "BathroomsThreeQuarter": null,
+        "BathroomsHalf": 1,
+        "BathroomsOneQuarter": null,
+        "BathroomsPartial": null,
+        "BuildingAreaTotal": 892.0,
+        "BuildingAreaUnits": null,
+        "Levels": null,
+        "Stories": null,
+        "InteriorFeatures": "BedroomonMainLevel,FirstFloorEntry",
+        "BasementYN": null,
+        "Basement": null,
+        "Flooring": [
+          "Tile"
+        ],
+        "SecurityFeatures": [
+          "FireAlarm",
+          "SecurityGuard"
+        ],
+        "WindowFeatures": null,
+        "FireplaceYN": null,
+        "FireplaceFeatures": null,
+        "FireplacesTotal": null,
+        "Appliances": [
+          "ElectricWaterHeater"
+        ],
+        "AccessibilityFeatures": null,
+        "PropertyType": "Residential",
+        "ArchitecturalStyle": [
+          "GardenApartment"
+        ],
+        "Ownership": null,
+        "DirectionFaces": null,
+        "LotSizeDimensions": null,
+        "LotFeatures": null,
+        "ParkingFeatures": [
+          "unidentified"
+        ],
+        "CarportYN": null,
+        "CarportSpaces": null,
+        "GarageYN": true,
+        "GarageSpaces": "2.00",
+        "AttachedGarageYN": null,
+        "CoveredSpaces": 2.0,
+        "ExteriorFeatures": [
+          "Patio"
+        ],
+        "WaterfrontYN": false,
+        "WaterfrontFeatures": null,
+        "WaterBodyName": null,
+        "Fencing": null,
+        "PatioAndPorchFeatures": [
+          "Patio"
+        ],
+        "RoadFrontageType": null,
+        "RoadSurfaceType": null,
+        "Topography": null,
+        "ViewYN": null,
+        "View": [
+          "Garden"
+        ],
+        "GreenEnergyEfficient": null,
+        "LaundryFeatures": [
+          "CommonArea"
+        ],
+        "Sewer": null,
+        "WaterSource": null,
+        "Utilities": null,
+        "ConstructionMaterials": [
+          "Block"
+        ],
+        "YearBuiltEffective": null,
+        "Roof": null,
+        "HomeWarrantyYN": null,
+        "BodyType": null,
+        "FoundationDetails": null,
+        "PropertyAttachedYN": true,
+        "AssociationYN": null,
+        "AssociationName": null,
+        "AssociationName2": null,
+        "SeniorCommunityYN": false,
+        "AssociationAmenities": [
+          "Clubhouse",
+          "Laundry",
+          "Pool",
+          "Elevators"
+        ],
+        "AssociationFeeIncludes": [
+          "AssociationManagement",
+          "CommonAreas",
+          "Insurance",
+          "Laundry",
+          "MaintenanceGrounds",
+          "MaintenanceStructure",
+          "Parking",
+          "Pools",
+          "RecreationFacilities",
+          "Roof",
+          "Sewer",
+          "Trash",
+          "Water"
+        ],
+        "RentControlYN": null,
+        "BuildingName": null,
+        "StoriesTotal": 4.0,
+        "ElementarySchoolDistrict": null,
+        "ElementarySchool": null,
+        "MiddleOrJuniorSchoolDistrict": null,
+        "MiddleOrJuniorSchool": null,
+        "HighSchoolDistrict": null,
+        "HighSchool": null,
+        "ListingId": "A11594416",
+        "CLIP": 8438476151,
+        "ListPrice": 276000.0,
+        "Inclusions": null,
+        "Exclusions": null,
+        "Directions": null,
+        "NumberOfUnitsTotal": null,
+        "OtherStructures": null,
+        "CurrentUse": null,
+        "PossibleUse": null,
+        "DevelopmentStatus": null,
+        "ElectricOnPropertyYN": null,
+        "GrossIncome": null,
+        "HorseAmenities": null,
+        "LandLeaseAmount": null,
+        "LandLeaseAmountFrequency": null,
+        "LeaseAmount": null,
+        "LeaseAmountFrequency": null,
+        "LeaseConsideredYN": false,
+        "ListingTerms": [
+          "Cash",
+          "Conventional"
+        ],
+        "NetOperatingIncome": null,
+        "NumberOfBuildings": null,
+        "NumberOfUnitsInCommunity": null,
+        "NumberOfUnitsVacant": null,
+        "OperatingExpense": null,
+        "SpaYN": null,
+        "SpaFeatures": null,
+        "Zoning": null,
+        "ZoningDescription": null,
+        "ParcelNumber": "30-40-04-051-1750",
+        "TaxAssessedValue": null,
+        "TaxYear": 2023.0,
+        "Contingency": null,
+        "TaxAnnualAmount": 3426.0,
+        "AvailabilityDate": null,
+        "Furnished": null,
+        "RentIncludes": null,
+        "TenantPays": null,
+        "OwnerPays": null,
+        "Township": null,
+        "SubdivisionName": "THE GREENS CONDO",
+        "CommunityFeatures": null,
+        "BusinessName": null,
+        "BusinessType": null,
+        "YearEstablished": null,
+        "LeaseRenewalOptionYN": null,
+        "MajorChangeType": "NewListing",
+        "SpecialListingConditions": [
+          "RealEstateOwned"
+        ],
+        "NewConstructionYN": null,
+        "Latitude": 25.770418,
+        "Longitude": -80.34033,
+        "MajorChangeTimestamp": "2024-05-28T22:21:16.000-00:00",
+        "PropertySubType": "Condominium",
+        "StructureType": null,
+        "PropertyCondition": null,
+        "ClosePrice": null,
+        "PreviousListPrice": null,
+        "DprLink": null,
+        "RatePlugLink": "https://www.rateplug.com/cc/fnf/rates.aspx?vt=Multi&MLSID=A11594416&LP=276000.0&AUD=Customer&FPT=&RID=10975&LSID=MIAMI",
+        "StandardStatus": "Active",
+        "AboveGradeFinishedArea": null,
+        "AboveGradeFinishedAreaUnits": null,
+        "BelowGradeFinishedArea": null,
+        "BelowGradeFinishedAreaUnits": null,
+        "DaysOnMarket": 15,
+        "CloseDate": null,
+        "EntryLevel": 1,
+        "BuilderName": null,
+        "RoadResponsibility": null,
+        "Possession": [
+          "ClosingFunding"
+        ],
+        "BuyerFinancing": null,
+        "MLSAreaMinor": null,
+        "TaxLegalDescription": "THE GREENS CONDO UNIT 104 BLDG 110 UNDIV .38209% INT IN COMMON ELEMENTS OFF REC 10912-402 OR 18746-3607 0899 1",
+        "ActivationDate": null,
+        "ListOfficeName": "NuFront International Realty",
+        "CoListOfficeName": null,
+        "ListOfficeEmail": "rmg@nufrontrealty.com",
+        "CoListOfficeEmail": null,
+        "ListOfficePhone": "305-988-2200",
+        "CoListOfficePhone": null,
+        "BuyerAgencyCompensation": null,
+        "BuyerAgencyCompensationType": null,
+        "BuyerBrokerageCompensation": null,
+        "BuyerBrokerageCompensationType": null,
+        "MLSAreaMajor": "40",
+        "OriginatingSystemName": "SEFMIAMI",
+        "CommonInterest": null,
+        "FrontageLength": null,
+        "FrontageType": null,
+        "FoundationArea": 0.0,
+        "AttributionContact": null,
+        "PrivateRemarks": null,
+        "ShowingInstructions": null,
+        "ShowingRequirements": null,
+        "LockBoxType": null,
+        "LockBoxLocation": null,
+        "OwnerName": null,
+        "OwnerPhone": null,
+        "ShowingContactName": null,
+        "ShowingContactPhone": null,
+        "SubAgencyCompensationType": null,
+        "SubAgencyCompensation": null,
+        "TransactionBrokerCompensationType": null,
+        "TransactionBrokerCompensation": null,
+        "DualVariableCompensationYN": null,
+        "ListAgentStateLicense": null,
+        "ListingAgreement": null,
+        "ListingContractDate": null,
+        "ExpirationDate": null,
+        "OriginalListPrice": null,
+        "ListAgentFullName": null,
+        "ListAgentMobilePhone": null,
+        "ListAgentEmail": null,
+        "ListAgentOfficePhone": null,
+        "ListAgentMlsId": null,
+        "PendingTimestamp": null,
+        "SourceSystemKey": "1075849001",
+        "CrossStreet": null,
+        "PermissionPrivate": null,
+        "LeaseExpiration": null,
+        "CityRegion": null,
+        "OtherParking": null,
+        "TotalActualRent": null,
+        "TrashExpense": null,
+        "UtilitiesExpense": null,
+        "ElectricExpense": null,
+        "InsuranceExpense": null,
+        "GardenerExpense": null,
+        "MaintenanceExpense": null,
+        "ManagerExpense": null,
+        "OperatingExpenseIncludes": null,
+        "CableTvExpense": null,
+        "SuppliesExpense": null,
+        "WaterSewerExpense": null,
+        "DocumentsAvailable": null,
+        "VacancyAllowanceRate": null,
+        "BuildingFeatures": [
+          "ExteriorLighting"
+        ],
+        "__typename": "Property"
+      },
+      "media": [
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Front of Structure",
+          "ImageOf": "FrontofStructure",
+          "MediaType": "jpeg",
+          "Order": "1",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjAsInVzciI6IkFPVEYiLCJTaXplIjoiMSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.AbEQI7RJAcvLk8dKL2ATdW7Ugofz_j7T_kwFieJ8n-U",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjAsInVzciI6IkFPVEYiLCJTaXplIjoiMiIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.mTFpzSTcLFTvClMXHpEkHFOrwRUy_Bqjwqo74nFELKE",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjAsInVzciI6IkFPVEYiLCJTaXplIjoiNSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.QfcBA7Vp95_YEPhgUX7LcMNPSJpONAtyyrAleCqxrP4",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Sun Room",
+          "ImageOf": "SunRoom",
+          "MediaType": "jpeg",
+          "Order": "11",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjEwLCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjEiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.0s6S_e1a-L3K0rXhCTaN7aSO5eFJdMvZCdnIcdRiccQ",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjEwLCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjIiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.DCsZFDCcavgnik5JpNASbnzeEnqs49xG94THMX71dz0",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjEwLCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjUiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.JCaqTqICLlXauecoaXNpSyOuJz174TnW18ENT4b62gA",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Bedroom",
+          "ImageOf": "Bedroom",
+          "MediaType": "jpeg",
+          "Order": "7",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjYsInVzciI6IkFPVEYiLCJTaXplIjoiMSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.tsJQFB28lqtkEHgyOvCykzYV8BQ466g3Fi3PxxdjbGw",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjYsInVzciI6IkFPVEYiLCJTaXplIjoiMiIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.96QqcsHcOIB7TAGbBGl66Yu2SKrC9pM6vVoV6MBZEsY",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjYsInVzciI6IkFPVEYiLCJTaXplIjoiNSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.V9igvRcII29lKzhVo1GFVVtUw5vJOyLxCourcsXN5Kc",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Bathroom",
+          "ImageOf": "Bathroom",
+          "MediaType": "jpeg",
+          "Order": "6",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjUsInVzciI6IkFPVEYiLCJTaXplIjoiMSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.dNXpc4Pf8fOfXXp1Sqpmarz9iAkILzc4qKlw3A2uJhw",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjUsInVzciI6IkFPVEYiLCJTaXplIjoiMiIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.io7mZWBimAgSvLtta9mawq7PKAQXX-RKzmp5Ijv5FFw",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjUsInVzciI6IkFPVEYiLCJTaXplIjoiNSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.ubNUBNiIn-lF_W3M4nXMHgnom7dc5Gvwku_RQmAzwAw",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Sun Room",
+          "ImageOf": "SunRoom",
+          "MediaType": "jpeg",
+          "Order": "12",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjExLCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjEiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.29zZ8YKoQ6qFgTm20yLnxosMLIwUUZ08JjRHUN3qwEg",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjExLCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjIiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.XG0GrT_ZK8v8iG5BXBmgdXlFQ__Ws2myTiGhbOIAi3Q",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjExLCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjUiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.ZllLKrQI4MLSDLwS1OR9Zhdgh2pRzKlaFYwcI_X1zWY",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Bathroom",
+          "ImageOf": "Bathroom",
+          "MediaType": "jpeg",
+          "Order": "9",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjgsInVzciI6IkFPVEYiLCJTaXplIjoiMSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.BU9TfiqjgUGbhTi7jdIO9rIbkJSkl_hSjs7ruTK5k5w",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjgsInVzciI6IkFPVEYiLCJTaXplIjoiMiIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.FZVuMFSSyc5q2z2BwNtS6N0XtQq6h5dQB5QTg0F3s3M",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjgsInVzciI6IkFPVEYiLCJTaXplIjoiNSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.mBooaEiBVR7vuXV8ie6iZoPOo4DHTLZ6-ST3saBAxO0",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Bathroom",
+          "ImageOf": "Bathroom",
+          "MediaType": "jpeg",
+          "Order": "10",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjksInVzciI6IkFPVEYiLCJTaXplIjoiMSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ._UsU9qStv9Dzr8XJJVb9mPz5bJhe2ZMxN5lQYKGsFak",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjksInVzciI6IkFPVEYiLCJTaXplIjoiMiIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.Ws4xfISyf0NEwqyZRDjnQ7ViiOK32t2GdksUTe8ttFc",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjksInVzciI6IkFPVEYiLCJTaXplIjoiNSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.36AECgX_DdOWNV1eTbEpMujnAES_t446rXQwupaMxZ8",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Bedroom",
+          "ImageOf": "Bedroom",
+          "MediaType": "jpeg",
+          "Order": "8",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjcsInVzciI6IkFPVEYiLCJTaXplIjoiMSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.C3dqlLSHZLRVx7ggkpNzvL2b-i0CHywGYgmNSrTACVU",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjcsInVzciI6IkFPVEYiLCJTaXplIjoiMiIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.lcVn6UadSzOwbaZopwdMR7jOu8xvyfDZXknEWzUnceY",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjcsInVzciI6IkFPVEYiLCJTaXplIjoiNSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.TLVLPV3TcIDMvxblc5S2c6B6hAuAEd9YqHY9kgsJEkE",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Aerial View",
+          "ImageOf": "AerialView",
+          "MediaType": "jpeg",
+          "Order": "15",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjE0LCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjEiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.-zyjrrtOKhU4ORoBSIzdzCAjrwniWLMb3Yzm8OfbUhE",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjE0LCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjIiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.QdGAIGESrkD-zMEXwaFltITF4LRmbJ7HDJUjAP9zQOw",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjE0LCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjUiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.Dkw9Ll5X9whCpDHOQYjI4p42POuBO7BawLWsEy8cZ9I",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Kitchen",
+          "ImageOf": "Kitchen",
+          "MediaType": "jpeg",
+          "Order": "3",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjIsInVzciI6IkFPVEYiLCJTaXplIjoiMSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.aVe244Qmh1UgJkSxYBbilNgaJvvFQuBoaR4WEzHnHqg",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjIsInVzciI6IkFPVEYiLCJTaXplIjoiMiIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.unyGxtNNcxT-0FHYqTDItH2i1l_iSZQwYUkTe_uz33U",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjIsInVzciI6IkFPVEYiLCJTaXplIjoiNSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.h6DAimIsbxVocawhjxCLXqeIBo5_1-N2Hyew_dcVCg0",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Front of Structure",
+          "ImageOf": "FrontofStructure",
+          "MediaType": "jpeg",
+          "Order": "2",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjEsInVzciI6IkFPVEYiLCJTaXplIjoiMSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.GE9RWaNP0JGsEHDiWI51RZc8JiDFFBZHs5xojCzigJA",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjEsInVzciI6IkFPVEYiLCJTaXplIjoiMiIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.AH6iLmdD1c17YhLamVGEy7Xp59oesOdmWbqD4D40Ivs",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjEsInVzciI6IkFPVEYiLCJTaXplIjoiNSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.odfScGMdm0YQYyFtWgEXyVJ9W3qqb9ufwPp1dtqLiak",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Aerial View",
+          "ImageOf": "AerialView",
+          "MediaType": "jpeg",
+          "Order": "13",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjEyLCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjEiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.TcSl2kHa-uXKXZvhtbsJ1QAfWmA7yqnszLmBm5jDytE",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjEyLCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjIiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.ULa5HjDsaWiEWnseBzmIJJ8Hga2IlQzAfzhB8C8FC7Q",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjEyLCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjUiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.Y9rRe9YzJiGhkWhXoEnTzJOmYwisnjwGg5rkr2x330c",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Other",
+          "ImageOf": "Other",
+          "MediaType": "jpeg",
+          "Order": "5",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjQsInVzciI6IkFPVEYiLCJTaXplIjoiMSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.KuEpfNlzJ8Vuel0hRBYkoWQQLT1yxDsXAErWa8ku2l4",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjQsInVzciI6IkFPVEYiLCJTaXplIjoiMiIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.qPr029gKpKycHwUF9z1euR_UW0fDuWfTj5UnBEStICE",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjQsInVzciI6IkFPVEYiLCJTaXplIjoiNSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ._zShR4HaFNK305ZVjT42YDR3vAQ7ZmGKD99tk6aAAv0",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Other",
+          "ImageOf": "Other",
+          "MediaType": "jpeg",
+          "Order": "4",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjMsInVzciI6IkFPVEYiLCJTaXplIjoiMSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.dXzBv2hggIebshRCbUHJ3BK11ol_je-7Y6P2GUvmRsE",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjMsInVzciI6IkFPVEYiLCJTaXplIjoiMiIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.llq9Brv5BycTBIRamtilr2bak8tZGoni7ZSn-3--Lwo",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjMsInVzciI6IkFPVEYiLCJTaXplIjoiNSIsImV4cCI6MTcxNzg2NDM0MiwiaWF0IjoxNzE3ODYyNTQyLCJLZXkiOiIzOTYzNTU1MDgifQ.ZI0CooWRDv8Dd5a65emhrfFSq7rdz3BV1mhsY7b2nmc",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        },
+        {
+          "LongDescription": null,
+          "LongDescription_es_US": null,
+          "LongDescription_en_CA": null,
+          "LongDescription_fr_CA": null,
+          "ShortDescription": "Aerial View",
+          "ImageOf": "AerialView",
+          "MediaType": "jpeg",
+          "Order": "14",
+          "Image": {
+            "Thumbnail": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjEzLCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjEiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.av0T3HznaT4jymQCra2CL70PscWDxAPqRYc1IYKjPdc",
+              "width": "133",
+              "height": "100",
+              "size": "1",
+              "__typename": "Image"
+            },
+            "Medium": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjEzLCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjIiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.yemdbFivphP9ILxyu2ut8YuMUN2_WH5DZxEV--kKlt0",
+              "width": "296",
+              "height": "222",
+              "size": "2",
+              "__typename": "Image"
+            },
+            "Large": {
+              "mediaUrl": "https://media.sef.mlsmatrix.com/MediaServer/GetMedia.ashx?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUYWJsZUlEIjoiOSIsIlR5cGUiOiIxIiwibmJmIjoxNzE3ODYyNTQyLCJOdW1iZXIiOjEzLCJ1c3IiOiJBT1RGIiwiU2l6ZSI6IjUiLCJleHAiOjE3MTc4NjQzNDIsImlhdCI6MTcxNzg2MjU0MiwiS2V5IjoiMzk2MzU1NTA4In0.-zYsDdFFzeErcstGErzFfZNI_YHZW5C0cybMUJe4sHY",
+              "width": "1600",
+              "height": "1200",
+              "size": "5",
+              "__typename": "Image"
+            },
+            "__typename": "ImageList"
+          },
+          "__typename": "Media"
+        }
+      ],
+      "openHouse": null,
+      "rooms": null,
+      "unitType": null,
+      "customProperty": {
+        "FIPSCode": null,
+        "LivingAreaRange": null,
+        "LivingAreaRangeUnits": null,
+        "LotSizeRange": null,
+        "BelowGradeFinishedAreaRange": null,
+        "BelowGradeUnfinishedAreaRange": null,
+        "AboveGradeFinishedAreaRange": null,
+        "AboveGradeUnfinishedAreaRange": null,
+        "BuildingAreaTotalRange": null,
+        "PropertyKey": "12025|3040040511750|1|3706554",
+        "LeaseAmountPerArea": null,
+        "LeaseAmountPerAreaUnit": "DollarsPerSquareFoot",
+        "ListingKey": "1075849001",
+        "ListingId": "A11594416",
+        "LandTenure": null,
+        "SourceSupplementPublicCount": null,
+        "TransactionDeskUrl": null,
+        "BrightDocumentsUrl": null,
+        "PublicRemarks_en_CA": null,
+        "PublicRemarks_es_US": null,
+        "PublicRemarks_fr_CA": null,
+        "PublicRemarks_lang2": null,
+        "PublicRemarks_lang3": null,
+        "Directions_es_US": null,
+        "Directions_en_CA": null,
+        "Directions_en_EG": null,
+        "Directions_fr_CA": null,
+        "BoatDockYN": null,
+        "NumberOfBoatDocks": null,
+        "BoatDockHeight": null,
+        "BoatSlipYN": null,
+        "NumberOfBoatSlips": null,
+        "BoatDockAccommodates": null,
+        "BoatDockSlipFeatures": null,
+        "BoatDockSlipDescription": null,
+        "MonthlyRate": null,
+        "BelowGradeBedrooms": null,
+        "AboveGradeBedrooms": null,
+        "OffersDescription": null,
+        "OffersReviewDate": null,
+        "ThirdPartyIntegrationType": null,
+        "CustomFields": null,
+        "WaterAccessYN": null,
+        "LakeSize": null,
+        "RentSpreeURL": null,
+        "RentSpreeYN": null,
+        "AvailabilityType": null,
+        "Restrictions": [
+          "OtherRestrictions"
+        ],
+        "FractionalShare": null,
+        "OriginatingSystemPropertyTaxKey": null,
+        "RentalBeastLink": null,
+        "AdditionalFeeDescription": null,
+        "AdditionalFee": null,
+        "OtherExpense": null,
+        "__typename": "CustomProperty"
+      },
+      "propertyLevel": null,
+      "notes": null,
+      "sourceMedia": [],
+      "__typename": "ListingDetail"
+    }
+  }
+}

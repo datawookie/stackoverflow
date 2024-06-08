@@ -1,0 +1,384 @@
+{
+  "search_metadata": {
+    "id": "66647ae42c084447e33dd07d",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/54ee10220703d630/66647ae42c084447e33dd07d.json",
+    "created_at": "2024-06-08 15:38:12 UTC",
+    "processed_at": "2024-06-08 15:38:12 UTC",
+    "google_maps_reviews_url": "https://www.google.com/maps/place/data=!4m7!3m6!1s!5m2!4m1!1i2!9m1!1b1?hl=en&gl=",
+    "raw_html_file": "https://serpapi.com/searches/54ee10220703d630/66647ae42c084447e33dd07d.html",
+    "prettify_html_file": "https://serpapi.com/searches/54ee10220703d630/66647ae42c084447e33dd07d.prettify",
+    "total_time_taken": 1.72
+  },
+  "search_parameters": {
+    "engine": "google_maps_reviews",
+    "place_id": "ChIJidRKt32YVogRN6fEPG9Kuho",
+    "hl": "en"
+  },
+  "place_info": {
+    "title": "Charlotte Douglas International Airport",
+    "address": "5501 Josh Birmingham Pkwy, Charlotte, NC 28208",
+    "rating": 3.9,
+    "reviews": 39144,
+    "type": "International airport"
+  },
+  "topics": [
+    {
+      "keyword": "rocking chairs",
+      "mentions": 520,
+      "id": "/m/047_c_"
+    },
+    {
+      "keyword": "concourse",
+      "mentions": 321,
+      "id": "/m/046768"
+    },
+    {
+      "keyword": "moving walkways",
+      "mentions": 189,
+      "id": "/m/02p19tw"
+    },
+    {
+      "keyword": "tsa precheck",
+      "mentions": 98,
+      "id": "/g/11fmzck39m"
+    },
+    {
+      "keyword": "atrium",
+      "mentions": 61,
+      "id": "/m/04sfb0"
+    },
+    {
+      "keyword": "BBQ",
+      "mentions": 50,
+      "id": "/m/0983v"
+    },
+    {
+      "keyword": "people mover",
+      "mentions": 44,
+      "id": "/m/0ddn4"
+    },
+    {
+      "keyword": "admirals",
+      "mentions": 21,
+      "id": "/m/0hfq_"
+    },
+    {
+      "keyword": "wireless charging",
+      "mentions": 21,
+      "id": "/g/1231f_hn"
+    },
+    {
+      "keyword": "taxiing",
+      "mentions": 18,
+      "id": "/m/015zzh"
+    }
+  ],
+  "reviews": [
+    {
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUREMGJtN0VREAE!2m1!1s0x0:0x1aba4a6f3cc4a737!3m1!1s2@1:CIHM0ogKEICAgIDD0bm7EQ%7CCgwIsaTcsAYQuN_azgM%7C?hl=en-US",
+      "rating": 4.0,
+      "date": "a month ago",
+      "iso_date": "2024-04-10T22:26:57Z",
+      "iso_date_of_last_edit": "2024-04-10T22:26:57Z",
+      "images": [
+        "https://lh5.googleusercontent.com/p/AF1QipPOfpSfXbmCjsdQmMIPyhlHkLTtVhAtxQSVLhsD=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMoyw4S5wIXqk3SUmaHLm1gdzCabcwHr0wS8WzZ=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPh8qtka9esmvUqo83K3ko58vjMX36WH42b5eFD=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNM8If4ShiTVhp9Sr1G5iIOhMzlB_hxfuhHIuPS=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOUwd3YpJu6RGaD2lHa8cSmyPIGw-fm9zhnjUng=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPyNkGXHIXpzOpSy_7z7waQ7fbYgSN5r65fGleJ=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNZaDaOTLtwXMOj1my2qxvkkgR_RDT_CTz44RJ4=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNOZUimj2Vxy8-CAISbzjfZ-4DjIMhXicw2t6ma=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOEm7HLiAHCPEnpLz6GmgRZc7LGSRbq81nfAQkg=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipN3hwZE9h4GCufe_2mx2quJZCcZpoPBdhuyiXG6=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipP6KnYD431SLdS99sBOe5Cwfm1CYNu3kpQ7yVyD=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNYXwh3BEP0zMlbpUeNGg_yk7qd59A9XyDfRvQA=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOqN8tWpWJCHXLuCpZNAVI3ginS_PHsBrl_0vow=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPThvSm-I66Eufm6KvNu_eux44TU__iUfb-Tb8n=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOseBtiqQ5x1-I7kGi-uick2YJmEIEfHqiucOyJ=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPhnCBaujCRB7lbmQtj7MQ_JwL9XZCa6IEQx6Hq=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPdAE2BF1FOEWDSixghxeB5IJH70GwmEHR0GUjB=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMMy3hltgva54RpUoGPocY_UkQrNXuIGKfy_ILA=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPmI6sU9fx3EH6U3lDDGLNPWOvNPh1DPqSYoyZR=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipP15gdApmCKsxSKnGg_t5nbeFJZWhFUIfvxf4df=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNZfp1V-xZhZf6TdABijHMMtZ1_8OZ22lRGWI4I=w150-h150-k-no-p"
+      ],
+      "source": "Google",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUREMGJtN0VREAE",
+      "user": {
+        "name": "Sritama Chakraborty",
+        "link": "https://www.google.com/maps/contrib/111132443765678051053?hl=en-US",
+        "contributor_id": "111132443765678051053",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjWphIN_NTygkBjaNekKFv_tmCn2y6-U2C2uO7SypflD5_1xjz13Ww=s120-c-rp-mo-ba7-br100",
+        "local_guide": true,
+        "reviews": 383,
+        "photos": 4889
+      },
+      "snippet": "The airport is really nice in terms of food options. The restrooms are very clean and well maintained. Only problem is that space is very less in front of the gates.  Most of the people were sitting on the floor. Not enough charging points. Requires a bit of face lift.",
+      "extracted_snippet": {
+        "original": "The airport is really nice in terms of food options. The restrooms are very clean and well maintained. Only problem is that space is very less in front of the gates.  Most of the people were sitting on the floor. Not enough charging points. Requires a bit of face lift."
+      },
+      "likes": 0
+    },
+    {
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUNEM0lId2pRRRAB!2m1!1s0x0:0x1aba4a6f3cc4a737!3m1!1s2@1:CIHM0ogKEICAgICD3IHwjQE%7CCgwI4NGGsAYQqMvWwQE%7C?hl=en-US",
+      "rating": 4.0,
+      "date": "2 months ago",
+      "iso_date": "2024-03-25T16:38:09Z",
+      "iso_date_of_last_edit": "2024-03-25T16:40:00Z",
+      "images": [
+        "https://lh5.googleusercontent.com/p/AF1QipOd_51dXMKtM_uCMPYfTxcv8TwmlUKUqy1gMDh-=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNc7hwIDDWbnTRg3anRxniVvQtn1YDsJhX7-fCs=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPKYIvPdGQxa2wM3gg_4cKzto-9gHzZNP3E8ey9=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPBRHWDxZ9ODqzNtJxbN23j-dU2UoBmuT26rYQd=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNo6WDWF9P8ki4RDoJi1BYubvqbloeJye030Ktf=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNnRSTa8llJ4jjChL3tMmCNBqVD86wpU_fLJf0o=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMib5xZJUZpaOHWpElR5LV9Kc3CrBtXUj9pv7oW=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPkJi6wYurwoVbsE922ICNEb6ChEBiy8Zs0YIV_=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOVfYQmveBz9mjFMgFH9Tp8eDxjtycDgjsxoH9R=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipN5cwZX8d8RILM1hRLE_MJx5eaivjEQevaqHtp9=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNBl6z9s9h5luqfVwmuX_EiV-QM7xrrOzcMTl0k=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipP68mU10hMc9MY-fEb1M3wzOAKr0q1vVw5a4LPC=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOw3Ut0UF-3v4Ua8mYoRhpHAebIMUAM-v6EF-9X=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMU7RHnClsxkLcCRmcPqI7ifKkA0pcWHrrinwH7=w150-h150-k-no-p"
+      ],
+      "source": "Google",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNEM0lId2pRRRAB",
+      "user": {
+        "name": "Paul Frederick Chiongson",
+        "link": "https://www.google.com/maps/contrib/112131965825719430465?hl=en-US",
+        "contributor_id": "112131965825719430465",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjUL0xoNqu0sX2Bi6FtpzJuCkrcg1DwyFdmFFwIyKKzKO7FZirrg=s120-c-rp-mo-ba6-br100",
+        "local_guide": true,
+        "reviews": 401,
+        "photos": 5625
+      },
+      "snippet": "Despite being a crowded airport the flow of traffic is very smooth. It has a couple of good food stalls and the rest rooms are well maintained and clean.\nI enjoyed the rocking chairs line up in the Atrium, its comfortable and I managed to get some much needed shut eye",
+      "extracted_snippet": {
+        "original": "Despite being a crowded airport the flow of traffic is very smooth. It has a couple of good food stalls and the rest rooms are well maintained and clean.\nI enjoyed the rocking chairs line up in the Atrium, its comfortable and I managed to get some much needed shut eye"
+      },
+      "likes": 1
+    },
+    {
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSURkbWQzMTVRRRAB!2m1!1s0x0:0x1aba4a6f3cc4a737!3m1!1s2@1:CIHM0ogKEICAgIDdmd315QE%7CCgwI7aHxrwYQuL-VtAI%7C?hl=en-US",
+      "rating": 5.0,
+      "date": "2 months ago",
+      "iso_date": "2024-02-25T03:06:58Z",
+      "iso_date_of_last_edit": "2024-03-21T15:23:25Z",
+      "images": [
+        "https://lh5.googleusercontent.com/p/AF1QipPGOxduBZ5-26VfkbvOkx1bytIbN2nkBETzen7z=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOX9mO4O9lmoGICL-uVEsMcqrgmnLTGuDRUoYM2=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNkOY0Vu_-KOokxRxHjAPjXROQV757NsQX71tnk=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMliOQKe5vmPgwfFXViChrEoLcouDTzW0l4dirg=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipM0syiF2PyGupvTnepEtNPDpJH3r2k3DAo5tCir=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNcoVKBHqPVGrtNeCWqbp5ntI_tOVlPgbBsMZFZ=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipN_6sI0YD7Lu_k4lqmmOFeYhqMI8_g_GK8gaZ_C=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOD0OGQ9VAqtw-ThFMBUay-FcAiMm5kcsc0xOHi=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNE1qFnwuzxhC1IYzn_jqAe35ToUBlS6lRaC9cp=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPed_1BDy0eoHN4UwyJWGtiCS2fgREoGVj3KebQ=w150-h150-k-no-p"
+      ],
+      "source": "Google",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSURkbWQzMTVRRRAB",
+      "user": {
+        "name": "Fareed Mohammed",
+        "link": "https://www.google.com/maps/contrib/101610419315538586039?hl=en-US",
+        "contributor_id": "101610419315538586039",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjWWOklU2OlLebX0Pk_2pnP_my_yb7cZnSjaaszf7jmDs0HpInbCGg=s120-c-rp-mo-ba6-br100",
+        "local_guide": true,
+        "reviews": 528,
+        "photos": 679
+      },
+      "snippet": "Even though I've actually arrived and left from Charlotte, I've had multiple layovers here, and it's one of my favorite airports to be forced to spend a layover at. There are many of food options and rotating art displays in the Atrium, the central area of the airport, along with a long row of comfortable rocking rockers. I think this airport is more charming than others, and I adore the original artwork that is shown in each terminal. There isn't another airport I would prefer be forced to spend a stopover at, though I can't comment to the accessibility of the public transportation system or navigating security.",
+      "extracted_snippet": {
+        "original": "Even though I've actually arrived and left from Charlotte, I've had multiple layovers here, and it's one of my favorite airports to be forced to spend a layover at. There are many of food options and rotating art displays in the Atrium, the central area of the airport, along with a long row of comfortable rocking rockers. I think this airport is more charming than others, and I adore the original artwork that is shown in each terminal. There isn't another airport I would prefer be forced to spend a stopover at, though I can't comment to the accessibility of the public transportation system or navigating security."
+      },
+      "likes": 0
+    },
+    {
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSURqb18yN0FnEAE!2m1!1s0x0:0x1aba4a6f3cc4a737!3m1!1s2@1:CIHM0ogKEICAgIDjo_27Ag%7CCgwIz6fmsQYQgOXPiQM%7C?hl=en-US",
+      "rating": 5.0,
+      "date": "a month ago",
+      "iso_date": "2024-05-07T02:37:03Z",
+      "iso_date_of_last_edit": "2024-05-07T02:37:03Z",
+      "images": [
+        "https://lh5.googleusercontent.com/p/AF1QipPhfKGOWdTy6vcmyNyKIiQRGYdjBjGEsK2YNlyQ=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMEBuvSwXJFkH4zRvqEc9nxUnfntV9hlDw6LwOp=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMkLrmt42WPxKwN-3ORfkNbL-R3acmVBbsY8vKy=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOubtC_9L4UzSRNhqRGLsoc_viT0jiDsz_QlfDy=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMb3cfUUyS2aqgc8tpbuo1ry1qkujTXXqV2T5Hi=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOx-FVSn-usvvUXvTb3VCTq5wlbJONkWq8EdXIz=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMtvEwbTiDIpOsbQM9H6Gmx0NkPDLfOv-SjeMZ-=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOm933bQUUNg3nCuCMg12AEVVkpOV37N5DZyHWj=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOHy-V6dzao5ebIJORW_XdlLWBjVXccSXcOfmlv=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMSBB8Z0VgQi0YdE0j49m5YDiPI9Zgk8qHANcBw=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPMkbauFqOmdbgPc0yEq8S2mbh8c9Mz07pN3tO6=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPVpwqJE3lxyLwNZr1zQrGaoKCXhfxWyCzGPpYU=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMJ2DFHfvNAl-Qi8ty9rRwWhityjV8AenrYO1wC=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipObxc5bGwYICC2Nt0DYO0FsDRk9e9jEaAVSWVZB=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMdN4S5xMd6L_vWOwwyFq2aEJwpEv-nZvh8mE1V=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPEhQ7eQEiPoHjQuiXHwXB7o66SDZxBCXSRFc2u=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPG-xrjmuir5WX8NvZt5nvmLuXVRdLTeL_mnwi2=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOTCffPrDyZgQ9eTg27E2RYtIPzx1Bl7w-rRfGd=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPUenkWc1P4vl--gJPzg8oPxYSOd5y0fg65Keh6=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipP0-VsfQOegT5M82HpTFeMN33lN-azlLnPX9U9N=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPLtH-jMQlvUNdwWwT1FVdDmQRa11-z7Eh47yJG=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOkY3oseh5ALzqgqVRZBvCwZYMpUp3j7nHuRDmb=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipP1dOrAAOmmJS8zM8pyRD4fD4FmQUlcJ2zfr8Pe=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPiqBLL6NtBuvSOKdoKdFBZUnfbo-U3_U5oqwRT=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPAeKSsETg9CgnwDaEwzmtdIFZKn9aC6g37H3Yh=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipME8doLI9bbDJLOQHHFNYz8EWbE73G-ls84SgxI=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMERv9nSLx2p8oMQKW3dsfPIFSioojf9TdOj3bN=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNxj2oOC-dGfiRk1_LCMQl94e55dbPPGht2cx4j=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNbJv2raf0qcOEMeDG9_a_h8Yw99u2HpFIuLVrL=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipM7H6vfx-fGDMy3Z94Zcu63ih9z6VCneMStPo0E=w150-h150-k-no-p"
+      ],
+      "source": "Google",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURqb18yN0FnEAE",
+      "user": {
+        "name": "Patrick Kelly",
+        "link": "https://www.google.com/maps/contrib/116929578311049446846?hl=en-US",
+        "contributor_id": "116929578311049446846",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjX7GunnwSeh6H3lWHd1VmiYdF9LzrumOORCQbagy1ByJDHEtPM=s120-c-rp-mo-ba6-br100",
+        "local_guide": true,
+        "reviews": 198,
+        "photos": 1118
+      },
+      "snippet": "Passing through Charlotte Douglas International Airport on my way to Birmingham, Alabama, and what a busy airport as always. There is a lot here from.shopling, seating, and relaxing. From Gate B to Gate E, it is about a 14-minute walk if you crush it. When I traveled it was nighttime so a lot of shops and restaurants were already closed. This, the airport needs a but of a renovation as well. The carpets look like they are from 1980. There were not many charhers either by the seats waiting for the flights.  This airport is always packed, so if you are connecting, get ready to move to your next location as there is no tram or shuttle between gates.",
+      "extracted_snippet": {
+        "original": "Passing through Charlotte Douglas International Airport on my way to Birmingham, Alabama, and what a busy airport as always. There is a lot here from.shopling, seating, and relaxing. From Gate B to Gate E, it is about a 14-minute walk if you crush it. When I traveled it was nighttime so a lot of shops and restaurants were already closed. This, the airport needs a but of a renovation as well. The carpets look like they are from 1980. There were not many charhers either by the seats waiting for the flights.  This airport is always packed, so if you are connecting, get ready to move to your next location as there is no tram or shuttle between gates."
+      },
+      "likes": 0
+    },
+    {
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUNqMjkzcWJnEAE!2m1!1s0x0:0x1aba4a6f3cc4a737!3m1!1s2@1:CIHM0ogKEICAgICj293qbg%7CCgsI0YutsQYQiILeRg%7C?hl=en-US",
+      "rating": 4.0,
+      "date": "a month ago",
+      "iso_date": "2024-04-26T06:00:05Z",
+      "iso_date_of_last_edit": "2024-04-26T06:12:33Z",
+      "images": [
+        "https://lh5.googleusercontent.com/p/AF1QipMDK_scbPc2IX-s0jf4bzBWHlaRKm9ky8_TlJOG=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNeYHoWVexp9KlFlSh3dUayr_FbrM1bW5CkjWxT=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipN0jzzIDd3GHfEFc1xwhoNR_PlkFfGYsGmOmBy6=w150-h150-k-no-p"
+      ],
+      "source": "Google",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNqMjkzcWJnEAE",
+      "user": {
+        "name": "Dr. Ziauddin Ahmed",
+        "link": "https://www.google.com/maps/contrib/117706059824622238424?hl=en-US",
+        "contributor_id": "117706059824622238424",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjUJ_IyOai0OeCqx8st4tx1NDTMWKZLB7NDMvCJKeqNKSwfYxdE=s120-c-rp-mo-ba5-br100",
+        "local_guide": true,
+        "reviews": 228,
+        "photos": 841
+      },
+      "snippet": "I used this airport  quite a few times for departure, arrival and transit. This is one of the largest airports of the USA, nonetheless I had to walk a lot while in transit this time and I was about to miss my connecting flight. It was good that I was in a group of travelers of more than 20 persons, the flight made delay for few minutes for us. Very nice airport having a lot of shops snd restaurants. Very well-maintained and nicely decorated airport. The downtown and hotel areas are not too far. Staffs were friendly. Outside of the airport is also good.",
+      "extracted_snippet": {
+        "original": "I used this airport  quite a few times for departure, arrival and transit. This is one of the largest airports of the USA, nonetheless I had to walk a lot while in transit this time and I was about to miss my connecting flight. It was good that I was in a group of travelers of more than 20 persons, the flight made delay for few minutes for us. Very nice airport having a lot of shops snd restaurants. Very well-maintained and nicely decorated airport. The downtown and hotel areas are not too far. Staffs were friendly. Outside of the airport is also good."
+      },
+      "likes": 1
+    },
+    {
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUNkMzUyZzB3RRAB!2m1!1s0x0:0x1aba4a6f3cc4a737!3m1!1s2@1:CIHM0ogKEICAgICd352g0wE%7CCgwIxdLOrgYQyN7tjgI%7C?hl=en-US",
+      "rating": 5.0,
+      "date": "3 months ago",
+      "iso_date": "2024-02-19T19:17:25Z",
+      "iso_date_of_last_edit": "2024-02-19T19:17:25Z",
+      "images": [
+        "https://lh5.googleusercontent.com/p/AF1QipNeni-wWik6O0ngbgkSW8cybfHmhCXnrGtuai_V=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMd_h2bMZhr7lazruSIqSYa-8H-b0yswzHGnx25=w150-h150-k-no-p"
+      ],
+      "source": "Google",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNkMzUyZzB3RRAB",
+      "user": {
+        "name": "Patrick Preece",
+        "link": "https://www.google.com/maps/contrib/118384220801647365886?hl=en-US",
+        "contributor_id": "118384220801647365886",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjUeh8RHLNbwjNTvAxFqIYGZ9OdMC1OXgdYGd4bWCfieinCll5A=s120-c-rp-mo-ba4-br100",
+        "local_guide": true,
+        "reviews": 72,
+        "photos": 202
+      },
+      "snippet": "Charlotte Douglas International Airport stands out as one of the finest airports in the United States, not only because it\u2019s the third busiest but also due to its exceptional organization and cleanliness. This airport sets a high standard for travel experiences, making it a place where you can actually look forward to a layover.\n\nOne of the airport\u2019s most commendable aspects is its wide array of dining and shopping options. Whether you\u2019re in the mood for a quick snack, a hearty meal, or some last-minute shopping, Charlotte Douglas offers a variety of choices to suit every need and taste. The selection is diverse, featuring both local flavors and international favorites, ensuring that every traveler can find something to enjoy.\n\nAdding to the airport\u2019s charm and comfort are the distinctive white rocking chairs scattered throughout the terminals. These rocking chairs are not just seating; they\u2019re a nod to Southern hospitality and a unique feature that sets Charlotte Douglas apart. They offer a cozy spot for relaxation and people-watching, turning a simple layover into a pleasant break in your journey.\n\nThe efficiency and cleanliness of the airport also deserve high praise. Despite its bustling nature, the airport maintains a sense of calm and order, with clear signage and helpful staff ensuring a smooth flow of passengers. The cleanliness is impeccable, contributing to an overall atmosphere of comfort and ease.\n\nIn conclusion, a layover at Charlotte Douglas International Airport is never a burden but rather a welcome part of the travel experience. The combination of excellent facilities, great dining and shopping, and those iconic rocking chairs make it a place where time flies by in the most enjoyable way. I never mind a layover in Charlotte, and I\u2019m always impressed by the consistent quality of the experience here.",
+      "extracted_snippet": {
+        "original": "Charlotte Douglas International Airport stands out as one of the finest airports in the United States, not only because it\u2019s the third busiest but also due to its exceptional organization and cleanliness. This airport sets a high standard for travel experiences, making it a place where you can actually look forward to a layover.\n\nOne of the airport\u2019s most commendable aspects is its wide array of dining and shopping options. Whether you\u2019re in the mood for a quick snack, a hearty meal, or some last-minute shopping, Charlotte Douglas offers a variety of choices to suit every need and taste. The selection is diverse, featuring both local flavors and international favorites, ensuring that every traveler can find something to enjoy.\n\nAdding to the airport\u2019s charm and comfort are the distinctive white rocking chairs scattered throughout the terminals. These rocking chairs are not just seating; they\u2019re a nod to Southern hospitality and a unique feature that sets Charlotte Douglas apart. They offer a cozy spot for relaxation and people-watching, turning a simple layover into a pleasant break in your journey.\n\nThe efficiency and cleanliness of the airport also deserve high praise. Despite its bustling nature, the airport maintains a sense of calm and order, with clear signage and helpful staff ensuring a smooth flow of passengers. The cleanliness is impeccable, contributing to an overall atmosphere of comfort and ease.\n\nIn conclusion, a layover at Charlotte Douglas International Airport is never a burden but rather a welcome part of the travel experience. The combination of excellent facilities, great dining and shopping, and those iconic rocking chairs make it a place where time flies by in the most enjoyable way. I never mind a layover in Charlotte, and I\u2019m always impressed by the consistent quality of the experience here."
+      },
+      "likes": 4
+    },
+    {
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUROc2RIWFFBEAE!2m1!1s0x0:0x1aba4a6f3cc4a737!3m1!1s2@1:CIHM0ogKEICAgIDNsdHXQA%7CCgsInb--rQYQ-InRJQ%7C?hl=en-US",
+      "rating": 5.0,
+      "date": "4 months ago",
+      "iso_date": "2024-01-23T11:14:37Z",
+      "iso_date_of_last_edit": "2024-01-23T11:14:37Z",
+      "images": [
+        "https://lh5.googleusercontent.com/p/AF1QipOW1hFCN5EQRsvjT1XmR3gghvIcaGwDmg5h10cL=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMrG-rJWlO1QjoOq-pQnoKOVQK3EaZ7xaoDG80-=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMaD6rsTftaQLsCjXtdeF6p9UBf8_IzJxR8PiMf=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipO5Vw2Z2c-EWs6y2INxEXsJubdFsjlYGuyrytfo=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNVNNQnSX48dYKOKNLdTZevpQh9PIqixJQs5qi8=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipO6Ggo1uwNu6S6LC0cz1cCok8BJHP4ADOyqC1AN=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipM2O8c1dtpDqMOSlCvfycdJKnkP2zfaSMjyK0Tb=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNwRSeSVlsrZRhPMKhWqhsblWJvRTPzeXF3Z7N2=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipO8e1fGekmux1snAG70RdiX8qwx1jeIZvKPgsaK=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipP_dVAETNDWifhx5iowqIF3WeKGCWAeY98FWJMi=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipNaCAUH4BexgxIUM-jS8cIZkB5KMF9DmbcOhZ_6=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPwjGFfUDm_TvX4318YWRvnE_JCmMvIb9Yp1KOf=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipPW9V4e8jra1ZCi4tc4kmXvrHYX0PEXf3H0bsNx=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipON96il1ZMAG7alnabH79y0JI-IQC3Max2gmQa2=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipMjPuNhVZ1zFBpuR5VkfXr0QO25No5tbRxc2EcN=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipM_AlR514nWktZzPnHDpDoY03xsgq-HH_okiC4f=w150-h150-k-no-p"
+      ],
+      "source": "Google",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUROc2RIWFFBEAE",
+      "user": {
+        "name": "Nick Pastore",
+        "link": "https://www.google.com/maps/contrib/114859072078129445323?hl=en-US",
+        "contributor_id": "114859072078129445323",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjW0tY4lFDTuup2Kb-7eRZVBOFa-McUrLpBgYZENP8AFbkB_kGtr=s120-c-rp-mo-ba6-br100",
+        "local_guide": true,
+        "reviews": 407,
+        "photos": 3153
+      },
+      "snippet": "This airport is under construction like every other one on earth. Unlike most it is still easy to navigate with adequate signs and information areas. One nice bonus is the information desk right next to the security checkpoint. Most important the bathrooms are kept clean and the staff are kind and helpful. The rocking chairs are also super comfortable and a nice touch.",
+      "extracted_snippet": {
+        "original": "This airport is under construction like every other one on earth. Unlike most it is still easy to navigate with adequate signs and information areas. One nice bonus is the information desk right next to the security checkpoint. Most important the bathrooms are kept clean and the staff are kind and helpful. The rocking chairs are also super comfortable and a nice touch."
+      },
+      "likes": 4
+    },
+    {
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUN6MHFfWWFBEAE!2m1!1s0x0:0x1aba4a6f3cc4a737!3m1!1s2@1:CIHM0ogKEICAgICz0q_YaA%7CCgsI-_TpsgYQiPWeFw%7C?hl=en-US",
+      "rating": 4.0,
+      "date": "a week ago",
+      "iso_date": "2024-06-01T01:33:47Z",
+      "iso_date_of_last_edit": "2024-06-01T01:33:47Z",
+      "images": [
+        "https://lh5.googleusercontent.com/p/AF1QipPUgeGxbg0j5H-gXbi2KGGE_eWXWswify02sO7J=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOXGVgp1pzbTpzh6PYXyugyYPta4vEKO4RN5DQx=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOwg6CS_OXlt_fgfMtfDy_xkB8WwDMbX1WtgLa0=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipN-UxgRMyfTWU1VnOKOnaX1dRFlHTTcO_JppgUz=w150-h150-k-no-p",
+        "https://lh5.googleusercontent.com/p/AF1QipOwYQ4rXIrl-USnxwu3oQzmAw5HV6pzw0YNx-JG=w150-h150-k-no-p"
+      ],
+      "source": "Google",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUN6MHFfWWFBEAE",
+      "user": {
+        "name": "Zach Benedicto",
+        "link": "https://www.google.com/maps/contrib/109547662286567505187?hl=en-US",
+        "contributor_id": "109547662286567505187",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjVOwsfxN3yaSNVFU_7LWffKl0gve35da26QpKKsMC9SNksqiXs0=s120-c-rp-mo-ba6-br100",
+        "local_guide": true,
+        "reviews": 186,
+        "photos": 1804
+      },
+      "snippet": "Good airport for connecting flight. Had a layover at Terminal E. Various places to eat. Clean bathrooms. Plenty of seats on the waiting area.",
+      "extracted_snippet": {
+        "original": "Good airport for connecting flight. Had a layover at Terminal E. Various places to eat. Clean bathrooms. Plenty of seats on the waiting area."
+      },
+      "likes": 0
+    }
+  ],
+  "serpapi_pagination": {
+    "next": "https://serpapi.com/search.json?engine=google_maps_reviews&hl=en&next_page_token=CAESBkVnSUlDQQ%3D%3D&place_id=ChIJidRKt32YVogRN6fEPG9Kuho",
+    "next_page_token": "CAESBkVnSUlDQQ=="
+  }
+}
