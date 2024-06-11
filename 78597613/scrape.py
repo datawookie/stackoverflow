@@ -1,5 +1,6 @@
 import requests
-import json
+import time
+from bs4 import BeautifulSoup
 
 DATE = "2024-06-07"
 
@@ -17,5 +18,25 @@ params = {
 
 response = requests.get("https://puntapi.com/graphql-horse-racing", params=params, headers=headers)
 
-with open(f"race-data-{DATE}.json", "wt") as file:
-    file.write(json.dumps(response.json(), indent=2))
+races = response.json()
+
+for group in races["data"]["meetingsGrouped"]:
+    for meeting in group["meetings"]:
+        for event in meeting["events"]:
+            time.sleep(5)
+            print("🟦 "+meeting["name"]+" — "+event["name"]+"\n")
+
+            URL = "https://www.racenet.com.au/results/horse-racing/"+meeting["slug"]+"/"+event["slug"]
+
+            print("URL: "+URL+"\n")
+
+            response = requests.get(URL, headers=headers)
+
+            soup = BeautifulSoup(response.text, "html.parser")
+
+            names = soup.select("h4.selection-result__info-competitor-name")
+
+            for name in names:
+                print(name.get_text().strip())
+
+            print()
