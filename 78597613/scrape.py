@@ -24,11 +24,11 @@ for group in races["data"]["meetingsGrouped"]:
     for meeting in group["meetings"]:
         for event in meeting["events"]:
             time.sleep(5)
-            print("🟦 "+meeting["name"]+" — "+event["name"]+"\n")
+            print("🟦 " + meeting["name"] + " — " + event["name"] + "\n")
 
-            URL = "https://www.racenet.com.au/results/horse-racing/"+meeting["slug"]+"/"+event["slug"]
+            URL = "https://www.racenet.com.au/results/horse-racing/" + meeting["slug"] + "/" + event["slug"]
 
-            print("URL: "+URL+"\n")
+            print("URL: " + URL + "\n")
 
             response = requests.get(URL, headers=headers)
 
