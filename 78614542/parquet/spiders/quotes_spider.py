@@ -1,21 +1,22 @@
 import scrapy
-
-from ..items import ParquetItem
+import pandas as pd
+from io import StringIO
 
 
 class QuotesSpider(scrapy.Spider):
-    name = "quotes"
-    start_urls = [
-        "https://quotes.toscrape.com/page/1/",
-        "https://quotes.toscrape.com/page/2/",
-    ]
+    name = "parquet"
+    start_urls = ["https://onlinetestcase.com/csv-file/"]
 
     def parse(self, response):
-        for quote in response.css("div.quote"):
-            item = ParquetItem()
+        for url in response.css("a::attr(href)").extract():
+            if url.endswith(".csv"):
+                url = response.urljoin(url)
 
-            item["file_urls"] = response.url
-            item["text"] = quote.css("span.text::text").get()
-            item["author"] = quote.css("small.author::text").get()
+                yield scrapy.http.Request(url, callback=self.parse_csv, dont_filter=True)
 
-            yield item
+    def parse_csv(self, response):
+        yield {
+            "url": response.url,
+            # Convert CSV text into Data Frame.
+            "data": pd.read_csv(StringIO(response.text)),
+        }

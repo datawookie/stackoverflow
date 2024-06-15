@@ -17,3 +17,12 @@ params = {
 response = requests.get("https://data.census.gov/api/profile/content/highlights", params=params, headers=headers)
 
 print(json.dumps(response.json(), indent=2))
+
+params = {
+    'g': '050XX00US35017',
+    'includeHighlights': 'false',
+}
+
+response = requests.get('https://data.census.gov/api/profile/metadata', params=params, headers=headers)
+
+print(response.json()["header"]["description"])

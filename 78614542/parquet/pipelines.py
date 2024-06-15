@@ -1,23 +1,21 @@
 import re
 from collections import defaultdict
 
-import pandas as pd
-
 
 class ParquetPipeline:
     def open_spider(self, spider):
         self.items = defaultdict(lambda: [])
 
     def close_spider(self, spider):
-        # Iterate over pages, writing data for each to a parquet file.
+        # Iterate over items, writing each to Parquet.
         #
-        for page, data in self.items.items():
-            df = pd.DataFrame(data)
-            df.to_parquet(f"page-{page}.parquet", index=False)
+        for name, df in self.items.items():
+            df.to_parquet(name, index=False)
 
     def process_item(self, item, spider):
-        # Extract page number from URL.
-        page = int(re.search(r"/page/(\d+)/", item["file_urls"]).group(1))
+        # Get CSV filename.
+        csv = re.search("[^/]+$", item["url"]).group(0)
+        # Create Parquet filename.
+        parquet = re.sub("\.csv", ".parquet", csv)
 
-        self.items[page].append(dict(item))
-        return item
+        self.items[parquet] = item["data"]
