@@ -31,4 +31,9 @@ res <- httr::POST(
   body = data
 )
 
-table <- content(res)$dataView$dataTable$rows |> map_dfr(function(row) {data.frame(row$text) %>% setNames(c("budget", "sales"))})
+table <- content(res)$dataView$dataTable$rows |>
+  map(function(row) {
+    data.frame(row$text) %>%
+      setNames(c("budget", "sales"))
+  }) |>
+  list_rbind()
