@@ -40,4 +40,3 @@ class CallmeduySpider(scrapy.Spider):
             else:
                 self.logger.info("Waiting for skeleton to load.")
                 time.sleep(5)
-

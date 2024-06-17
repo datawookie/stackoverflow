@@ -4,6 +4,7 @@ from pathlib import Path
 import scrapy
 from scrapy_splash import SplashRequest
 
+
 class CallmeduySpider(scrapy.Spider):
     name = "callmeduy"
 
@@ -26,34 +27,32 @@ class CallmeduySpider(scrapy.Spider):
     """
 
     def start_requests(self):
-        urls = [
-            "https://callmeduy.com/san-pham/"
-        ]
+        urls = ["https://callmeduy.com/san-pham/"]
         for url in urls:
             yield SplashRequest(
                 url=url,
                 callback=self.parse,
-                endpoint='execute',
+                endpoint="execute",
                 args={
-                    'wait': 10,
-                    'timeout': 90,
-                    'images': 0,
-                    'lua_source': self.script,
-                }
+                    "wait": 10,
+                    "timeout": 90,
+                    "images": 0,
+                    "lua_source": self.script,
+                },
             )
 
     def parse(self, response):
         print(response.body)
-        f = open('res.html', 'w+')
+        f = open("res.html", "w+")
         f.write(str(response.body))
         f.close()
 
-        print(response.data['png'])
+        print(response.data["png"])
 
         # with open('res.png', 'wb') as f:
         #     f.write(response.data['png'])
         # with open('res.har', 'w') as f:
         #     f.write(response.data['har'])
 
-        with open('res.png', 'wb') as f:
-            f.write(base64.b64decode(response.data['png']))
+        with open("res.png", "wb") as f:
+            f.write(base64.b64decode(response.data["png"]))
