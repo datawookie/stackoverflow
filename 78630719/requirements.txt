@@ -1,0 +1,5 @@
+Scrapy==2.11.2
+scrapy-splash==0.9.0
+playwright==1.44.0
+scrapy-playwright==0.0.35
+beautifulsoup4==4.12.3

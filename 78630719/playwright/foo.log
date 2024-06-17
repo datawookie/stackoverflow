@@ -1,0 +1,426 @@
+2024-06-17 09:25:28 [scrapy.utils.log] INFO: Scrapy 2.11.2 started (bot: tutorial)
+2024-06-17 09:25:28 [scrapy.utils.log] INFO: Versions: lxml 5.2.2.0, libxml2 2.12.6, cssselect 1.2.0, parsel 1.9.1, w3lib 2.2.1, Twisted 24.3.0, Python 3.11.4 (main, Dec  7 2023, 15:43:41) [GCC 12.3.0], pyOpenSSL 24.1.0 (OpenSSL 3.2.2 4 Jun 2024), cryptography 42.0.8, Platform Linux-6.2.0-39-generic-x86_64-with-glibc2.37
+2024-06-17 09:25:28 [scrapy.addons] INFO: Enabled addons:
+[]
+2024-06-17 09:25:28 [asyncio] DEBUG: Using selector: EpollSelector
+2024-06-17 09:25:28 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2024-06-17 09:25:28 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2024-06-17 09:25:28 [scrapy.extensions.telnet] INFO: Telnet Password: 6e7f8951b7934e61
+2024-06-17 09:25:28 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2024-06-17 09:25:28 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'tutorial',
+ 'CONCURRENT_REQUESTS': 4,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 2,
+ 'CONCURRENT_REQUESTS_PER_IP': 2,
+ 'DOWNLOAD_DELAY': 3,
+ 'EDITOR': 'vim',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'tutorial.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['tutorial.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2024-06-17 09:25:28 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-06-17 09:25:28 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-06-17 09:25:28 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2024-06-17 09:25:28 [scrapy.core.engine] INFO: Spider opened
+2024-06-17 09:25:28 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-06-17 09:25:28 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-06-17 09:25:28 [scrapy-playwright] INFO: Starting download handler
+2024-06-17 09:25:28 [scrapy-playwright] INFO: Starting download handler
+2024-06-17 09:25:33 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://callmeduy.com/robots.txt> (referer: None)
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 1 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 4 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 9 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 11 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 12 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 15 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 16 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 17 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 18 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 19 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 22 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 23 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 24 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 25 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 26 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 29 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 30 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 31 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 32 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 33 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 36 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 37 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 38 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 39 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 40 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 43 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 44 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 45 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 46 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 47 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 50 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 51 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 52 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 53 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 54 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 57 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 58 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 59 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 60 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 61 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 64 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 65 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 66 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 67 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 68 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 71 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 72 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 73 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 74 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 75 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 78 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 79 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 80 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 81 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 82 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 85 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 86 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 87 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 88 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 89 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 92 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 93 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 94 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 95 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 96 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 99 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 100 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 101 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 102 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 103 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 107 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 108 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 110 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 112 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 115 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 117 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 120 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 122 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 125 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 127 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 130 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 132 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 135 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 137 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 140 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 142 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 145 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 147 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 150 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 152 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 155 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 157 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 160 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 162 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 165 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 167 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 170 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 172 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 175 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 177 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 180 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 182 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 185 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 187 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 190 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 192 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 195 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 197 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 200 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 202 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 205 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 207 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 210 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 212 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 215 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 217 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 220 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 222 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 225 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 227 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 230 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 232 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 235 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 237 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 240 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 242 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 245 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 247 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 250 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 252 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 255 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 257 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 260 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 262 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 265 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 267 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 270 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 272 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 275 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 277 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 280 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 282 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 285 without any user agent to enforce it on.
+2024-06-17 09:25:33 [protego] DEBUG: Rule at line 287 without any user agent to enforce it on.
+2024-06-17 09:25:33 [scrapy-playwright] INFO: Launching browser chromium
+2024-06-17 09:25:34 [scrapy-playwright] INFO: Browser chromium launched
+2024-06-17 09:25:34 [scrapy-playwright] DEBUG: Browser context started: 'default' (persistent=False, remote=False)
+2024-06-17 09:25:34 [scrapy-playwright] DEBUG: [Context=default] New page created, page count is 1 (1 for all contexts)
+2024-06-17 09:25:34 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/san-pham> (resource type: document)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/san-pham>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css> (resource type: stylesheet, referrer: https://callmeduy.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600;1,800&family=Roboto:wght@300;400;700;900&display=swap> (resource type: stylesheet, referrer: https://callmeduy.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js> (resource type: script, referrer: https://callmeduy.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/css/9fec325d4bc63715650d.css> (resource type: stylesheet, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/main-97f3ac2750b403726c52.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/webpack-caf1ff17dad824a6f46b.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/framework.a5d4ffe593e18b49243e.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/29107295.ebaa356c5b0a632e591c.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/commons.ebb08e1bdcbf3233c06e.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/23431c37d75fca30ee19b004dc8a257b145188db.b23d31ff1277ddaba4c0.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/pages/_app-74e605d338363a9f0190.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/d94bb849d384b868cc7e4ad434f6dee0c4d44bf1.498b8d19d86d6b01e35f.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/89f16f4b3c9579ad1a1c009c2934d1fde3493133.f415b2f2dec4f7f79d62.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/4688402fd76a443eca3aa598e918bf9c6321fa77.59d6261bd6a345c72d7e.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/c8e35c3dc3e226dbe778b75ecf63b7b7e22e95d1.af652bada79af01c67c4.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/3a125bd803930a408c95fadaac633a84da7254cc.fe33e0174469dab8f3b2.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/pages/san-pham-2949ab692d54f52558a9.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/css/9fec325d4bc63715650d.css>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/main-97f3ac2750b403726c52.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/webpack-caf1ff17dad824a6f46b.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/framework.a5d4ffe593e18b49243e.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/29107295.ebaa356c5b0a632e591c.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/commons.ebb08e1bdcbf3233c06e.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/23431c37d75fca30ee19b004dc8a257b145188db.b23d31ff1277ddaba4c0.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/pages/_app-74e605d338363a9f0190.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/d94bb849d384b868cc7e4ad434f6dee0c4d44bf1.498b8d19d86d6b01e35f.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/89f16f4b3c9579ad1a1c009c2934d1fde3493133.f415b2f2dec4f7f79d62.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/4688402fd76a443eca3aa598e918bf9c6321fa77.59d6261bd6a345c72d7e.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/c8e35c3dc3e226dbe778b75ecf63b7b7e22e95d1.af652bada79af01c67c4.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/pages/san-pham-2949ab692d54f52558a9.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/3a125bd803930a408c95fadaac633a84da7254cc.fe33e0174469dab8f3b2.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600;1,800&family=Roboto:wght@300;400;700;900&display=swap>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://connect.facebook.net/vi_VN/sdk.js> (resource type: script, referrer: https://callmeduy.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/DZaMROzcQKLCNZPLj1Uua/_buildManifest.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/DZaMROzcQKLCNZPLj1Uua/_ssgManifest.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://connect.facebook.net/en_US/fbevents.js> (resource type: script, referrer: https://callmeduy.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf> (resource type: font, referrer: https://fonts.googleapis.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlvAw.ttf> (resource type: font, referrer: https://fonts.googleapis.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf> (resource type: font, referrer: https://fonts.googleapis.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/DZaMROzcQKLCNZPLj1Uua/_buildManifest.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://connect.facebook.net/vi_VN/sdk.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/assets/img/logo_header.png> (resource type: image, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/assets/img/arrow_up.png> (resource type: image, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/assets/img/icons/send.svg> (resource type: image, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://www.google-analytics.com/analytics.js> (resource type: script, referrer: https://callmeduy.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_api/layouts/insta> (resource type: xhr, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_api/layouts/other> (resource type: xhr, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_api/products/count?name_contains=> (resource type: xhr, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_api/products?_start=0&_limit=12&name_contains=&_sort=created_at:DESC> (resource type: xhr, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_api/brands?_limit=-1&_sort=name:ASC> (resource type: xhr, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/DZaMROzcQKLCNZPLj1Uua/_ssgManifest.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://connect.facebook.net/en_US/fbevents.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlvAw.ttf>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://connect.facebook.net/vi_VN/sdk.js?hash=27b04148d2f94ed730352598e5e088b2> (resource type: script, referrer: https://callmeduy.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/05d954cf.948cceca4ac10d052335.js> (resource type: other, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/d94bb849d384b868cc7e4ad434f6dee0c4d44bf1.498b8d19d86d6b01e35f.js> (resource type: other, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/89f16f4b3c9579ad1a1c009c2934d1fde3493133.f415b2f2dec4f7f79d62.js> (resource type: other, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/4688402fd76a443eca3aa598e918bf9c6321fa77.59d6261bd6a345c72d7e.js> (resource type: other, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/3a125bd803930a408c95fadaac633a84da7254cc.fe33e0174469dab8f3b2.js> (resource type: other, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/pages/index-71796e88f36c9db3bc4b.js> (resource type: other, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/c8e35c3dc3e226dbe778b75ecf63b7b7e22e95d1.af652bada79af01c67c4.js> (resource type: other, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/pages/san-pham-2949ab692d54f52558a9.js> (resource type: other, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/pages/bai-viet-d37d6f83ff2a86479dfc.js> (resource type: other, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/b1a4c868fba7e1c90f841c85936ec70220c1385e.307f9d3211722c24e388.js> (resource type: other, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/pages/thanh-phan-649ab104153e44059ffe.js> (resource type: other, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://connect.facebook.net/signals/config/436713284323042?v=2.9.158&r=stable&domain=callmeduy.com&hme=446fb981c8c3baeb03730fe3cbd404f7f15f64c693f24c7fe75da498bc2c95d8&ex_m=67%2C113%2C100%2C104%2C58%2C3%2C93%2C66%2C15%2C91%2C84%2C49%2C51%2C160%2C163%2C174%2C170%2C171%2C173%2C28%2C94%2C50%2C73%2C172%2C155%2C158%2C167%2C168%2C175%2C122%2C14%2C48%2C180%2C179%2C124%2C17%2C33%2C38%2C1%2C41%2C62%2C63%2C64%2C68%2C88%2C16%2C13%2C90%2C87%2C86%2C101%2C103%2C37%2C102%2C29%2C25%2C156%2C159%2C131%2C27%2C10%2C11%2C12%2C5%2C6%2C24%2C21%2C22%2C54%2C59%2C61%2C71%2C95%2C26%2C72%2C8%2C7%2C76%2C46%2C20%2C97%2C96%2C98%2C9%2C19%2C18%2C81%2C53%2C79%2C32%2C70%2C0%2C89%2C31%2C78%2C83%2C45%2C44%2C82%2C36%2C4%2C85%2C77%2C42%2C39%2C34%2C80%2C2%2C35%2C60%2C40%2C99%2C43%2C75%2C65%2C105%2C57%2C56%2C30%2C92%2C55%2C52%2C47%2C74%2C69%2C23%2C106> (resource type: script, referrer: https://callmeduy.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://connect.facebook.net/vi_VN/sdk.js?hash=27b04148d2f94ed730352598e5e088b2>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://www.google-analytics.com/analytics.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/05d954cf.948cceca4ac10d052335.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/89f16f4b3c9579ad1a1c009c2934d1fde3493133.f415b2f2dec4f7f79d62.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/d94bb849d384b868cc7e4ad434f6dee0c4d44bf1.498b8d19d86d6b01e35f.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/4688402fd76a443eca3aa598e918bf9c6321fa77.59d6261bd6a345c72d7e.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <POST https://www.google-analytics.com/j/collect?v=1&_v=j101&a=1416999557&t=pageview&_s=1&dl=https%3A%2F%2Fcallmeduy.com%2Fsan-pham&dp=%2Fsan-pham&ul=en-gb&de=UTF-8&dt=S%E1%BA%A3n%20ph%E1%BA%A9m%20-%20Callmeduy&sd=24-bit&sr=1280x720&vp=1265x720&je=0&_u=YEBAAEABAAAAACAAI~&jid=306241179&gjid=897054950&cid=285745410.1718612736&tid=UA-174166344-1&_gid=129869905.1718612736&_r=1&_slc=1&z=1413872684> (resource type: xhr, referrer: https://callmeduy.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/3a125bd803930a408c95fadaac633a84da7254cc.fe33e0174469dab8f3b2.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/pages/index-71796e88f36c9db3bc4b.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/c8e35c3dc3e226dbe778b75ecf63b7b7e22e95d1.af652bada79af01c67c4.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/pages/san-pham-2949ab692d54f52558a9.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/pages/bai-viet-d37d6f83ff2a86479dfc.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/b1a4c868fba7e1c90f841c85936ec70220c1385e.307f9d3211722c24e388.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_next/static/chunks/pages/thanh-phan-649ab104153e44059ffe.js>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://www.google-analytics.com/j/collect?v=1&_v=j101&a=1416999557&t=pageview&_s=1&dl=https%3A%2F%2Fcallmeduy.com%2Fsan-pham&dp=%2Fsan-pham&ul=en-gb&de=UTF-8&dt=S%E1%BA%A3n%20ph%E1%BA%A9m%20-%20Callmeduy&sd=24-bit&sr=1280x720&vp=1265x720&je=0&_u=YEBAAEABAAAAACAAI~&jid=306241179&gjid=897054950&cid=285745410.1718612736&tid=UA-174166344-1&_gid=129869905.1718612736&_r=1&_slc=1&z=1413872684>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://www.googletagmanager.com/gtag/js?id=G-98CML2YKBK&cx=c&_slc=1> (resource type: script, referrer: https://callmeduy.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://connect.facebook.net/signals/config/436713284323042?v=2.9.158&r=stable&domain=callmeduy.com&hme=446fb981c8c3baeb03730fe3cbd404f7f15f64c693f24c7fe75da498bc2c95d8&ex_m=67%2C113%2C100%2C104%2C58%2C3%2C93%2C66%2C15%2C91%2C84%2C49%2C51%2C160%2C163%2C174%2C170%2C171%2C173%2C28%2C94%2C50%2C73%2C172%2C155%2C158%2C167%2C168%2C175%2C122%2C14%2C48%2C180%2C179%2C124%2C17%2C33%2C38%2C1%2C41%2C62%2C63%2C64%2C68%2C88%2C16%2C13%2C90%2C87%2C86%2C101%2C103%2C37%2C102%2C29%2C25%2C156%2C159%2C131%2C27%2C10%2C11%2C12%2C5%2C6%2C24%2C21%2C22%2C54%2C59%2C61%2C71%2C95%2C26%2C72%2C8%2C7%2C76%2C46%2C20%2C97%2C96%2C98%2C9%2C19%2C18%2C81%2C53%2C79%2C32%2C70%2C0%2C89%2C31%2C78%2C83%2C45%2C44%2C82%2C36%2C4%2C85%2C77%2C42%2C39%2C34%2C80%2C2%2C35%2C60%2C40%2C99%2C43%2C75%2C65%2C105%2C57%2C56%2C30%2C92%2C55%2C52%2C47%2C74%2C69%2C23%2C106>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://www.facebook.com/tr/?id=436713284323042&ev=PageView&dl=https%3A%2F%2Fcallmeduy.com%2Fsan-pham&rl=&if=false&ts=1718612735610&sw=1280&sh=720&v=2.9.158&r=stable&ec=0&o=4126&fbp=fb.1.1718612735609.397376675346430864&ler=empty&cdl=API_unavailable&it=1718612735521&coo=false&rqm=GET> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://www.facebook.com/privacy_sandbox/pixel/register/trigger/?id=436713284323042&ev=PageView&dl=https%3A%2F%2Fcallmeduy.com%2Fsan-pham&rl=&if=false&ts=1718612735610&sw=1280&sh=720&v=2.9.158&r=stable&ec=0&o=4126&fbp=fb.1.1718612735609.397376675346430864&ler=empty&cdl=API_unavailable&it=1718612735521&coo=false&rqm=FGET> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://www.googletagmanager.com/gtag/js?id=G-98CML2YKBK&cx=c&_slc=1>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://www.facebook.com/tr/?id=436713284323042&ev=PageView&dl=https%3A%2F%2Fcallmeduy.com%2Fsan-pham&rl=&if=false&ts=1718612735610&sw=1280&sh=720&v=2.9.158&r=stable&ec=0&o=4126&fbp=fb.1.1718612735609.397376675346430864&ler=empty&cdl=API_unavailable&it=1718612735521&coo=false&rqm=GET>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/assets/img/arrow_up.png>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/assets/img/icons/send.svg>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://www.facebook.com/privacy_sandbox/pixel/register/trigger/?id=436713284323042&ev=PageView&dl=https%3A%2F%2Fcallmeduy.com%2Fsan-pham&rl=&if=false&ts=1718612735610&sw=1280&sh=720&v=2.9.158&r=stable&ec=0&o=4126&fbp=fb.1.1718612735609.397376675346430864&ler=empty&cdl=API_unavailable&it=1718612735521&coo=false&rqm=FGET>
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Request: <POST https://region1.google-analytics.com/g/collect?v=2&tid=G-98CML2YKBK&gtm=45je46c0v9124260100za200&_p=1718612735577&gcd=13l3l3l3l2&npa=0&dma=0&tag_exp=0&ul=en-gb&sr=1280x720&cid=285745410.1718612736&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B125.0.6422.26%7CNot.A%252FBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=6.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&dl=https%3A%2F%2Fcallmeduy.com%2Fsan-pham&dp=%2Fsan-pham&dt=S%E1%BA%A3n%20ph%E1%BA%A9m%20-%20Callmeduy&sid=1718612735&sct=1&seg=0&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1445&_z=fetch> (resource type: fetch, referrer: https://callmeduy.com/)
+2024-06-17 09:25:35 [scrapy-playwright] DEBUG: [Context=default] Response: <204 https://region1.google-analytics.com/g/collect?v=2&tid=G-98CML2YKBK&gtm=45je46c0v9124260100za200&_p=1718612735577&gcd=13l3l3l3l2&npa=0&dma=0&tag_exp=0&ul=en-gb&sr=1280x720&cid=285745410.1718612736&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B125.0.6422.26%7CNot.A%252FBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=6.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&dl=https%3A%2F%2Fcallmeduy.com%2Fsan-pham&dp=%2Fsan-pham&dt=S%E1%BA%A3n%20ph%E1%BA%A9m%20-%20Callmeduy&sid=1718612735&sct=1&seg=0&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1445&_z=fetch>
+2024-06-17 09:25:36 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/assets/img/logo_header.png>
+2024-06-17 09:25:36 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/assets/img/favicon.png> (resource type: other, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://callmeduy.com/san-pham> (referer: None) ['playwright']
+2024-06-17 09:25:36 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_api/products/count?name_contains=>
+2024-06-17 09:25:36 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_api/layouts/insta>
+2024-06-17 09:25:36 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/assets/img/unknown.png> (resource type: image, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:36 [callmeduy] INFO: Waiting for skeleton to load.
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/assets/img/unknown.png>
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_api/layouts/other>
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/slideshow_1_jpg_e9f35be120.jpg> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:41 [callmeduy] DEBUG: ====================================================
+2024-06-17 09:25:41 [callmeduy] DEBUG: Sữa Chống Nắng Bí Đao Cocoon
+2024-06-17 09:25:41 [callmeduy] DEBUG: /san-pham/1451
+2024-06-17 09:25:41 [callmeduy] DEBUG: COSRX The Hyaluronic Acid 3...
+2024-06-17 09:25:41 [callmeduy] DEBUG: /san-pham/1450
+2024-06-17 09:25:41 [callmeduy] DEBUG: Kem chống nắng Skin1004 Mad...
+2024-06-17 09:25:41 [callmeduy] DEBUG: /san-pham/1449
+2024-06-17 09:25:41 [callmeduy] DEBUG: COSRX The Niacinamide 15% S...
+2024-06-17 09:25:41 [callmeduy] DEBUG: /san-pham/1448
+2024-06-17 09:25:41 [callmeduy] DEBUG: Nacific Origin Red Salicyli...
+2024-06-17 09:25:41 [callmeduy] DEBUG: /san-pham/1446
+2024-06-17 09:25:41 [callmeduy] DEBUG: Skin1004 Madagascar Centell...
+2024-06-17 09:25:41 [callmeduy] DEBUG: /san-pham/1445
+2024-06-17 09:25:41 [callmeduy] DEBUG: ACNACARE GEL Mega We Care
+2024-06-17 09:25:41 [callmeduy] DEBUG: /san-pham/1444
+2024-06-17 09:25:41 [callmeduy] DEBUG: Viên uống ACNACARE Mega We ...
+2024-06-17 09:25:41 [callmeduy] DEBUG: /san-pham/1443
+2024-06-17 09:25:41 [callmeduy] DEBUG: Serum NNO VITE Mega We Care
+2024-06-17 09:25:41 [callmeduy] DEBUG: /san-pham/1442
+2024-06-17 09:25:41 [callmeduy] DEBUG: Neutrogena Hydro Boost Acti...
+2024-06-17 09:25:41 [callmeduy] DEBUG: /san-pham/1441
+2024-06-17 09:25:41 [callmeduy] DEBUG: Neutrogena Hydroboost Clean...
+2024-06-17 09:25:41 [callmeduy] DEBUG: /san-pham/1440
+2024-06-17 09:25:41 [callmeduy] DEBUG: Skin Recovery Cream
+2024-06-17 09:25:41 [callmeduy] DEBUG: /san-pham/1439
+2024-06-17 09:25:41 [callmeduy] DEBUG: ====================================================
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/assets/img/favicon.png>
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_api/brands?_limit=-1&_sort=name:ASC>
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Response: <200 https://callmeduy.com/_api/products?_start=0&_limit=12&name_contains=&_sort=created_at:DESC>
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/assets/img/icons/sao.jpg> (resource type: image, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/assets/img/icons/isNoAncol.jpg> (resource type: image, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:41 [scrapy.core.engine] INFO: Closing spider (finished)
+2024-06-17 09:25:41 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 446,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 51306,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 12.803241,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 6, 17, 8, 25, 41, 508138, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 11336,
+ 'httpcompression/response_count': 1,
+ 'log_count/DEBUG': 290,
+ 'log_count/INFO': 15,
+ 'memusage/max': 75161600,
+ 'memusage/startup': 75161600,
+ 'playwright/context_count': 1,
+ 'playwright/context_count/max_concurrent': 1,
+ 'playwright/context_count/persistent/False': 1,
+ 'playwright/context_count/remote/False': 1,
+ 'playwright/page_count': 1,
+ 'playwright/page_count/max_concurrent': 1,
+ 'playwright/request_count': 79,
+ 'playwright/request_count/method/GET': 77,
+ 'playwright/request_count/method/POST': 2,
+ 'playwright/request_count/navigation': 1,
+ 'playwright/request_count/resource_type/document': 1,
+ 'playwright/request_count/resource_type/fetch': 1,
+ 'playwright/request_count/resource_type/font': 3,
+ 'playwright/request_count/resource_type/image': 27,
+ 'playwright/request_count/resource_type/other': 12,
+ 'playwright/request_count/resource_type/script': 25,
+ 'playwright/request_count/resource_type/stylesheet': 3,
+ 'playwright/request_count/resource_type/xhr': 7,
+ 'playwright/response_count': 55,
+ 'playwright/response_count/method/GET': 53,
+ 'playwright/response_count/method/POST': 2,
+ 'playwright/response_count/resource_type/document': 1,
+ 'playwright/response_count/resource_type/fetch': 1,
+ 'playwright/response_count/resource_type/font': 3,
+ 'playwright/response_count/resource_type/image': 6,
+ 'playwright/response_count/resource_type/other': 12,
+ 'playwright/response_count/resource_type/script': 23,
+ 'playwright/response_count/resource_type/stylesheet': 3,
+ 'playwright/response_count/resource_type/xhr': 6,
+ 'response_received_count': 2,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2024, 6, 17, 8, 25, 28, 704897, tzinfo=datetime.timezone.utc)}
+2024-06-17 09:25:41 [scrapy.core.engine] INFO: Spider closed (finished)
+2024-06-17 09:25:41 [scrapy-playwright] INFO: Closing download handler
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/assets/img/icons/isNoFlavoring.jpg> (resource type: image, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/assets/img/icons/info.svg> (resource type: image, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/tai_xuong_019218bef8.jpg> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/assets/img/icons/isNotForPregnancy.jpg> (resource type: image, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/Cosrx_HA_3_a199711d31.png> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/assets/img/icons/isForPergnancy.jpg> (resource type: image, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/assets/img/icons/isNoFungarAnce.jpg> (resource type: image, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/0f456cb2501a6d583e5fe7f7346673a0_jpg_720x720q80_jpg_dd7ac85d59.webp> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/eng_pm_Cosrx_The_Niacinamide_15_Serum_20ml_13923_3_5479_ad0a6e6406.jpg> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/Kitchen_4_5f82900700.png> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/e9b1149be256638e9ee206ca1b00191d_b26eead38c.jpeg> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:41 [scrapy-playwright] INFO: Closing download handler
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/acnacare_gel_21889ec921.png> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/assets/img/icons/isRX.jpg> (resource type: image, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/ACNACARE_hop_2bc_min_1_2_1e12bd7a15.png> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/Kitchen_3_71da799832.png> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/a13904230f8e64cb38212b233c609a80_cb2d6fed00.jpg> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/8e971a2e667f0dff6e8c6c2602c25f5d_36c0a2051f.jpg> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy-production-s3.s3.ap-southeast-1.amazonaws.com/brighten_2_8c0df456f6.png> (resource type: image, referrer: https://callmeduy.com/)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_api/chemicals?isHighlighting=true> (resource type: xhr, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/05d954cf.948cceca4ac10d052335.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: [Context=default] Request: <GET https://callmeduy.com/_next/static/chunks/pages/index-71796e88f36c9db3bc4b.js> (resource type: script, referrer: https://callmeduy.com/san-pham)
+2024-06-17 09:25:41 [scrapy-playwright] DEBUG: Browser context closed: 'default' (persistent=False, remote=False)
+2024-06-17 09:25:41 [scrapy-playwright] INFO: Closing browser
