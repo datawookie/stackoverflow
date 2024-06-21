@@ -9,8 +9,7 @@ class GoogleJobsSpider(scrapy.Spider):
 
     def start_requests(self):
         yield scrapy.Request(
-            url="https://www.google.com/search?q=product+designer+nyc&ibp=htl;jobs",
-            callback=self.parse
+            url="https://www.google.com/search?q=product+designer+nyc&ibp=htl;jobs", callback=self.parse
         )
 
     async def parse(self, response):
