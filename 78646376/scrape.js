@@ -5,9 +5,9 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
 
   await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36');
-  
+
   await page.goto('https://www.reddit.com/r/javascript/');
-  
+
   await page.waitForSelector('h1');
 
   const data = await page.evaluate(() => {
@@ -28,8 +28,8 @@ const puppeteer = require('puppeteer');
 
     return content;
   });
-  
+
   console.log(data);
-  
+
   await browser.close();
 })();
