@@ -6,18 +6,18 @@ options = Options()
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 
-driver = webdriver.Remote(
-  "http://127.0.0.1:4444/wd/hub",
-  options=options
-)
+driver = webdriver.Remote("http://127.0.0.1:4444/wd/hub", options=options)
 
-driver.get('https://www.forexfactory.com/calendar?week=this')
+driver.get("https://www.forexfactory.com/calendar?week=this")
 
 import time
+
 time.sleep(10)
 
 try:
-    high_impact_news = high_impact_rows = driver.find_elements(By.XPATH, "//tr[.//span[contains(@class, 'icon--ff-impact-red')]]")
+    high_impact_news = high_impact_rows = driver.find_elements(
+        By.XPATH, "//tr[.//span[contains(@class, 'icon--ff-impact-red')]]"
+    )
 
     for row in high_impact_news:
         print("==================================================")
@@ -29,7 +29,10 @@ try:
             time = row.find_element(By.XPATH, ".//td[@class='calendar__cell calendar__time']//span")
         except:
             # Time in spanning row.
-            time = row.find_element(By.XPATH, "preceding-sibling::tr[.//td[@class='calendar__cell calendar__time']][1]//span[not(contains(@class, 'icon'))]")
+            time = row.find_element(
+                By.XPATH,
+                "preceding-sibling::tr[.//td[@class='calendar__cell calendar__time']][1]//span[not(contains(@class, 'icon'))]",
+            )
 
         # Remove line break from date.
         date = date.replace("\n", " ")

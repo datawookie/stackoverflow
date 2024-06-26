@@ -2,9 +2,11 @@ from requests_html import AsyncHTMLSession
 from pprint import pprint
 from typing import Any as any
 
+
 async def get_url(url: str) -> any:
     print(url)
     return await session.get(url)
+
 
 session = AsyncHTMLSession()
 

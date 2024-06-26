@@ -12,51 +12,40 @@ ACCOUNT_NUMBER = "0523620090003"
 URL = "https://hcad.org/property-search/property-search"
 
 options = Options()
-options.add_argument('--disable-gpu')
-options.add_argument('--no-sandbox')
+options.add_argument("--disable-gpu")
+options.add_argument("--no-sandbox")
 
-driver = webdriver.Remote(
-  "http://127.0.0.1:4444/wd/hub",
-  options=options
-)
+driver = webdriver.Remote("http://127.0.0.1:4444/wd/hub", options=options)
 
 driver.get(URL)
 
-time.sleep(2)
-
-iframe = WebDriverWait(driver, 10).until(
-    EC.presence_of_element_located((By.CSS_SELECTOR, 'iframe'))
-)
+# Change focus to <iframe>.
+iframe = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "iframe")))
 driver.switch_to.frame(iframe)
 
-input = WebDriverWait(driver, 10).until(
-    EC.presence_of_element_located((By.CSS_SELECTOR, 'input[type="search"]'))
-)
+# Locate the <input> field.
+input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'input[type="search"]')))
 
-# input.click()
-
+# Insert search term.
 input.send_keys(ACCOUNT_NUMBER)
-
 time.sleep(2)
 
-button = driver.find_element(By.CSS_SELECTOR, '.input-group-append button')
-print(button)
+# Trigger search.
+button = driver.find_element(By.CSS_SELECTOR, ".input-group-append button")
 button.click()
 
 time.sleep(5)
 
-print(input)
-# print(link.text)
-
-row = driver.find_element(By.CSS_SELECTOR, 'tr.resulttr.odd')
-print(row)
+# Find first search result and click.
+row = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "tr.resulttr.odd")))
 
 row.click()
 
 time.sleep(5)
 
+# Get fiduciary details.
+fiduciary = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "i.fa-person-walking-luggage")))
+details = fiduciary.find_element(By.XPATH, './../following-sibling::*[1]')
+print(details.text)
+
 driver.close()
-
-# body > div.container-fluid > main > div > div.container-md > div > div.col-md-10 > div > div > input
-
-# /html/body/div[1]/main/div/div[1]/div/div[1]/div/div/input

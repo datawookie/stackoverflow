@@ -34,6 +34,7 @@ import time
 
 #             await page.context.close()
 
+
 class MySpider(Spider):
     name = "google"
 
@@ -49,35 +50,35 @@ class MySpider(Spider):
     #         }
     #     )
 
-    start_urls = ['https://www.google.com/search?q=product+designer+nyc&ibp=htl;jobs']
+    start_urls = ["https://www.google.com/search?q=product+designer+nyc&ibp=htl;jobs"]
 
     def start_requests(self):
         consent_url = "https://consent.google.com/save"
         payload = {
-            'bl': 'boq_identityfrontenduiserver_20240617.06_p0',
-            'x': '8',
-            'gl': 'GB',
-            'm': '0',
-            'app': '0',
-            'pc': 'srp',
-            'continue': 'https://www.google.com/search?q=product+designer+nyc&ibp=htl;jobs',
-            'hl': 'en',
-            'uxe': 'none',
-            'cm': '2',
-            'set_eom': 'false',
-            'set_sc': 'true',
-            'set_aps': 'true'
+            "bl": "boq_identityfrontenduiserver_20240617.06_p0",
+            "x": "8",
+            "gl": "GB",
+            "m": "0",
+            "app": "0",
+            "pc": "srp",
+            "continue": "https://www.google.com/search?q=product+designer+nyc&ibp=htl;jobs",
+            "hl": "en",
+            "uxe": "none",
+            "cm": "2",
+            "set_eom": "false",
+            "set_sc": "true",
+            "set_aps": "true",
         }
         headers = {
-            'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0',
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Origin': 'https://consent.google.com',
-            'Referer': 'https://consent.google.com/ml?continue=https://www.google.com/search%3Fq%3Dproduct%2Bdesigner%2Bnyc%26ibp%3Dhtl%3Bjobs&gl=GB&m=0&pc=srp&uxe=none&cm=2&hl=en&src=1',
+            "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Origin": "https://consent.google.com",
+            "Referer": "https://consent.google.com/ml?continue=https://www.google.com/search%3Fq%3Dproduct%2Bdesigner%2Bnyc%26ibp%3Dhtl%3Bjobs&gl=GB&m=0&pc=srp&uxe=none&cm=2&hl=en&src=1",
         }
 
         # Send the POST request to accept cookies
         response = requests.post(consent_url, data=payload, headers=headers)
-        
+
         if response.status_code == 200:
             cookies = response.cookies.get_dict()
             cookies_script = f"""
@@ -88,18 +89,16 @@ class MySpider(Spider):
                 yield Request(
                     url,
                     meta={
-                        'playwright': True,
-                        'playwright_include_page': True,
-                        'playwright_page_methods': [
-                            PageMethod('add_init_script', script=cookies_script),
-                            PageMethod('wait_for_selector', 'div#search', timeout=10000),
-                        ]
-                    }
+                        "playwright": True,
+                        "playwright_include_page": True,
+                        "playwright_page_methods": [
+                            PageMethod("add_init_script", script=cookies_script),
+                            PageMethod("wait_for_selector", "div#search", timeout=10000),
+                        ],
+                    },
                 )
         else:
             self.logger.error("Failed to accept cookies, status code: %d", response.status_code)
-
-
 
         # for url in self.start_urls:
         #     yield Request(
@@ -130,13 +129,13 @@ class MySpider(Spider):
     #     print("XXXXXXXXXXXXXXXXXXXx")
     #     print(inp)
     #     jobs = page.locator("//li")
-       
+
     #     num_jobs = await jobs.count()
 
     #     for idx in range(num_jobs):
     #         await jobs.nth(idx).click()
     #         job_details = page.locator("#tl_ditsc")
-            
+
     #         job_details_html = await job_details.inner_html()
     #         soup = BeautifulSoup(job_details_html, 'html.parser')
     #         data = self.parse_single_jd(soup)
