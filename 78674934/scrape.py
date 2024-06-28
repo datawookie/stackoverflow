@@ -1,19 +1,7 @@
 import requests
 
 headers = {
-    "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:127.0) Gecko/20100101 Firefox/127.0",
-    "Accept": "text/plain, */*; q=0.01",
-    "Accept-Language": "en-US,en;q=0.5",
-    # 'Accept-Encoding': 'gzip, deflate, br, zstd',
     "Content-Type": "application/json; charset=utf-8",
-    "X-Requested-With": "XMLHttpRequest",
-    "Origin": "https://pjenlinea3.poder-judicial.go.cr",
-    "Connection": "keep-alive",
-    "Referer": "https://pjenlinea3.poder-judicial.go.cr/estadisticasoij/",
-    "Sec-Fetch-Dest": "empty",
-    "Sec-Fetch-Mode": "cors",
-    "Sec-Fetch-Site": "same-origin",
-    "Priority": "u=1",
 }
 
 data = {

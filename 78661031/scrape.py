@@ -44,8 +44,10 @@ row.click()
 time.sleep(5)
 
 # Get fiduciary details.
-fiduciary = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "i.fa-person-walking-luggage")))
-details = fiduciary.find_element(By.XPATH, './../following-sibling::*[1]')
+fiduciary = WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.CSS_SELECTOR, "i.fa-person-walking-luggage"))
+)
+details = fiduciary.find_element(By.XPATH, "./../following-sibling::*[1]")
 print(details.text)
 
 driver.close()
