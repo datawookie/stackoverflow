@@ -8,9 +8,7 @@ import pandas as pd
 
 playwright = sync_playwright().start()
 browser = playwright.chromium.launch(headless=False, slow_mo=2000)
-context = browser.new_context(
-    viewport={"width": 1280, "height": 900}
-)
+context = browser.new_context(viewport={"width": 1280, "height": 900})
 
 page = context.new_page()
 
@@ -35,4 +33,4 @@ data = pd.concat(tables)
 
 data = data.loc[:, data.columns[1:-1]]
 
-data.to_csv('crypto-data.csv', index=False)
+data.to_csv("crypto-data.csv", index=False)

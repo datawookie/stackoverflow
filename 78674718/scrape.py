@@ -11,11 +11,10 @@ URL = f"https://www.coingecko.com/en/coins/1/markets/spot"
 
 playwright = sync_playwright().start()
 browser = playwright.chromium.launch(headless=False, slow_mo=2000)
-context = browser.new_context(
-    viewport={"width": 1280, "height": 900}
-)
+context = browser.new_context(viewport={"width": 1280, "height": 900})
 
 page = context.new_page()
+
 
 def fetch_page(url):
     print(url)
@@ -23,6 +22,7 @@ def fetch_page(url):
     time.sleep(5)
 
     return page.content()
+
 
 def scrape_all_pages(url, max_pages=10):
     markets = []
@@ -34,11 +34,12 @@ def scrape_all_pages(url, max_pages=10):
 
     return pd.concat(markets, ignore_index=True)
 
+
 max_pages = 10
 df = scrape_all_pages(URL, max_pages)
 
 page.close()
 
-df = df.dropna(how='all')
+df = df.dropna(how="all")
 
 print(df)
