@@ -1,56 +1,26 @@
 import requests
-from bs4 import BeautifulSoup
+import json
 
 
-def search_adviser_by_name(first_name, last_name):
-    search_url = "https://adviserinfo.sec.gov/IAPD/Individual/Search/Search"
-    search_params = {
-        'ADVANCED': 'true',
-        'FIND_BY_NAME': 'true',
-        'INDIVIDUAL_NAME': f"{first_name} {last_name}",
-        'resultsPerPage': '10'
+def search_adviser_by_name(first, last):
+    params = {
+        "query": f"{first} {last}",
+        "includePrevious": "true",
+        "hl": "true",
+        "nrows": "12",
+        "start": "0",
+        "r": "25",
+        "sort": "score+desc",
+        "wt": "json",
     }
 
-    response = requests.get(search_url, params=search_params)
-    if response.status_code != 200:
-        return None
+    response = requests.get("https://api.adviserinfo.sec.gov/search/individual", params=params)
 
-    soup = BeautifulSoup(response.content, 'html.parser')
-    search_results = soup.find_all('a', {'class': 'individual-summary'})
+    records = response.json()["hits"]["hits"]
 
-    for result in search_results:
-        if first_name.lower() in result.text.lower() and last_name.lower() in result.text.lower():
-            adviser_url = "https://adviserinfo.sec.gov" + result['href']
-            return get_adviser_info(adviser_url)
-
-    return None
+    return [record["_source"] for record in records]
 
 
-def get_adviser_info(adviser_url):
-    response = requests.get(adviser_url)
+info = search_adviser_by_name("Kelly", "Demers")
 
-    if response.status_code == 200:
-        soup = BeautifulSoup(response.content, 'html.parser')
-
-        # Extract specific information using the new HTML structure provided
-        name = soup.find('span', class_='text-lg sm:text-sm font-semibold').text.strip()
-        firm = soup.find('span', {'class': 'firmName'}).text.strip()
-        crd_number = soup.find('span', {'class': 'crdNumber'}).text.strip()
-
-        return {
-            'Name': name,
-            'Firm': firm,
-            'CRD Number': crd_number
-        }
-    else:
-        return None
-
-
-# Example usage
-first_name = 'Kelly'
-last_name = 'Demers'
-info = search_adviser_by_name(first_name, last_name)
-if info:
-    print(info)
-else:
-    print("Failed to retrieve adviser information.")
+print(json.dumps(info, indent=2))
