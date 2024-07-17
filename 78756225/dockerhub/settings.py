@@ -1,0 +1,31 @@
+BOT_NAME = "dockerhub"
+
+SPIDER_MODULES = ["dockerhub.spiders"]
+NEWSPIDER_MODULE = "dockerhub.spiders"
+
+ROBOTSTXT_OBEY = False
+
+REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
+TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
+FEED_EXPORT_ENCODING = "utf-8"
+
+COOKIES_ENABLED = False
+
+DOWNLOAD_HANDLERS = {
+    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+}
+PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 30 * 1000
+PLAYWRIGHT_BROWSER_TYPE = "chromium"
+PLAYWRIGHT_LAUNCH_OPTIONS = {"headless": False}
+
+AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_START_DELAY = 5
+AUTOTHROTTLE_MAX_DELAY = 60
+AUTOTHROTTLE_TARGET_CONCURRENCY = 0.5
+AUTOTHROTTLE_DEBUG = True
+
+DOWNLOAD_DELAY = 5
+CONCURRENT_REQUESTS = 1
+CONCURRENT_REQUESTS_PER_DOMAIN = 1
+CONCURRENT_REQUESTS_PER_IP = 1

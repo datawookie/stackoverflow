@@ -2,13 +2,6 @@ from scrapy.spiders import CrawlSpider
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
 
-from scrapy import Item
-from scrapy import Field
-
-
-class UrlItem(Item):
-    url = Field()
-
 
 class WikiSpider(CrawlSpider):
     name = "wiki"
@@ -22,6 +15,4 @@ class WikiSpider(CrawlSpider):
     def parse_url(self, response):
         if response.url not in self.seen:
             self.seen.add(response.url)
-            item = UrlItem()
-            item["url"] = response.url
-            yield item
+            yield {"url": response.url}

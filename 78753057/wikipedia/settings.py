@@ -1,20 +1,7 @@
-# Scrapy settings for parquet project
-#
-# For simplicity, this file contains only settings considered important or
-# commonly used. You can find more settings consulting the documentation:
-#
-#     https://docs.scrapy.org/en/latest/topics/settings.html
-#     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+BOT_NAME = "wikipedia"
 
-BOT_NAME = "parquet"
-
-SPIDER_MODULES = ["parquet.spiders"]
-NEWSPIDER_MODULE = "parquet.spiders"
-
-
-# Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = "parquet (+http://www.yourdomain.com)"
+SPIDER_MODULES = ["wikipedia.spiders"]
+NEWSPIDER_MODULE = "wikipedia.spiders"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -40,18 +27,6 @@ ROBOTSTXT_OBEY = False
 # DEFAULT_REQUEST_HEADERS = {
 #    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 #    "Accept-Language": "en",
-# }
-
-# Enable or disable spider middlewares
-# See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-# SPIDER_MIDDLEWARES = {
-#    "parquet.middlewares.ParquetSpiderMiddleware": 543,
-# }
-
-# Enable or disable downloader middlewares
-# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#    "parquet.middlewares.ParquetDownloaderMiddleware": 543,
 # }
 
 # Enable or disable extensions

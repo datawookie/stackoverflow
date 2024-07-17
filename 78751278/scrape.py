@@ -39,7 +39,7 @@ for question in questions:
     for menu in menus:
         driver.execute_script("arguments[0].click();", menu)
         time.sleep(1)
-    
+
     # Get buttons to display tables.
     views = driver.find_elements(By.XPATH, "//li[contains(text(), 'View data table')]")
 

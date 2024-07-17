@@ -1,24 +1,24 @@
 # library(httr)
 # library(rvest)
-# 
+#
 # cookies = c(
 #   `ASP.NET_SessionId` = "4darg2wqzgyyldwileqxnmzg"
 # )
-# 
+#
 # headers = c(
 #   `User-Agent` = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:127.0) Gecko/20100101 Firefox/127.0"
 # )
-# 
+#
 # response <- httr::GET(
 #   url = "https://fcainfoweb.nic.in/reports/Report_daily1_web_Statewise.aspx",
 #   httr::add_headers(.headers=headers),
 #   httr::set_cookies(.cookies = cookies)
 # )
-# 
+#
 # data <- content(response) |>
 #   html_node("table") %>%
 #   html_table()
-# 
+#
 # head(data)
 
 library(httr)
