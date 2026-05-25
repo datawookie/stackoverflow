@@ -5,7 +5,6 @@ from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 import pandas as pd
 
-
 playwright = sync_playwright().start()
 browser = playwright.chromium.launch(headless=False, slow_mo=2000)
 context = browser.new_context(viewport={"width": 1280, "height": 900})
