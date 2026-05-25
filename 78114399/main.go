@@ -31,4 +31,3 @@ func main() {
 	// For demonstration, we'll just print that we've successfully initialized Firestore
 	fmt.Println("Successfully initialized Firestore")
 }
-

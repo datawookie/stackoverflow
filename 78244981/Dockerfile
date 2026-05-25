@@ -5,7 +5,7 @@ RUN apt-get update && \
         wget \
         expect \
         libgomp1 \
-        libx11-6 && \ 
+        libx11-6 && \
     rm -rf /var/lib/apt/lists/*
 
 RUN wget https://github.com/NREL/EnergyPlus/releases/download/v24.1.0/EnergyPlus-24.1.0-9d7789a3ac-Linux-Ubuntu22.04-x86_64.sh
