@@ -22,14 +22,12 @@ class DocsSpider(scrapy.Spider):
 
         await page.wait_for_selector("product-availability-root")
 
-        await page.wait_for_function(
-            """
+        await page.wait_for_function("""
             () => {
                 const element = document.querySelector("product-availability-root");
                 return element && element.innerHTML.trim().length > 0;
             }
-            """
-        )
+            """)
 
         await page.wait_for_selector(".product-card-list", timeout=30000)
 
