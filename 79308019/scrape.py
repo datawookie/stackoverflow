@@ -3,7 +3,6 @@ import undetected_chromedriver as uc
 import pandas as pd
 from bs4 import BeautifulSoup
 
-
 URL = "https://www.payscale.com/college-salary-report/majors-that-pay-you-back/bachelors/"
 
 driver = uc.Chrome(headless=False, use_subprocess=True)
