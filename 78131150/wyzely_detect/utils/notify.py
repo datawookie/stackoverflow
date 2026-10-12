@@ -1,7 +1,6 @@
 import httpx
 import time
 
-
 """
 Structure of objects_and_peoples
 Really, the only reason peoples is a separate dictionary is to prevent duplicates, though it just makes the code more complicated.
