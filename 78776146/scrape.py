@@ -44,13 +44,11 @@ print(shadow_root)
 # element_inside_shadow_dom = driver.execute_script('return arguments[0].querySelector(".liquidativo-rentabilidad")', shadow_root)
 # print(element_inside_shadow_dom)
 
-price = driver.execute_script(
-    """
+price = driver.execute_script("""
     var shadowHost = document.querySelector('fichaco-page');
     var shadowRoot = shadowHost.shadowRoot;
     return shadowRoot.querySelector('.liquidativo-rentabilidad').textContent;
-"""
-)
+""")
 
 print(price)
 
